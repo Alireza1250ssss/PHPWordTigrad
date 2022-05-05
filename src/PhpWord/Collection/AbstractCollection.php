@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Collection;
+namespace Alireza1250ssss\PhpWord\Collection;
 
 /**
  * Collection abstract class
@@ -27,14 +27,14 @@ abstract class AbstractCollection
     /**
      * Items
      *
-     * @var \PhpOffice\PhpWord\Element\AbstractContainer[]
+     * @var \Alireza1250ssss\PhpWord\Element\AbstractContainer[]
      */
     private $items = array();
 
     /**
      * Get items
      *
-     * @return \PhpOffice\PhpWord\Element\AbstractContainer[]
+     * @return \Alireza1250ssss\PhpWord\Element\AbstractContainer[]
      */
     public function getItems()
     {
@@ -45,7 +45,7 @@ abstract class AbstractCollection
      * Get item by index
      *
      * @param int $index
-     * @return \PhpOffice\PhpWord\Element\AbstractContainer
+     * @return \Alireza1250ssss\PhpWord\Element\AbstractContainer
      */
     public function getItem($index)
     {
@@ -60,7 +60,7 @@ abstract class AbstractCollection
      * Set item.
      *
      * @param int $index
-     * @param \PhpOffice\PhpWord\Element\AbstractContainer $item
+     * @param \Alireza1250ssss\PhpWord\Element\AbstractContainer $item
      */
     public function setItem($index, $item)
     {
@@ -72,7 +72,7 @@ abstract class AbstractCollection
     /**
      * Add new item
      *
-     * @param \PhpOffice\PhpWord\Element\AbstractContainer $item
+     * @param \Alireza1250ssss\PhpWord\Element\AbstractContainer $item
      * @return int
      */
     public function addItem($item)

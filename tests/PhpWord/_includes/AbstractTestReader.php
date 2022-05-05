@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord;
+namespace Alireza1250ssss\PhpWord;
 
 /**
  * Base class for Word2007 reader tests
@@ -23,11 +23,11 @@ namespace PhpOffice\PhpWord;
 abstract class AbstractTestReader extends \PHPUnit\Framework\TestCase
 {
     private $parts = array(
-        'styles'     => array('class' => 'PhpOffice\PhpWord\Reader\Word2007\Styles',      'xml' => '<w:styles xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:docDefaults><w:rPrDefault><w:rPr><w:sz w:val="24"/></w:rPr></w:rPrDefault></w:docDefaults>{toReplace}</w:styles>'),
-        'document'   => array('class' => 'PhpOffice\PhpWord\Reader\Word2007\Document',    'xml' => '<w:document xmlns:v="urn:schemas-microsoft-com:vml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>{toReplace}</w:body></w:document>'),
-        'footnotes'  => array('class' => 'PhpOffice\PhpWord\Reader\Word2007\Footnotes',   'xml' => '<w:footnotes xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">{toReplace}</w:footnotes>'),
-        'endnotes'   => array('class' => 'PhpOffice\PhpWord\Reader\Word2007\Endnotes',    'xml' => '<w:endnotes xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">{toReplace}</w:endnotes>'),
-        'settings'   => array('class' => 'PhpOffice\PhpWord\Reader\Word2007\Settings',    'xml' => '<w:comments xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">{toReplace}</w:comments>'),
+        'styles'     => array('class' => 'Alireza1250ssss\PhpWord\Reader\Word2007\Styles',      'xml' => '<w:styles xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:docDefaults><w:rPrDefault><w:rPr><w:sz w:val="24"/></w:rPr></w:rPrDefault></w:docDefaults>{toReplace}</w:styles>'),
+        'document'   => array('class' => 'Alireza1250ssss\PhpWord\Reader\Word2007\Document',    'xml' => '<w:document xmlns:v="urn:schemas-microsoft-com:vml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>{toReplace}</w:body></w:document>'),
+        'footnotes'  => array('class' => 'Alireza1250ssss\PhpWord\Reader\Word2007\Footnotes',   'xml' => '<w:footnotes xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">{toReplace}</w:footnotes>'),
+        'endnotes'   => array('class' => 'Alireza1250ssss\PhpWord\Reader\Word2007\Endnotes',    'xml' => '<w:endnotes xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">{toReplace}</w:endnotes>'),
+        'settings'   => array('class' => 'Alireza1250ssss\PhpWord\Reader\Word2007\Settings',    'xml' => '<w:comments xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">{toReplace}</w:comments>'),
     );
 
     /**
@@ -35,7 +35,7 @@ abstract class AbstractTestReader extends \PHPUnit\Framework\TestCase
      *
      * @param string $documentXml
      * @param null|string $stylesXml
-     * @return \PhpOffice\PhpWord\PhpWord
+     * @return \Alireza1250ssss\PhpWord\PhpWord
      */
     protected function getDocumentFromString(array $partXmls = array())
     {

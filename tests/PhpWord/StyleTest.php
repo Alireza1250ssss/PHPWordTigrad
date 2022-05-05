@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord;
+namespace Alireza1250ssss\PhpWord;
 
-use PhpOffice\PhpWord\SimpleType\Jc;
+use Alireza1250ssss\PhpWord\SimpleType\Jc;
 
 /**
- * Test class for PhpOffice\PhpWord\Style
+ * Test class for Alireza1250ssss\PhpWord\Style
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Style
  * @runTestsInSeparateProcesses
  */
 class StyleTest extends \PHPUnit\Framework\TestCase
@@ -82,7 +82,7 @@ class StyleTest extends \PHPUnit\Framework\TestCase
 
         $this->assertCount(count($styles), Style::getStyles());
         foreach ($styles as $name => $style) {
-            $this->assertInstanceOf("PhpOffice\\PhpWord\\Style\\{$style}", Style::getStyle($name));
+            $this->assertInstanceOf("Alireza1250ssss\\PhpWord\\Style\\{$style}", Style::getStyle($name));
         }
         $this->assertNull(Style::getStyle('Unknown'));
 
@@ -102,6 +102,6 @@ class StyleTest extends \PHPUnit\Framework\TestCase
 
         Style::setDefaultParagraphStyle($paragraph);
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Paragraph', Style::getStyle('Normal'));
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Paragraph', Style::getStyle('Normal'));
     }
 }

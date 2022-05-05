@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\SimpleType;
+namespace Alireza1250ssss\PhpWord\SimpleType;
 
-use PhpOffice\PhpWord\Shared\AbstractEnum;
+use Alireza1250ssss\PhpWord\Shared\AbstractEnum;
 
 /**
  * Horizontal Alignment Type.
@@ -27,7 +27,7 @@ use PhpOffice\PhpWord\Shared\AbstractEnum;
  *
  * @since 0.13.0
  *
- * @see \PhpOffice\PhpWord\SimpleType\JcTable For table alignment modes available since ISO/IEC-29500:2008.
+ * @see \Alireza1250ssss\PhpWord\SimpleType\JcTable For table alignment modes available since ISO/IEC-29500:2008.
  * @see  http://www.datypic.com/sc/ooxml/t-w_ST_Jc.html
  */
 final class Jc extends AbstractEnum

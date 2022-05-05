@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\Footer
+ * Test class for Alireza1250ssss\PhpWord\Element\Footer
  *
  * @runTestsInSeparateProcesses
  */
@@ -32,7 +32,7 @@ class BookmarkTest extends \PHPUnit\Framework\TestCase
         $bookmarkName = 'test';
         $oBookmark = new Bookmark($bookmarkName);
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Bookmark', $oBookmark);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Bookmark', $oBookmark);
         $this->assertEquals($bookmarkName, $oBookmark->getName());
     }
 }

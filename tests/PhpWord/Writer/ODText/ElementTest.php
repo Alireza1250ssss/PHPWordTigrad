@@ -15,15 +15,15 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText;
+namespace Alireza1250ssss\PhpWord\Writer\ODText;
 
-use PhpOffice\PhpWord\Element\TrackChange;
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Shared\XMLWriter;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Alireza1250ssss\PhpWord\Element\TrackChange;
+use Alireza1250ssss\PhpWord\PhpWord;
+use Alireza1250ssss\PhpWord\Shared\XMLWriter;
+use Alireza1250ssss\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\ODText\Element subnamespace
+ * Test class for Alireza1250ssss\PhpWord\Writer\ODText\Element subnamespace
  */
 class ElementTest extends \PHPUnit\Framework\TestCase
 {
@@ -42,9 +42,9 @@ class ElementTest extends \PHPUnit\Framework\TestCase
     {
         $elements = array('Image', 'Link', 'Table', 'Text', 'Title', 'Field');
         foreach ($elements as $element) {
-            $objectClass = 'PhpOffice\\PhpWord\\Writer\\ODText\\Element\\' . $element;
+            $objectClass = 'Alireza1250ssss\\PhpWord\\Writer\\ODText\\Element\\' . $element;
             $xmlWriter = new XMLWriter();
-            $newElement = new \PhpOffice\PhpWord\Element\PageBreak();
+            $newElement = new \Alireza1250ssss\PhpWord\Element\PageBreak();
             $object = new $objectClass($xmlWriter, $newElement);
             $object->write();
 
@@ -98,7 +98,7 @@ class ElementTest extends \PHPUnit\Framework\TestCase
         $phpWord = new PhpWord();
         $section = $phpWord->addSection();
 
-        $table = $section->addTable(array('alignment' => \PhpOffice\PhpWord\SimpleType\JcTable::CENTER));
+        $table = $section->addTable(array('alignment' => \Alireza1250ssss\PhpWord\SimpleType\JcTable::CENTER));
         $table->addRow(900);
         $table->addCell(2000)->addText('Row 1');
         $table->addCell(2000)->addText('Row 2');
@@ -124,7 +124,7 @@ class ElementTest extends \PHPUnit\Framework\TestCase
         self::AssertNotEquals('', $tableStyleName);
         $element = "$element/style:table-properties";
         self::assertTrue($doc->elementExists($element));
-        self::assertEquals(\PhpOffice\PhpWord\SimpleType\JcTable::CENTER, $doc->getElementAttribute($element, 'table:align'));
+        self::assertEquals(\Alireza1250ssss\PhpWord\SimpleType\JcTable::CENTER, $doc->getElementAttribute($element, 'table:align'));
         $p2t = '/office:document-content/office:body/office:text/text:section';
         $tableRootElement = "$p2t/table:table";
         self::assertTrue($doc->elementExists($tableRootElement));
@@ -193,12 +193,12 @@ class ElementTest extends \PHPUnit\Framework\TestCase
      */
     public function testTextRunTitle()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
         $phpWord->addTitleStyle(1, array('name' => 'Times New Roman', 'size' => 18, 'bold' => true));
         $section = $phpWord->addSection();
         $section->addTitle('Text Title', 1);
         $section->addText('Text following Text Title');
-        $textRun = new \PhpOffice\PhpWord\Element\TextRun();
+        $textRun = new \Alireza1250ssss\PhpWord\Element\TextRun();
         $textRun->addText('Text Run');
         $textRun->addText(' Title');
         $section->addTitle($textRun, 1);
@@ -234,15 +234,15 @@ class ElementTest extends \PHPUnit\Framework\TestCase
      */
     public function testTextWithAmpersand()
     {
-        $esc = \PhpOffice\PhpWord\Settings::isOutputEscapingEnabled();
-        \PhpOffice\PhpWord\Settings::setOutputEscapingEnabled(true);
+        $esc = \Alireza1250ssss\PhpWord\Settings::isOutputEscapingEnabled();
+        \Alireza1250ssss\PhpWord\Settings::setOutputEscapingEnabled(true);
         $phpWord = new PhpWord();
         $section = $phpWord->addSection();
         $txt = 'this text contains an & (ampersand)';
         $section->addText($txt);
 
         $doc = TestHelperDOCX::getDocument($phpWord, 'ODText');
-        \PhpOffice\PhpWord\Settings::setOutputEscapingEnabled($esc);
+        \Alireza1250ssss\PhpWord\Settings::setOutputEscapingEnabled($esc);
         $p2t = '/office:document-content/office:body/office:text/text:section';
         $element = "$p2t/text:p[2]";
         $this->assertTrue($doc->elementExists($element));
@@ -273,7 +273,7 @@ class ElementTest extends \PHPUnit\Framework\TestCase
      */
     public function testTrackedChanges()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
 
         // New portrait section
         $section = $phpWord->addSection();

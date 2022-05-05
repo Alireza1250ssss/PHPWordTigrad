@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\RTF\Element;
+namespace Alireza1250ssss\PhpWord\Writer\RTF\Element;
 
-use PhpOffice\PhpWord\Writer\HTML\Element\Container as HTMLContainer;
+use Alireza1250ssss\PhpWord\Writer\HTML\Element\Container as HTMLContainer;
 
 /**
  * Container element RTF writer
@@ -31,5 +31,5 @@ class Container extends HTMLContainer
      *
      * @var string
      */
-    protected $namespace = 'PhpOffice\\PhpWord\\Writer\\RTF\\Element';
+    protected $namespace = 'Alireza1250ssss\\PhpWord\\Writer\\RTF\\Element';
 }

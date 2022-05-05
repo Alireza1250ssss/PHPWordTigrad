@@ -15,11 +15,11 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Reader\Word2007;
+namespace Alireza1250ssss\PhpWord\Reader\Word2007;
 
-use PhpOffice\PhpWord\Element\Section;
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Shared\XMLReader;
+use Alireza1250ssss\PhpWord\Element\Section;
+use Alireza1250ssss\PhpWord\PhpWord;
+use Alireza1250ssss\PhpWord\Shared\XMLReader;
 
 /**
  * Document reader
@@ -32,14 +32,14 @@ class Document extends AbstractPart
     /**
      * PhpWord object
      *
-     * @var \PhpOffice\PhpWord\PhpWord
+     * @var \Alireza1250ssss\PhpWord\PhpWord
      */
     private $phpWord;
 
     /**
      * Read document.xml.
      *
-     * @param \PhpOffice\PhpWord\PhpWord $phpWord
+     * @param \Alireza1250ssss\PhpWord\PhpWord $phpWord
      */
     public function read(PhpWord $phpWord)
     {
@@ -64,7 +64,7 @@ class Document extends AbstractPart
      * Read header footer.
      *
      * @param array $settings
-     * @param \PhpOffice\PhpWord\Element\Section &$section
+     * @param \Alireza1250ssss\PhpWord\Element\Section &$section
      */
     private function readHeaderFooter($settings, Section &$section)
     {
@@ -97,7 +97,7 @@ class Document extends AbstractPart
     /**
      * Read w:sectPr
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLReader $xmlReader
+     * @param \Alireza1250ssss\PhpWord\Shared\XMLReader $xmlReader
      * @param \DOMElement $domNode
      * @ignoreScrutinizerPatch
      * @return array
@@ -141,9 +141,9 @@ class Document extends AbstractPart
     /**
      * Read w:p node.
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLReader $xmlReader
+     * @param \Alireza1250ssss\PhpWord\Shared\XMLReader $xmlReader
      * @param \DOMElement $node
-     * @param \PhpOffice\PhpWord\Element\Section &$section
+     * @param \Alireza1250ssss\PhpWord\Element\Section &$section
      *
      * @todo <w:lastRenderedPageBreak>
      */
@@ -170,9 +170,9 @@ class Document extends AbstractPart
     /**
      * Read w:sectPr node.
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLReader $xmlReader
+     * @param \Alireza1250ssss\PhpWord\Shared\XMLReader $xmlReader
      * @param \DOMElement $node
-     * @param \PhpOffice\PhpWord\Element\Section &$section
+     * @param \Alireza1250ssss\PhpWord\Element\Section &$section
      */
     private function readWSectPrNode(XMLReader $xmlReader, \DOMElement $node, Section &$section)
     {

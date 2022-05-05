@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Part;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007\Part;
 
-use PhpOffice\PhpWord\Exception\Exception;
-use PhpOffice\PhpWord\Settings;
-use PhpOffice\PhpWord\Shared\XMLWriter;
-use PhpOffice\PhpWord\Writer\AbstractWriter;
+use Alireza1250ssss\PhpWord\Exception\Exception;
+use Alireza1250ssss\PhpWord\Settings;
+use Alireza1250ssss\PhpWord\Shared\XMLWriter;
+use Alireza1250ssss\PhpWord\Writer\AbstractWriter;
 
 /**
  * Word2007 writer part abstract class
@@ -30,7 +30,7 @@ abstract class AbstractPart
     /**
      * Parent writer
      *
-     * @var \PhpOffice\PhpWord\Writer\AbstractWriter
+     * @var \Alireza1250ssss\PhpWord\Writer\AbstractWriter
      */
     protected $parentWriter;
 
@@ -49,7 +49,7 @@ abstract class AbstractPart
     /**
      * Set parent writer.
      *
-     * @param \PhpOffice\PhpWord\Writer\AbstractWriter $writer
+     * @param \Alireza1250ssss\PhpWord\Writer\AbstractWriter $writer
      */
     public function setParentWriter(AbstractWriter $writer = null)
     {
@@ -59,8 +59,8 @@ abstract class AbstractPart
     /**
      * Get parent writer
      *
-     * @throws \PhpOffice\PhpWord\Exception\Exception
-     * @return \PhpOffice\PhpWord\Writer\AbstractWriter
+     * @throws \Alireza1250ssss\PhpWord\Exception\Exception
+     * @return \Alireza1250ssss\PhpWord\Writer\AbstractWriter
      */
     public function getParentWriter()
     {
@@ -73,7 +73,7 @@ abstract class AbstractPart
     /**
      * Get XML Writer
      *
-     * @return \PhpOffice\PhpWord\Shared\XMLWriter
+     * @return \Alireza1250ssss\PhpWord\Shared\XMLWriter
      */
     protected function getXmlWriter()
     {

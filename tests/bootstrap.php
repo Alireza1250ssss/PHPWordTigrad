@@ -25,7 +25,7 @@ if (!defined('PHPWORD_TESTS_BASE_DIR')) {
 
 spl_autoload_register(function ($class) {
     $class = ltrim($class, '\\');
-    $prefix = 'PhpOffice\\PhpWord';
+    $prefix = 'Alireza1250ssss\\PhpWord';
     if (strpos($class, $prefix) === 0) {
         $class = str_replace('\\', DIRECTORY_SEPARATOR, $class);
         $class = implode(DIRECTORY_SEPARATOR, array('PhpWord', '_includes')) .

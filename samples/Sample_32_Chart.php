@@ -1,11 +1,11 @@
 <?php
 include_once 'Sample_Header.php';
 
-use PhpOffice\PhpWord\Shared\Converter;
+use Alireza1250ssss\PhpWord\Shared\Converter;
 
 // New Word document
 echo date('H:i:s'), ' Create new PhpWord object', EOL;
-$phpWord = new \PhpOffice\PhpWord\PhpWord();
+$phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
 
 // Define styles
 $phpWord->addTitleStyle(1, array('size' => 14, 'bold' => true), array('keepNext' => true, 'spaceBefore' => 240));

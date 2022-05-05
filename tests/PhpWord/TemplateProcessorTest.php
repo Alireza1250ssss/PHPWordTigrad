@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord;
+namespace Alireza1250ssss\PhpWord;
 
-use PhpOffice\PhpWord\Element\Text;
-use PhpOffice\PhpWord\Element\TextRun;
+use Alireza1250ssss\PhpWord\Element\Text;
+use Alireza1250ssss\PhpWord\Element\TextRun;
 
 /**
- * @covers \PhpOffice\PhpWord\TemplateProcessor
- * @coversDefaultClass \PhpOffice\PhpWord\TemplateProcessor
+ * @covers \Alireza1250ssss\PhpWord\TemplateProcessor
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\TemplateProcessor
  * @runTestsInSeparateProcesses
  */
 final class TemplateProcessorTest extends \PHPUnit\Framework\TestCase
@@ -36,7 +36,7 @@ final class TemplateProcessorTest extends \PHPUnit\Framework\TestCase
     public function testTheConstruct()
     {
         $object = new TemplateProcessor(__DIR__ . '/_files/templates/blank.docx');
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\TemplateProcessor', $object);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\TemplateProcessor', $object);
         $this->assertEquals(array(), $object->getVariables());
     }
 
@@ -134,7 +134,7 @@ final class TemplateProcessorTest extends \PHPUnit\Framework\TestCase
      * XSL stylesheet cannot be applied on failure in setting parameter value.
      *
      * @covers                   ::applyXslStyleSheet
-     * @expectedException        \PhpOffice\PhpWord\Exception\Exception
+     * @expectedException        \Alireza1250ssss\PhpWord\Exception\Exception
      * @expectedExceptionMessage Could not set values for the given XSL style sheet parameters.
      * @test
      */
@@ -161,7 +161,7 @@ final class TemplateProcessorTest extends \PHPUnit\Framework\TestCase
      * XSL stylesheet can be applied on failure of loading XML from template.
      *
      * @covers                   ::applyXslStyleSheet
-     * @expectedException        \PhpOffice\PhpWord\Exception\Exception
+     * @expectedException        \Alireza1250ssss\PhpWord\Exception\Exception
      * @expectedExceptionMessage Could not load the given XML document.
      * @test
      */
@@ -439,15 +439,15 @@ final class TemplateProcessorTest extends \PHPUnit\Framework\TestCase
 
         // dynamic generated doc
         $testFileName = 'images-test-sample.docx';
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
         $section = $phpWord->addSection();
         $section->addText('${Test:width=100:ratio=true}');
-        $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
+        $objWriter = \Alireza1250ssss\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
         $objWriter->save($testFileName);
         $this->assertFileExists($testFileName, "Generated file '{$testFileName}' not found!");
 
         $resultFileName = 'images-test-result.docx';
-        $templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor($testFileName);
+        $templateProcessor = new \Alireza1250ssss\PhpWord\TemplateProcessor($testFileName);
         unlink($testFileName);
         $templateProcessor->setImageValue('Test', $imagePath);
         $templateProcessor->setImageValue('Test1', $imagePath);
@@ -566,7 +566,7 @@ final class TemplateProcessorTest extends \PHPUnit\Framework\TestCase
         // and the placeholders have been replaced correctly
         $phpWord = IOFactory::load($templatePath);
         $sections = $phpWord->getSections();
-        /** @var \PhpOffice\PhpWord\Element\TextRun[] $actualElements */
+        /** @var \Alireza1250ssss\PhpWord\Element\TextRun[] $actualElements */
         $actualElements = $sections[0]->getElements();
         unlink($templatePath);
         $expectedElements = array(

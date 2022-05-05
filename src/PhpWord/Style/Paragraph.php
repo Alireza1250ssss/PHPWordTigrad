@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Alireza1250ssss\PhpWord\Style;
 
-use PhpOffice\PhpWord\Exception\InvalidStyleException;
-use PhpOffice\PhpWord\Shared\Text;
-use PhpOffice\PhpWord\SimpleType\Jc;
-use PhpOffice\PhpWord\SimpleType\TextAlignment;
+use Alireza1250ssss\PhpWord\Exception\InvalidStyleException;
+use Alireza1250ssss\PhpWord\Shared\Text;
+use Alireza1250ssss\PhpWord\SimpleType\Jc;
+use Alireza1250ssss\PhpWord\SimpleType\TextAlignment;
 
 /**
  * Paragraph style
@@ -85,14 +85,14 @@ class Paragraph extends Border
     /**
      * Indentation
      *
-     * @var \PhpOffice\PhpWord\Style\Indentation|null
+     * @var \Alireza1250ssss\PhpWord\Style\Indentation|null
      */
     private $indentation;
 
     /**
      * Spacing
      *
-     * @var \PhpOffice\PhpWord\Style\Spacing
+     * @var \Alireza1250ssss\PhpWord\Style\Spacing
      */
     private $spacing;
 
@@ -148,14 +148,14 @@ class Paragraph extends Border
     /**
      * Set of Custom Tab Stops
      *
-     * @var \PhpOffice\PhpWord\Style\Tab[]
+     * @var \Alireza1250ssss\PhpWord\Style\Tab[]
      */
     private $tabs = array();
 
     /**
      * Shading
      *
-     * @var \PhpOffice\PhpWord\Style\Shading
+     * @var \Alireza1250ssss\PhpWord\Style\Shading
      */
     private $shading;
 
@@ -345,7 +345,7 @@ class Paragraph extends Border
     /**
      * Get shading
      *
-     * @return \PhpOffice\PhpWord\Style\Indentation
+     * @return \Alireza1250ssss\PhpWord\Style\Indentation
      */
     public function getIndentation()
     {
@@ -410,7 +410,7 @@ class Paragraph extends Border
     /**
      * Get spacing
      *
-     * @return \PhpOffice\PhpWord\Style\Spacing
+     * @return \Alireza1250ssss\PhpWord\Style\Spacing
      * @todo Rename to getSpacing in 1.0
      */
     public function getSpace()
@@ -509,7 +509,7 @@ class Paragraph extends Border
      * Set the spacing line rule
      *
      * @param string $value Possible values are defined in LineSpacingRule
-     * @return \PhpOffice\PhpWord\Style\Paragraph
+     * @return \Alireza1250ssss\PhpWord\Style\Paragraph
      */
     public function setSpacingLineRule($value)
     {
@@ -531,7 +531,7 @@ class Paragraph extends Border
      *
      * @param int|float|string $lineHeight
      *
-     * @throws \PhpOffice\PhpWord\Exception\InvalidStyleException
+     * @throws \Alireza1250ssss\PhpWord\Exception\InvalidStyleException
      * @return self
      */
     public function setLineHeight($lineHeight)
@@ -546,7 +546,7 @@ class Paragraph extends Border
 
         $this->lineHeight = $lineHeight;
         $this->setSpacing(($lineHeight - 1) * self::LINE_HEIGHT);
-        $this->setSpacingLineRule(\PhpOffice\PhpWord\SimpleType\LineSpacingRule::AUTO);
+        $this->setSpacingLineRule(\Alireza1250ssss\PhpWord\SimpleType\LineSpacingRule::AUTO);
 
         return $this;
     }
@@ -692,7 +692,7 @@ class Paragraph extends Border
     /**
      * Get tabs
      *
-     * @return \PhpOffice\PhpWord\Style\Tab[]
+     * @return \Alireza1250ssss\PhpWord\Style\Tab[]
      */
     public function getTabs()
     {
@@ -765,7 +765,7 @@ class Paragraph extends Border
     /**
      * Get shading
      *
-     * @return \PhpOffice\PhpWord\Style\Shading
+     * @return \Alireza1250ssss\PhpWord\Style\Shading
      */
     public function getShading()
     {

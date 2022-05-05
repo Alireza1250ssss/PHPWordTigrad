@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\HTML\Element;
+namespace Alireza1250ssss\PhpWord\Writer\HTML\Element;
 
 /**
  * ListItem element HTML writer
@@ -31,7 +31,7 @@ class ListItemRun extends TextRun
      */
     public function write()
     {
-        if (!$this->element instanceof \PhpOffice\PhpWord\Element\ListItemRun) {
+        if (!$this->element instanceof \Alireza1250ssss\PhpWord\Element\ListItemRun) {
             return '';
         }
 

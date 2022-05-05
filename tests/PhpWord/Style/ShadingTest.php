@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Alireza1250ssss\PhpWord\Style;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Shading
+ * Test class for Alireza1250ssss\PhpWord\Style\Shading
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\Shading
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Style\Shading
  */
 class ShadingTest extends \PHPUnit\Framework\TestCase
 {

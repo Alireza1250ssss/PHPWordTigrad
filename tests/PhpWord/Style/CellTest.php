@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Alireza1250ssss\PhpWord\Style;
 
-use PhpOffice\PhpWord\SimpleType\VerticalJc;
+use Alireza1250ssss\PhpWord\SimpleType\VerticalJc;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Cell
+ * Test class for Alireza1250ssss\PhpWord\Style\Cell
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\Cell
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Style\Cell
  * @runTestsInSeparateProcesses
  */
 class CellTest extends \PHPUnit\Framework\TestCase

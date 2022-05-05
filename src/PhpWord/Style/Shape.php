@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Alireza1250ssss\PhpWord\Style;
 
 /**
  * Shape style
@@ -50,35 +50,35 @@ class Shape extends AbstractStyle
     /**
      * Frame
      *
-     * @var \PhpOffice\PhpWord\Style\Frame
+     * @var \Alireza1250ssss\PhpWord\Style\Frame
      */
     private $frame;
 
     /**
      * Fill
      *
-     * @var \PhpOffice\PhpWord\Style\Fill
+     * @var \Alireza1250ssss\PhpWord\Style\Fill
      */
     private $fill;
 
     /**
      * Outline
      *
-     * @var \PhpOffice\PhpWord\Style\Outline
+     * @var \Alireza1250ssss\PhpWord\Style\Outline
      */
     private $outline;
 
     /**
      * Shadow
      *
-     * @var \PhpOffice\PhpWord\Style\Shadow
+     * @var \Alireza1250ssss\PhpWord\Style\Shadow
      */
     private $shadow;
 
     /**
      * 3D extrusion
      *
-     * @var \PhpOffice\PhpWord\Style\Extrusion
+     * @var \Alireza1250ssss\PhpWord\Style\Extrusion
      */
     private $extrusion;
 
@@ -141,7 +141,7 @@ class Shape extends AbstractStyle
     /**
      * Get frame
      *
-     * @return \PhpOffice\PhpWord\Style\Frame
+     * @return \Alireza1250ssss\PhpWord\Style\Frame
      */
     public function getFrame()
     {
@@ -164,7 +164,7 @@ class Shape extends AbstractStyle
     /**
      * Get fill
      *
-     * @return \PhpOffice\PhpWord\Style\Fill
+     * @return \Alireza1250ssss\PhpWord\Style\Fill
      */
     public function getFill()
     {
@@ -187,7 +187,7 @@ class Shape extends AbstractStyle
     /**
      * Get outline
      *
-     * @return \PhpOffice\PhpWord\Style\Outline
+     * @return \Alireza1250ssss\PhpWord\Style\Outline
      */
     public function getOutline()
     {
@@ -210,7 +210,7 @@ class Shape extends AbstractStyle
     /**
      * Get shadow
      *
-     * @return \PhpOffice\PhpWord\Style\Shadow
+     * @return \Alireza1250ssss\PhpWord\Style\Shadow
      */
     public function getShadow()
     {
@@ -233,7 +233,7 @@ class Shape extends AbstractStyle
     /**
      * Get 3D extrusion
      *
-     * @return \PhpOffice\PhpWord\Style\Extrusion
+     * @return \Alireza1250ssss\PhpWord\Style\Extrusion
      */
     public function getExtrusion()
     {

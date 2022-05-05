@@ -15,13 +15,13 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Metadata;
+namespace Alireza1250ssss\PhpWord\Metadata;
 
-use PhpOffice\PhpWord\ComplexType\ProofState;
-use PhpOffice\PhpWord\SimpleType\Zoom;
+use Alireza1250ssss\PhpWord\ComplexType\ProofState;
+use Alireza1250ssss\PhpWord\SimpleType\Zoom;
 
 /**
- * Test class for PhpOffice\PhpWord\Metadata\Settings
+ * Test class for Alireza1250ssss\PhpWord\Metadata\Settings
  *
  * @runTestsInSeparateProcesses
  */

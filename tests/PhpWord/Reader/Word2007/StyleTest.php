@@ -15,17 +15,17 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Reader\Word2007;
+namespace Alireza1250ssss\PhpWord\Reader\Word2007;
 
-use PhpOffice\PhpWord\AbstractTestReader;
-use PhpOffice\PhpWord\SimpleType\TblWidth;
-use PhpOffice\PhpWord\SimpleType\VerticalJc;
-use PhpOffice\PhpWord\Style;
-use PhpOffice\PhpWord\Style\Table;
-use PhpOffice\PhpWord\Style\TablePosition;
+use Alireza1250ssss\PhpWord\AbstractTestReader;
+use Alireza1250ssss\PhpWord\SimpleType\TblWidth;
+use Alireza1250ssss\PhpWord\SimpleType\VerticalJc;
+use Alireza1250ssss\PhpWord\Style;
+use Alireza1250ssss\PhpWord\Style\Table;
+use Alireza1250ssss\PhpWord\Style\TablePosition;
 
 /**
- * Test class for PhpOffice\PhpWord\Reader\Word2007\Styles
+ * Test class for Alireza1250ssss\PhpWord\Reader\Word2007\Styles
  */
 class StyleTest extends AbstractTestReader
 {
@@ -43,8 +43,8 @@ class StyleTest extends AbstractTestReader
         $phpWord = $this->getDocumentFromString(array('document' => $documentXml));
 
         $elements = $phpWord->getSection(0)->getElements();
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\Table', $elements[0]);
-        $this->assertInstanceOf('PhpOffice\PhpWord\Style\Table', $elements[0]->getStyle());
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\Table', $elements[0]);
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Style\Table', $elements[0]->getStyle());
         $this->assertEquals(Table::LAYOUT_FIXED, $elements[0]->getStyle()->getLayout());
     }
 
@@ -62,9 +62,9 @@ class StyleTest extends AbstractTestReader
         $phpWord = $this->getDocumentFromString(array('document' => $documentXml));
 
         $elements = $phpWord->getSection(0)->getElements();
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\Table', $elements[0]);
-        $this->assertInstanceOf('PhpOffice\PhpWord\Style\Table', $elements[0]->getStyle());
-        /** @var \PhpOffice\PhpWord\Style\Table $tableStyle */
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\Table', $elements[0]);
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Style\Table', $elements[0]->getStyle());
+        /** @var \Alireza1250ssss\PhpWord\Style\Table $tableStyle */
         $tableStyle = $elements[0]->getStyle();
         $this->assertEquals(TblWidth::AUTO, $tableStyle->getUnit());
         $this->assertEquals(10.5, $tableStyle->getCellSpacing());
@@ -84,11 +84,11 @@ class StyleTest extends AbstractTestReader
         $phpWord = $this->getDocumentFromString(array('document' => $documentXml));
 
         $elements = $phpWord->getSection(0)->getElements();
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\Table', $elements[0]);
-        $this->assertInstanceOf('PhpOffice\PhpWord\Style\Table', $elements[0]->getStyle());
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\Table', $elements[0]);
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Style\Table', $elements[0]->getStyle());
         $this->assertNotNull($elements[0]->getStyle()->getPosition());
-        $this->assertInstanceOf('PhpOffice\PhpWord\Style\TablePosition', $elements[0]->getStyle()->getPosition());
-        /** @var \PhpOffice\PhpWord\Style\TablePosition $tableStyle */
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Style\TablePosition', $elements[0]->getStyle()->getPosition());
+        /** @var \Alireza1250ssss\PhpWord\Style\TablePosition $tableStyle */
         $tableStyle = $elements[0]->getStyle()->getPosition();
         $this->assertEquals(10, $tableStyle->getLeftFromText());
         $this->assertEquals(20, $tableStyle->getRightFromText());
@@ -119,12 +119,12 @@ class StyleTest extends AbstractTestReader
         $phpWord = $this->getDocumentFromString(array('document' => $documentXml));
 
         $elements = $phpWord->getSection(0)->getElements();
-        /** @var \PhpOffice\PhpWord\Element\TextRun $elements */
+        /** @var \Alireza1250ssss\PhpWord\Element\TextRun $elements */
         $textRun = $elements[0];
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\TextRun', $textRun);
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\Text', $textRun->getElement(0));
-        $this->assertInstanceOf('PhpOffice\PhpWord\Style\Font', $textRun->getElement(0)->getFontStyle());
-        /** @var \PhpOffice\PhpWord\Style\Font $fontStyle */
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\TextRun', $textRun);
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\Text', $textRun->getElement(0));
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Style\Font', $textRun->getElement(0)->getFontStyle());
+        /** @var \Alireza1250ssss\PhpWord\Style\Font $fontStyle */
         $fontStyle = $textRun->getElement(0)->getFontStyle();
         $this->assertEquals(15, $fontStyle->getPosition());
     }
@@ -140,9 +140,9 @@ class StyleTest extends AbstractTestReader
         $phpWord = $this->getDocumentFromString(array('document' => $documentXml));
 
         $elements = $phpWord->getSection(0)->getElements();
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\Table', $elements[0]);
-        $this->assertInstanceOf('PhpOffice\PhpWord\Style\Table', $elements[0]->getStyle());
-        /** @var \PhpOffice\PhpWord\Style\Table $tableStyle */
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\Table', $elements[0]);
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Style\Table', $elements[0]->getStyle());
+        /** @var \Alireza1250ssss\PhpWord\Style\Table $tableStyle */
         $tableStyle = $elements[0]->getStyle();
         $this->assertSame(TblWidth::TWIP, $tableStyle->getIndent()->getType());
         $this->assertSame(2160, $tableStyle->getIndent()->getValue());
@@ -159,9 +159,9 @@ class StyleTest extends AbstractTestReader
         $phpWord = $this->getDocumentFromString(array('document' => $documentXml));
 
         $elements = $phpWord->getSection(0)->getElements();
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\Table', $elements[0]);
-        $this->assertInstanceOf('PhpOffice\PhpWord\Style\Table', $elements[0]->getStyle());
-        /** @var \PhpOffice\PhpWord\Style\Table $tableStyle */
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\Table', $elements[0]);
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Style\Table', $elements[0]->getStyle());
+        /** @var \Alireza1250ssss\PhpWord\Style\Table $tableStyle */
         $tableStyle = $elements[0]->getStyle();
         $this->assertTrue($tableStyle->isBidiVisual());
     }
@@ -180,12 +180,12 @@ class StyleTest extends AbstractTestReader
         $phpWord = $this->getDocumentFromString(array('document' => $documentXml));
 
         $elements = $phpWord->getSection(0)->getElements();
-        /** @var \PhpOffice\PhpWord\Element\TextRun $elements */
+        /** @var \Alireza1250ssss\PhpWord\Element\TextRun $elements */
         $textRun = $elements[0];
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\TextRun', $textRun);
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\Text', $textRun->getElement(0));
-        $this->assertInstanceOf('PhpOffice\PhpWord\Style\Font', $textRun->getElement(0)->getFontStyle());
-        /** @var \PhpOffice\PhpWord\Style\Font $fontStyle */
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\TextRun', $textRun);
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\Text', $textRun->getElement(0));
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Style\Font', $textRun->getElement(0)->getFontStyle());
+        /** @var \Alireza1250ssss\PhpWord\Style\Font $fontStyle */
         $fontStyle = $textRun->getElement(0)->getFontStyle();
         $this->assertTrue($fontStyle->isHidden());
     }
@@ -212,7 +212,7 @@ class StyleTest extends AbstractTestReader
         $name = 'Heading_1';
 
         $this->getDocumentFromString(array('styles' => $documentXml));
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Font', Style::getStyle($name));
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Font', Style::getStyle($name));
     }
 
     public function testPageVerticalAlign()

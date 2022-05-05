@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\RTF\Element;
+namespace Alireza1250ssss\PhpWord\Writer\RTF\Element;
 
 /**
  * Title element RTF writer; extends from text
@@ -26,17 +26,17 @@ class Title extends Text
 {
     protected function getStyles()
     {
-        /** @var \PhpOffice\PhpWord\Element\Title $element Type hint */
+        /** @var \Alireza1250ssss\PhpWord\Element\Title $element Type hint */
         $element = $this->element;
         $style = $element->getStyle();
         $style = str_replace('Heading', 'Heading_', $style);
-        $style = \PhpOffice\PhpWord\Style::getStyle($style);
-        if ($style instanceof \PhpOffice\PhpWord\Style\Font) {
+        $style = \Alireza1250ssss\PhpWord\Style::getStyle($style);
+        if ($style instanceof \Alireza1250ssss\PhpWord\Style\Font) {
             $this->fontStyle = $style;
             $pstyle = $style->getParagraph();
-            if ($pstyle instanceof \PhpOffice\PhpWord\Style\Paragraph && $pstyle->hasPageBreakBefore()) {
+            if ($pstyle instanceof \Alireza1250ssss\PhpWord\Style\Paragraph && $pstyle->hasPageBreakBefore()) {
                 $sect = $element->getParent();
-                if ($sect instanceof \PhpOffice\PhpWord\Element\Section) {
+                if ($sect instanceof \Alireza1250ssss\PhpWord\Element\Section) {
                     $elems = $sect->getElements();
                     if ($elems[0] === $element) {
                         $pstyle = clone $pstyle;
@@ -55,7 +55,7 @@ class Title extends Text
      */
     public function write()
     {
-        /** @var \PhpOffice\PhpWord\Element\Title $element Type hint */
+        /** @var \Alireza1250ssss\PhpWord\Element\Title $element Type hint */
         $element = $this->element;
         $elementClass = str_replace('\\Writer\\RTF', '', get_class($this));
         if (!$element instanceof $elementClass || !is_string($element->getText())) {

@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\HTML\Element;
+namespace Alireza1250ssss\PhpWord\Writer\HTML\Element;
 
 /**
  * Bookmark element HTML writer
@@ -31,7 +31,7 @@ class Bookmark extends Text
      */
     public function write()
     {
-        if (!$this->element instanceof \PhpOffice\PhpWord\Element\Bookmark) {
+        if (!$this->element instanceof \Alireza1250ssss\PhpWord\Element\Bookmark) {
             return '';
         }
 

@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\SimpleType;
+namespace Alireza1250ssss\PhpWord\SimpleType;
 
-use PhpOffice\PhpWord\Shared\AbstractEnum;
+use Alireza1250ssss\PhpWord\Shared\AbstractEnum;
 
 /**
  * Document Protection Types

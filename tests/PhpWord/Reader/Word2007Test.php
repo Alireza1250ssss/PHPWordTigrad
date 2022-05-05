@@ -15,15 +15,15 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Reader;
+namespace Alireza1250ssss\PhpWord\Reader;
 
-use PhpOffice\PhpWord\IOFactory;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Alireza1250ssss\PhpWord\IOFactory;
+use Alireza1250ssss\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Reader\Word2007
+ * Test class for Alireza1250ssss\PhpWord\Reader\Word2007
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Reader\Word2007
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Reader\Word2007
  * @runTestsInSeparateProcesses
  */
 class Word2007Test extends \PHPUnit\Framework\TestCase
@@ -56,7 +56,7 @@ class Word2007Test extends \PHPUnit\Framework\TestCase
         $filename = __DIR__ . '/../_files/documents/reader.docx';
         $phpWord = IOFactory::load($filename);
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\PhpWord', $phpWord);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\PhpWord', $phpWord);
         $this->assertTrue($phpWord->getSettings()->hasDoNotTrackMoves());
         $this->assertFalse($phpWord->getSettings()->hasDoNotTrackFormatting());
         $this->assertEquals(100, $phpWord->getSettings()->getZoom());
@@ -73,7 +73,7 @@ class Word2007Test extends \PHPUnit\Framework\TestCase
         $filename = __DIR__ . '/../_files/documents/reader-2011.docx';
         $phpWord = IOFactory::load($filename);
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\PhpWord', $phpWord);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\PhpWord', $phpWord);
 
         $doc = TestHelperDOCX::getDocument($phpWord);
         $this->assertTrue($doc->elementExists('/w:document/w:body/w:p[3]/w:r/w:pict/v:shape/v:imagedata'));

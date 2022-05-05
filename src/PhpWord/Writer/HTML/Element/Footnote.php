@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\HTML\Element;
+namespace Alireza1250ssss\PhpWord\Writer\HTML\Element;
 
 /**
  * Footnote element HTML writer
@@ -38,10 +38,10 @@ class Footnote extends AbstractElement
      */
     public function write()
     {
-        if (!$this->element instanceof \PhpOffice\PhpWord\Element\Footnote) {
+        if (!$this->element instanceof \Alireza1250ssss\PhpWord\Element\Footnote) {
             return '';
         }
-        /** @var \PhpOffice\PhpWord\Writer\HTML $parentWriter Type hint */
+        /** @var \Alireza1250ssss\PhpWord\Writer\HTML $parentWriter Type hint */
         $parentWriter = $this->parentWriter;
 
         $noteId = count($parentWriter->getNotes()) + 1;

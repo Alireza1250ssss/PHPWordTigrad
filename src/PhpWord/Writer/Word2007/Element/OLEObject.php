@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Element;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007\Element;
 
-use PhpOffice\PhpWord\Writer\Word2007\Style\Image as ImageStyleWriter;
+use Alireza1250ssss\PhpWord\Writer\Word2007\Style\Image as ImageStyleWriter;
 
 /**
  * OLEObject element writer
@@ -33,7 +33,7 @@ class OLEObject extends AbstractElement
     {
         $xmlWriter = $this->getXmlWriter();
         $element = $this->getElement();
-        if (!$element instanceof \PhpOffice\PhpWord\Element\OLEObject) {
+        if (!$element instanceof \Alireza1250ssss\PhpWord\Element\OLEObject) {
             return;
         }
 

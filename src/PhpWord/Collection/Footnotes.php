@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Collection;
+namespace Alireza1250ssss\PhpWord\Collection;
 
 /**
  * Footnotes collection

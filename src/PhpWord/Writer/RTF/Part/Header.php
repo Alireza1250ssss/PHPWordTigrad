@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\RTF\Part;
+namespace Alireza1250ssss\PhpWord\Writer\RTF\Part;
 
-use PhpOffice\PhpWord\Settings;
-use PhpOffice\PhpWord\Shared\Converter;
-use PhpOffice\PhpWord\Style;
-use PhpOffice\PhpWord\Style\Font;
+use Alireza1250ssss\PhpWord\Settings;
+use Alireza1250ssss\PhpWord\Shared\Converter;
+use Alireza1250ssss\PhpWord\Style;
+use Alireza1250ssss\PhpWord\Style\Font;
 
 /**
  * RTF header part writer
@@ -210,7 +210,7 @@ class Header extends AbstractPart
     /**
      * Register border colors.
      *
-     * @param \PhpOffice\PhpWord\Style\Border $style
+     * @param \Alireza1250ssss\PhpWord\Style\Border $style
      */
     private function registerBorderColor($style)
     {
@@ -225,7 +225,7 @@ class Header extends AbstractPart
     /**
      * Register fonts and colors.
      *
-     * @param \PhpOffice\PhpWord\Style\AbstractStyle $style
+     * @param \Alireza1250ssss\PhpWord\Style\AbstractStyle $style
      */
     private function registerFontItems($style)
     {

@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Alireza1250ssss\PhpWord\Style;
 
-use PhpOffice\PhpWord\SimpleType\Jc;
+use Alireza1250ssss\PhpWord\SimpleType\Jc;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Image
+ * Test class for Alireza1250ssss\PhpWord\Style\Image
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\Image
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Style\Image
  * @runTestsInSeparateProcesses
  */
 class TextBoxTest extends \PHPUnit\Framework\TestCase

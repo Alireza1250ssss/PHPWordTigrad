@@ -3,7 +3,7 @@ include_once 'Sample_Header.php';
 
 // New Word document
 echo date('H:i:s'), ' Create new PhpWord object', EOL;
-$phpWord = new \PhpOffice\PhpWord\PhpWord();
+$phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
 
 // New portrait section
 $section = $phpWord->addSection();
@@ -17,7 +17,7 @@ $cell = $table->addCell(4500);
 $textrun = $cell->addTextRun();
 $textrun->addText('This is the header with ');
 $textrun->addLink('https://github.com/PHPOffice/PHPWord', 'PHPWord on GitHub');
-$table->addCell(4500)->addImage('resources/PhpWord.png', array('width' => 80, 'height' => 80, 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::END));
+$table->addCell(4500)->addImage('resources/PhpWord.png', array('width' => 80, 'height' => 80, 'alignment' => \Alireza1250ssss\PhpWord\SimpleType\Jc::END));
 
 // Add header for all other pages
 $subsequent = $section->addHeader();
@@ -26,7 +26,7 @@ $subsequent->addImage('resources/_mars.jpg', array('width' => 80, 'height' => 80
 
 // Add footer
 $footer = $section->addFooter();
-$footer->addPreserveText('Page {PAGE} of {NUMPAGES}.', null, array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER));
+$footer->addPreserveText('Page {PAGE} of {NUMPAGES}.', null, array('alignment' => \Alireza1250ssss\PhpWord\SimpleType\Jc::CENTER));
 $footer->addLink('https://github.com/PHPOffice/PHPWord', 'PHPWord on GitHub');
 
 // Write some text

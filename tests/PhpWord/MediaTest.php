@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord;
+namespace Alireza1250ssss\PhpWord;
 
-use PhpOffice\PhpWord\Element\Image;
+use Alireza1250ssss\PhpWord\Element\Image;
 
 /**
- * Test class for PhpOffice\PhpWord\Media
+ * Test class for Alireza1250ssss\PhpWord\Media
  *
  * @runTestsInSeparateProcesses
  */

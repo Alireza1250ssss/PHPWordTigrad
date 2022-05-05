@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\HTML\Element;
+namespace Alireza1250ssss\PhpWord\Writer\HTML\Element;
 
-use PhpOffice\PhpWord\Element\TrackChange;
-use PhpOffice\PhpWord\Settings;
-use PhpOffice\PhpWord\Style\Font;
-use PhpOffice\PhpWord\Style\Paragraph;
-use PhpOffice\PhpWord\Writer\HTML\Style\Font as FontStyleWriter;
-use PhpOffice\PhpWord\Writer\HTML\Style\Paragraph as ParagraphStyleWriter;
+use Alireza1250ssss\PhpWord\Element\TrackChange;
+use Alireza1250ssss\PhpWord\Settings;
+use Alireza1250ssss\PhpWord\Style\Font;
+use Alireza1250ssss\PhpWord\Style\Paragraph;
+use Alireza1250ssss\PhpWord\Writer\HTML\Style\Font as FontStyleWriter;
+use Alireza1250ssss\PhpWord\Writer\HTML\Style\Paragraph as ParagraphStyleWriter;
 
 /**
  * Text element HTML writer
@@ -66,7 +66,7 @@ class Text extends AbstractElement
      */
     public function write()
     {
-        /** @var \PhpOffice\PhpWord\Element\Text $element Type hint */
+        /** @var \Alireza1250ssss\PhpWord\Element\Text $element Type hint */
         $element = $this->element;
         $this->getFontStyle();
 
@@ -217,7 +217,7 @@ class Text extends AbstractElement
      */
     private function getParagraphStyle()
     {
-        /** @var \PhpOffice\PhpWord\Element\Text $element Type hint */
+        /** @var \Alireza1250ssss\PhpWord\Element\Text $element Type hint */
         $element = $this->element;
         $style = '';
         if (!method_exists($element, 'getParagraphStyle')) {
@@ -245,7 +245,7 @@ class Text extends AbstractElement
      */
     private function getFontStyle()
     {
-        /** @var \PhpOffice\PhpWord\Element\Text $element Type hint */
+        /** @var \Alireza1250ssss\PhpWord\Element\Text $element Type hint */
         $element = $this->element;
         $style = '';
         $fontStyle = $element->getFontStyle();

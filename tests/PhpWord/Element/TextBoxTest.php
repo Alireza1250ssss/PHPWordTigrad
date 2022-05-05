@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\TextBox
+ * Test class for Alireza1250ssss\PhpWord\Element\TextBox
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Element\TextBox
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Element\TextBox
  * @runTestsInSeparateProcesses
  */
 class TextBoxTest extends \PHPUnit\Framework\TestCase
@@ -32,7 +32,7 @@ class TextBoxTest extends \PHPUnit\Framework\TestCase
     {
         $oTextBox = new TextBox();
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\TextBox', $oTextBox);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\TextBox', $oTextBox);
         $this->assertNull($oTextBox->getStyle());
     }
 
@@ -53,11 +53,11 @@ class TextBoxTest extends \PHPUnit\Framework\TestCase
     {
         $oTextBox = new TextBox(
             array(
-                'width'       => \PhpOffice\PhpWord\Shared\Converter::cmToPixel(4.5),
-                'height'      => \PhpOffice\PhpWord\Shared\Converter::cmToPixel(17.5),
+                'width'       => \Alireza1250ssss\PhpWord\Shared\Converter::cmToPixel(4.5),
+                'height'      => \Alireza1250ssss\PhpWord\Shared\Converter::cmToPixel(17.5),
                 'positioning' => 'absolute',
-                'marginLeft'  => \PhpOffice\PhpWord\Shared\Converter::cmToPixel(15.4),
-                'marginTop'   => \PhpOffice\PhpWord\Shared\Converter::cmToPixel(9.9),
+                'marginLeft'  => \Alireza1250ssss\PhpWord\Shared\Converter::cmToPixel(15.4),
+                'marginTop'   => \Alireza1250ssss\PhpWord\Shared\Converter::cmToPixel(9.9),
                 'stroke'      => 0,
                 'innerMargin' => 0,
                 'borderSize'  => 1,
@@ -65,6 +65,6 @@ class TextBoxTest extends \PHPUnit\Framework\TestCase
             )
         );
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\TextBox', $oTextBox->getStyle());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\TextBox', $oTextBox->getStyle());
     }
 }

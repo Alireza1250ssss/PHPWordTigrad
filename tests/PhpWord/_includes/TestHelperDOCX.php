@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord;
+namespace Alireza1250ssss\PhpWord;
 
-use PhpOffice\PhpWord\Exception\CreateTemporaryFileException;
+use Alireza1250ssss\PhpWord\Exception\CreateTemporaryFileException;
 
 /**
  * Test helper class
@@ -36,11 +36,11 @@ class TestHelperDOCX
      *
      * @since 0.12.0 Throws CreateTemporaryFileException.
      *
-     * @param \PhpOffice\PhpWord\PhpWord $phpWord
+     * @param \Alireza1250ssss\PhpWord\PhpWord $phpWord
      * @param string $writerName
      *
-     * @throws \PhpOffice\PhpWord\Exception\CreateTemporaryFileException
-     * @return \PhpOffice\PhpWord\XmlDocument
+     * @throws \Alireza1250ssss\PhpWord\Exception\CreateTemporaryFileException
+     * @return \Alireza1250ssss\PhpWord\XmlDocument
      */
     public static function getDocument(PhpWord $phpWord, $writerName = 'Word2007')
     {

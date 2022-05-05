@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Shared;
+namespace Alireza1250ssss\PhpWord\Shared;
 
 /**
  * XMLWriter
@@ -47,7 +47,7 @@ class XMLWriter extends \XMLWriter
     private $tempFileName = '';
 
     /**
-     * Create a new \PhpOffice\PhpWord\Shared\XMLWriter instance
+     * Create a new \Alireza1250ssss\PhpWord\Shared\XMLWriter instance
      *
      * @param int $pTemporaryStorage Temporary storage location
      * @param string $pTemporaryStorageDir Temporary storage folder

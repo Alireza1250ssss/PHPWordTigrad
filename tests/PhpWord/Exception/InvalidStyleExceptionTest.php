@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Exception;
+namespace Alireza1250ssss\PhpWord\Exception;
 
 /**
- * Test class for PhpOffice\PhpWord\Exception\InvalidStyleException
+ * Test class for Alireza1250ssss\PhpWord\Exception\InvalidStyleException
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Exception\InvalidStyleException
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Exception\InvalidStyleException
  * @runTestsInSeparateProcesses
  */
 class InvalidStyleExceptionTest extends \PHPUnit\Framework\TestCase
@@ -28,8 +28,8 @@ class InvalidStyleExceptionTest extends \PHPUnit\Framework\TestCase
     /**
      * Throw new exception
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\InvalidStyleException
-     * @covers            \PhpOffice\PhpWord\Exception\InvalidStyleException
+     * @expectedException \Alireza1250ssss\PhpWord\Exception\InvalidStyleException
+     * @covers            \Alireza1250ssss\PhpWord\Exception\InvalidStyleException
      */
     public function testThrowException()
     {

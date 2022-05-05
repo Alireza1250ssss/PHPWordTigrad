@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Metadata;
+namespace Alireza1250ssss\PhpWord\Metadata;
 
-use PhpOffice\PhpWord\ComplexType\ProofState;
-use PhpOffice\PhpWord\ComplexType\TrackChangesView;
-use PhpOffice\PhpWord\SimpleType\Zoom;
-use PhpOffice\PhpWord\Style\Language;
+use Alireza1250ssss\PhpWord\ComplexType\ProofState;
+use Alireza1250ssss\PhpWord\ComplexType\TrackChangesView;
+use Alireza1250ssss\PhpWord\SimpleType\Zoom;
+use Alireza1250ssss\PhpWord\Style\Language;
 
 /**
  * Setting class
@@ -34,7 +34,7 @@ class Settings
      * Magnification Setting
      *
      * @see  http://www.datypic.com/sc/ooxml/e-w_zoom-1.html
-     * @var mixed either integer, in which case it treated as a percent, or one of PhpOffice\PhpWord\SimpleType\Zoom
+     * @var mixed either integer, in which case it treated as a percent, or one of Alireza1250ssss\PhpWord\SimpleType\Zoom
      */
     private $zoom = 100;
 
@@ -91,14 +91,14 @@ class Settings
     /**
      * Spelling and Grammatical Checking State
      *
-     * @var \PhpOffice\PhpWord\ComplexType\ProofState
+     * @var \Alireza1250ssss\PhpWord\ComplexType\ProofState
      */
     private $proofState;
 
     /**
      * Document Editing Restrictions
      *
-     * @var \PhpOffice\PhpWord\Metadata\Protection
+     * @var \Alireza1250ssss\PhpWord\Metadata\Protection
      */
     private $documentProtection;
 
@@ -255,7 +255,7 @@ class Settings
     /**
      * Get the Visibility of Annotation Types
      *
-     * @return \PhpOffice\PhpWord\ComplexType\TrackChangesView
+     * @return \Alireza1250ssss\PhpWord\ComplexType\TrackChangesView
      */
     public function getRevisionView()
     {

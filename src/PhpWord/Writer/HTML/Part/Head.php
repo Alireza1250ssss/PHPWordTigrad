@@ -15,15 +15,15 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\HTML\Part;
+namespace Alireza1250ssss\PhpWord\Writer\HTML\Part;
 
-use PhpOffice\PhpWord\Settings;
-use PhpOffice\PhpWord\Style;
-use PhpOffice\PhpWord\Style\Font;
-use PhpOffice\PhpWord\Style\Paragraph;
-use PhpOffice\PhpWord\Writer\HTML\Style\Font as FontStyleWriter;
-use PhpOffice\PhpWord\Writer\HTML\Style\Generic as GenericStyleWriter;
-use PhpOffice\PhpWord\Writer\HTML\Style\Paragraph as ParagraphStyleWriter;
+use Alireza1250ssss\PhpWord\Settings;
+use Alireza1250ssss\PhpWord\Style;
+use Alireza1250ssss\PhpWord\Style\Font;
+use Alireza1250ssss\PhpWord\Style\Paragraph;
+use Alireza1250ssss\PhpWord\Writer\HTML\Style\Font as FontStyleWriter;
+use Alireza1250ssss\PhpWord\Writer\HTML\Style\Generic as GenericStyleWriter;
+use Alireza1250ssss\PhpWord\Writer\HTML\Style\Paragraph as ParagraphStyleWriter;
 
 /**
  * RTF head part writer

@@ -3,7 +3,7 @@ include_once 'Sample_Header.php';
 
 // New Word document
 echo date('H:i:s'), ' Create new PhpWord object', EOL;
-$phpWord = new \PhpOffice\PhpWord\PhpWord();
+$phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
 
 // Define styles
 $linkFontStyleName = 'myOwnLinStyle';
@@ -16,7 +16,7 @@ $section = $phpWord->addSection();
 $section->addLink(
     'https://github.com/PHPOffice/PHPWord',
     'PHPWord on GitHub',
-    array('color' => '0000FF', 'underline' => \PhpOffice\PhpWord\Style\Font::UNDERLINE_SINGLE)
+    array('color' => '0000FF', 'underline' => \Alireza1250ssss\PhpWord\Style\Font::UNDERLINE_SINGLE)
 );
 $section->addTextBreak(2);
 $section->addLink('http://www.bing.com', null, $linkFontStyleName);

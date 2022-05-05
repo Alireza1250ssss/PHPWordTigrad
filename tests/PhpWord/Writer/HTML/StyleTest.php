@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\HTML;
+namespace Alireza1250ssss\PhpWord\Writer\HTML;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\HTML\Style subnamespace
+ * Test class for Alireza1250ssss\PhpWord\Writer\HTML\Style subnamespace
  */
 class StyleTest extends \PHPUnit\Framework\TestCase
 {
@@ -29,7 +29,7 @@ class StyleTest extends \PHPUnit\Framework\TestCase
     {
         $styles = array('Font', 'Paragraph', 'Image');
         foreach ($styles as $style) {
-            $objectClass = 'PhpOffice\\PhpWord\\Writer\\HTML\\Style\\' . $style;
+            $objectClass = 'Alireza1250ssss\\PhpWord\\Writer\\HTML\\Style\\' . $style;
             $object = new $objectClass();
 
             $this->assertEquals('', $object->write());

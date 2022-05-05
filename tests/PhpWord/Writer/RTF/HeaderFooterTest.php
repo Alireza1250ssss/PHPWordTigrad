@@ -15,19 +15,19 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\RTF;
+namespace Alireza1250ssss\PhpWord\Writer\RTF;
 
-use PhpOffice\PhpWord\Element\Footer;
-use PhpOffice\PhpWord\Writer\RTF;
+use Alireza1250ssss\PhpWord\Element\Footer;
+use Alireza1250ssss\PhpWord\Writer\RTF;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\RTF\Element subnamespace
+ * Test class for Alireza1250ssss\PhpWord\Writer\RTF\Element subnamespace
  */
 class HeaderFooterTest extends \PHPUnit\Framework\TestCase
 {
     public function testNoHeaderNoFooter()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
         $parentWriter = new RTF($phpWord);
         $section = $phpWord->addSection();
         $section->addText('Doc without header or footer');
@@ -40,7 +40,7 @@ class HeaderFooterTest extends \PHPUnit\Framework\TestCase
 
     public function testNoHeaderYesFooter()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
         $parentWriter = new RTF($phpWord);
         $section = $phpWord->addSection();
         $footer = $section->addFooter();
@@ -55,7 +55,7 @@ class HeaderFooterTest extends \PHPUnit\Framework\TestCase
 
     public function testEvenHeaderFirstFooter()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
         $phpWord->getSettings()->setEvenAndOddHeaders(true);
         $parentWriter = new RTF($phpWord);
         $section = $phpWord->addSection();

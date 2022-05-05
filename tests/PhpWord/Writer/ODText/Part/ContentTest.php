@@ -15,16 +15,16 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Part;
+namespace Alireza1250ssss\PhpWord\Writer\ODText\Part;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\SimpleType\Jc;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Alireza1250ssss\PhpWord\PhpWord;
+use Alireza1250ssss\PhpWord\SimpleType\Jc;
+use Alireza1250ssss\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\ODText\Part\Content
+ * Test class for Alireza1250ssss\PhpWord\Writer\ODText\Part\Content
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Writer\ODText\Part\Content
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Writer\ODText\Part\Content
  */
 class ContentTest extends \PHPUnit\Framework\TestCase
 {

@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Element;
+namespace Alireza1250ssss\PhpWord\Writer\ODText\Element;
 
-use PhpOffice\PhpWord\Element\TrackChange;
-use PhpOffice\PhpWord\Exception\Exception;
+use Alireza1250ssss\PhpWord\Element\TrackChange;
+use Alireza1250ssss\PhpWord\Exception\Exception;
 
 /**
  * Text element writer
@@ -34,7 +34,7 @@ class Text extends AbstractElement
     {
         $xmlWriter = $this->getXmlWriter();
         $element = $this->getElement();
-        if (!$element instanceof \PhpOffice\PhpWord\Element\Text) {
+        if (!$element instanceof \Alireza1250ssss\PhpWord\Element\Text) {
             return;
         }
         $fontStyle = $element->getFontStyle();

@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Style;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007\Style;
 
 /**
  * Paragraph indentation style writer
@@ -30,7 +30,7 @@ class Indentation extends AbstractStyle
     public function write()
     {
         $style = $this->getStyle();
-        if (!$style instanceof \PhpOffice\PhpWord\Style\Indentation) {
+        if (!$style instanceof \Alireza1250ssss\PhpWord\Style\Indentation) {
             return;
         }
         $xmlWriter = $this->getXmlWriter();

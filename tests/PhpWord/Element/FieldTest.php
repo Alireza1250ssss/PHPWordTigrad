@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\Field
+ * Test class for Alireza1250ssss\PhpWord\Element\Field
  *
  * @runTestsInSeparateProcesses
  */
@@ -31,7 +31,7 @@ class FieldTest extends \PHPUnit\Framework\TestCase
     {
         $oField = new Field();
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Field', $oField);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Field', $oField);
     }
 
     /**
@@ -41,7 +41,7 @@ class FieldTest extends \PHPUnit\Framework\TestCase
     {
         $oField = new Field('DATE');
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Field', $oField);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Field', $oField);
         $this->assertEquals('DATE', $oField->getType());
     }
 
@@ -52,7 +52,7 @@ class FieldTest extends \PHPUnit\Framework\TestCase
     {
         $oField = new Field('DATE', array('dateformat' => 'd-M-yyyy'));
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Field', $oField);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Field', $oField);
         $this->assertEquals('DATE', $oField->getType());
         $this->assertEquals(array('dateformat' => 'd-M-yyyy'), $oField->getProperties());
     }
@@ -64,7 +64,7 @@ class FieldTest extends \PHPUnit\Framework\TestCase
     {
         $oField = new Field('DATE', array('dateformat' => 'd-M-yyyy'), array('SakaEraCalendar', 'PreserveFormat'));
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Field', $oField);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Field', $oField);
         $this->assertEquals('DATE', $oField->getType());
         $this->assertEquals(array('dateformat' => 'd-M-yyyy'), $oField->getProperties());
         $this->assertEquals(array('SakaEraCalendar', 'PreserveFormat'), $oField->getOptions());
@@ -77,7 +77,7 @@ class FieldTest extends \PHPUnit\Framework\TestCase
     {
         $oField = new Field('XE', array(), array('Bold', 'Italic'), 'FieldValue');
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Field', $oField);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Field', $oField);
         $this->assertEquals('XE', $oField->getType());
         $this->assertEquals(array(), $oField->getProperties());
         $this->assertEquals(array('Bold', 'Italic'), $oField->getOptions());
@@ -94,18 +94,18 @@ class FieldTest extends \PHPUnit\Framework\TestCase
 
         $oField = new Field('XE', array(), array('Bold', 'Italic'), $textRun);
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Field', $oField);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Field', $oField);
         $this->assertEquals('XE', $oField->getType());
         $this->assertEquals(array(), $oField->getProperties());
         $this->assertEquals(array('Bold', 'Italic'), $oField->getOptions());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\TextRun', $oField->getText());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\TextRun', $oField->getText());
     }
 
     public function testConstructWithOptionValue()
     {
         $oField = new Field('INDEX', array(), array('\\c "3" \\h "A"'));
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Field', $oField);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Field', $oField);
         $this->assertEquals('INDEX', $oField->getType());
         $this->assertEquals(array(), $oField->getProperties());
         $this->assertEquals(array('\\c "3" \\h "A"'), $oField->getOptions());

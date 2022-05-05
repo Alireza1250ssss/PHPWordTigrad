@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Style;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007\Style;
 
 /**
  * Shape style writer
@@ -30,7 +30,7 @@ class Shape extends AbstractStyle
     public function write()
     {
         $style = $this->getStyle();
-        if (!$style instanceof \PhpOffice\PhpWord\Style\Shape) {
+        if (!$style instanceof \Alireza1250ssss\PhpWord\Style\Shape) {
             return;
         }
 

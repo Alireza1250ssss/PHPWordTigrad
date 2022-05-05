@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Part;
+namespace Alireza1250ssss\PhpWord\Writer\ODText\Part;
 
-use PhpOffice\PhpWord\Writer\ODText;
+use Alireza1250ssss\PhpWord\Writer\ODText;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\ODText\Part\AbstractPart
+ * Test class for Alireza1250ssss\PhpWord\Writer\ODText\Part\AbstractPart
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Writer\ODText\Part\AbstractPart
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Writer\ODText\Part\AbstractPart
  */
 class AbstractPartTest extends \PHPUnit\Framework\TestCase
 {
@@ -32,7 +32,7 @@ class AbstractPartTest extends \PHPUnit\Framework\TestCase
      */
     public function testSetGetParentWriter()
     {
-        $object = $this->getMockForAbstractClass('PhpOffice\\PhpWord\\Writer\\ODText\\Part\\AbstractPart');
+        $object = $this->getMockForAbstractClass('Alireza1250ssss\\PhpWord\\Writer\\ODText\\Part\\AbstractPart');
         $object->setParentWriter(new ODText());
         $this->assertEquals(new ODText(), $object->getParentWriter());
     }
@@ -45,7 +45,7 @@ class AbstractPartTest extends \PHPUnit\Framework\TestCase
      */
     public function testSetGetParentWriterNull()
     {
-        $object = $this->getMockForAbstractClass('PhpOffice\\PhpWord\\Writer\\ODText\\Part\\AbstractPart');
+        $object = $this->getMockForAbstractClass('Alireza1250ssss\\PhpWord\\Writer\\ODText\\Part\\AbstractPart');
         $object->getParentWriter();
     }
 }

@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\Footnote
+ * Test class for Alireza1250ssss\PhpWord\Element\Footnote
  *
  * @runTestsInSeparateProcesses
  */
@@ -31,7 +31,7 @@ class FootnoteTest extends \PHPUnit\Framework\TestCase
     {
         $oFootnote = new Footnote();
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Footnote', $oFootnote);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Footnote', $oFootnote);
         $this->assertCount(0, $oFootnote->getElements());
         $this->assertNull($oFootnote->getParagraphStyle());
     }
@@ -54,7 +54,7 @@ class FootnoteTest extends \PHPUnit\Framework\TestCase
         $oFootnote = new Footnote(array('spacing' => 100));
 
         $this->assertInstanceOf(
-            'PhpOffice\\PhpWord\\Style\\Paragraph',
+            'Alireza1250ssss\\PhpWord\\Style\\Paragraph',
             $oFootnote->getParagraphStyle()
         );
     }
@@ -68,7 +68,7 @@ class FootnoteTest extends \PHPUnit\Framework\TestCase
         $element = $oFootnote->addText('text');
 
         $this->assertCount(1, $oFootnote->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Text', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Text', $element);
     }
 
     /**
@@ -91,7 +91,7 @@ class FootnoteTest extends \PHPUnit\Framework\TestCase
         $element = $oFootnote->addLink('https://github.com/PHPOffice/PHPWord');
 
         $this->assertCount(1, $oFootnote->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Link', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Link', $element);
     }
 
     /**

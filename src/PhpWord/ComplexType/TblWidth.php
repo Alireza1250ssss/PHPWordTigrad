@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\ComplexType;
+namespace Alireza1250ssss\PhpWord\ComplexType;
 
-use PhpOffice\PhpWord\SimpleType\TblWidth as TblWidthSimpleType;
+use Alireza1250ssss\PhpWord\SimpleType\TblWidth as TblWidthSimpleType;
 
 /**
  * @see http://www.datypic.com/sc/ooxml/t-w_CT_TblWidth.html

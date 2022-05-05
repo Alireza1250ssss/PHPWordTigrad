@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Alireza1250ssss\PhpWord\Style;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\SimpleType\Jc;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Alireza1250ssss\PhpWord\PhpWord;
+use Alireza1250ssss\PhpWord\SimpleType\Jc;
+use Alireza1250ssss\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Font
+ * Test class for Alireza1250ssss\PhpWord\Style\Font
  *
  * @runTestsInSeparateProcesses
  */
@@ -44,7 +44,7 @@ class FontTest extends \PHPUnit\Framework\TestCase
         $object = new Font('text', array('alignment' => Jc::BOTH));
 
         $this->assertEquals('text', $object->getStyleType());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Paragraph', $object->getParagraphStyle());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Paragraph', $object->getParagraphStyle());
         $this->assertInternalType('array', $object->getStyleValues());
     }
 
@@ -172,7 +172,7 @@ class FontTest extends \PHPUnit\Framework\TestCase
     /**
      * Test line height exception by using nonnumeric value
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\InvalidStyleException
+     * @expectedException \Alireza1250ssss\PhpWord\Exception\InvalidStyleException
      */
     public function testLineHeightException()
     {
@@ -187,7 +187,7 @@ class FontTest extends \PHPUnit\Framework\TestCase
     {
         $object = new Font();
         $object->setLang(Language::FR_BE);
-        $this->assertInstanceOf('PhpOffice\PhpWord\Style\Language', $object->getLang());
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Style\Language', $object->getLang());
         $this->assertEquals(Language::FR_BE, $object->getLang()->getLatin());
     }
 }

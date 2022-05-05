@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Element;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007\Element;
 
-use PhpOffice\PhpWord\Element\Line as LineElement;
-use PhpOffice\PhpWord\Writer\Word2007\Style\Line as LineStyleWriter;
+use Alireza1250ssss\PhpWord\Element\Line as LineElement;
+use Alireza1250ssss\PhpWord\Writer\Word2007\Style\Line as LineStyleWriter;
 
 /**
  * Line element writer

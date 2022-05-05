@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
-use PhpOffice\PhpWord\AbstractWebServerEmbeddedTest;
+use Alireza1250ssss\PhpWord\AbstractWebServerEmbeddedTest;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\Footer
+ * Test class for Alireza1250ssss\PhpWord\Element\Footer
  *
  * @runTestsInSeparateProcesses
  */
@@ -34,7 +34,7 @@ class FooterTest extends AbstractWebServerEmbeddedTest
         $iVal = rand(1, 1000);
         $oFooter = new Footer($iVal);
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Footer', $oFooter);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Footer', $oFooter);
         $this->assertEquals($iVal, $oFooter->getSectionId());
     }
 
@@ -47,7 +47,7 @@ class FooterTest extends AbstractWebServerEmbeddedTest
         $element = $oFooter->addText('text');
 
         $this->assertCount(1, $oFooter->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Text', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Text', $element);
     }
 
     /**
@@ -59,7 +59,7 @@ class FooterTest extends AbstractWebServerEmbeddedTest
         $element = $oFooter->addText(utf8_decode('ééé'));
 
         $this->assertCount(1, $oFooter->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Text', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Text', $element);
         $this->assertEquals('ééé', $element->getText());
     }
 
@@ -84,7 +84,7 @@ class FooterTest extends AbstractWebServerEmbeddedTest
         $element = $oFooter->addTextRun();
 
         $this->assertCount(1, $oFooter->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\TextRun', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\TextRun', $element);
     }
 
     /**
@@ -96,7 +96,7 @@ class FooterTest extends AbstractWebServerEmbeddedTest
         $element = $oFooter->addTable();
 
         $this->assertCount(1, $oFooter->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Table', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Table', $element);
     }
 
     /**
@@ -109,7 +109,7 @@ class FooterTest extends AbstractWebServerEmbeddedTest
         $element = $oFooter->addImage($src);
 
         $this->assertCount(1, $oFooter->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Image', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Image', $element);
     }
 
     /**
@@ -121,7 +121,7 @@ class FooterTest extends AbstractWebServerEmbeddedTest
         $element = $oFooter->addImage(self::getRemoteGifImageUrl());
 
         $this->assertCount(1, $oFooter->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Image', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Image', $element);
     }
 
     /**
@@ -133,7 +133,7 @@ class FooterTest extends AbstractWebServerEmbeddedTest
         $element = $oFooter->addPreserveText('text');
 
         $this->assertCount(1, $oFooter->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\PreserveText', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\PreserveText', $element);
     }
 
     /**
@@ -145,7 +145,7 @@ class FooterTest extends AbstractWebServerEmbeddedTest
         $element = $oFooter->addPreserveText(utf8_decode('ééé'));
 
         $this->assertCount(1, $oFooter->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\PreserveText', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\PreserveText', $element);
         $this->assertEquals(array('ééé'), $element->getText());
     }
 

@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Part;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007\Part;
 
-use PhpOffice\PhpWord\Writer\Word2007\Element\Container;
+use Alireza1250ssss\PhpWord\Writer\Word2007\Element\Container;
 
 /**
  * Word2007 footer part writer: word/footerx.xml
@@ -34,7 +34,7 @@ class Footer extends AbstractPart
     /**
      * Footer/header element to be written
      *
-     * @var \PhpOffice\PhpWord\Element\Footer
+     * @var \Alireza1250ssss\PhpWord\Element\Footer
      */
     protected $element;
 
@@ -71,7 +71,7 @@ class Footer extends AbstractPart
     /**
      * Set element
      *
-     * @param \PhpOffice\PhpWord\Element\Footer|\PhpOffice\PhpWord\Element\Header $element
+     * @param \Alireza1250ssss\PhpWord\Element\Footer|\Alireza1250ssss\PhpWord\Element\Header $element
      * @return self
      */
     public function setElement($element)

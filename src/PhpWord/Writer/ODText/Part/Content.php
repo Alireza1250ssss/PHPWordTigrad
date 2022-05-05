@@ -15,23 +15,23 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Part;
+namespace Alireza1250ssss\PhpWord\Writer\ODText\Part;
 
-use PhpOffice\PhpWord\Element\AbstractContainer;
-use PhpOffice\PhpWord\Element\Field;
-use PhpOffice\PhpWord\Element\Image;
-use PhpOffice\PhpWord\Element\Table;
-use PhpOffice\PhpWord\Element\Text;
-use PhpOffice\PhpWord\Element\TextRun;
-use PhpOffice\PhpWord\Element\TrackChange;
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Shared\XMLWriter;
-use PhpOffice\PhpWord\Style;
-use PhpOffice\PhpWord\Style\Font;
-use PhpOffice\PhpWord\Style\Paragraph;
-use PhpOffice\PhpWord\Style\Table as TableStyle;
-use PhpOffice\PhpWord\Writer\ODText\Element\Container;
-use PhpOffice\PhpWord\Writer\ODText\Style\Paragraph as ParagraphStyleWriter;
+use Alireza1250ssss\PhpWord\Element\AbstractContainer;
+use Alireza1250ssss\PhpWord\Element\Field;
+use Alireza1250ssss\PhpWord\Element\Image;
+use Alireza1250ssss\PhpWord\Element\Table;
+use Alireza1250ssss\PhpWord\Element\Text;
+use Alireza1250ssss\PhpWord\Element\TextRun;
+use Alireza1250ssss\PhpWord\Element\TrackChange;
+use Alireza1250ssss\PhpWord\PhpWord;
+use Alireza1250ssss\PhpWord\Shared\XMLWriter;
+use Alireza1250ssss\PhpWord\Style;
+use Alireza1250ssss\PhpWord\Style\Font;
+use Alireza1250ssss\PhpWord\Style\Paragraph;
+use Alireza1250ssss\PhpWord\Style\Table as TableStyle;
+use Alireza1250ssss\PhpWord\Writer\ODText\Element\Container;
+use Alireza1250ssss\PhpWord\Writer\ODText\Style\Paragraph as ParagraphStyleWriter;
 
 /**
  * ODText content part writer: content.xml
@@ -151,7 +151,7 @@ class Content extends AbstractPart
      *
      * @since 0.11.0
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLWriter $xmlWriter
+     * @param \Alireza1250ssss\PhpWord\Shared\XMLWriter $xmlWriter
      */
     private function writeAutoStyles(XMLWriter $xmlWriter)
     {
@@ -159,9 +159,9 @@ class Content extends AbstractPart
 
         $this->writeTextStyles($xmlWriter);
         foreach ($this->autoStyles as $element => $styles) {
-            $writerClass = 'PhpOffice\\PhpWord\\Writer\\ODText\\Style\\' . $element;
+            $writerClass = 'Alireza1250ssss\\PhpWord\\Writer\\ODText\\Style\\' . $element;
             foreach ($styles as $style) {
-                /** @var \PhpOffice\PhpWord\Writer\ODText\Style\AbstractStyle $styleWriter Type hint */
+                /** @var \Alireza1250ssss\PhpWord\Writer\ODText\Style\AbstractStyle $styleWriter Type hint */
                 $styleWriter = new $writerClass($xmlWriter, $style);
                 $styleWriter->write();
             }
@@ -173,7 +173,7 @@ class Content extends AbstractPart
     /**
      * Write automatic styles.
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLWriter $xmlWriter
+     * @param \Alireza1250ssss\PhpWord\Shared\XMLWriter $xmlWriter
      */
     private function writeTextStyles(XMLWriter $xmlWriter)
     {
@@ -219,7 +219,7 @@ class Content extends AbstractPart
             if ($style->isAuto() === true) {
                 $styleClass = str_replace('\\Style\\', '\\Writer\\ODText\\Style\\', get_class($style));
                 if (class_exists($styleClass)) {
-                    /** @var \PhpOffice\PhpWord\Writer\ODText\Style\AbstractStyle $styleWriter Type hint */
+                    /** @var \Alireza1250ssss\PhpWord\Writer\ODText\Style\AbstractStyle $styleWriter Type hint */
                     $styleWriter = new $styleClass($xmlWriter, $style);
                     $styleWriter->write();
                 }
@@ -229,7 +229,7 @@ class Content extends AbstractPart
             }
         }
         foreach ($this->imageParagraphStyles as $style) {
-            $styleWriter = new \PhpOffice\PhpWord\Writer\ODText\Style\Paragraph($xmlWriter, $style);
+            $styleWriter = new \Alireza1250ssss\PhpWord\Writer\ODText\Style\Paragraph($xmlWriter, $style);
             $styleWriter->write();
         }
     }
@@ -237,7 +237,7 @@ class Content extends AbstractPart
     /**
      * Get automatic styles.
      *
-     * @param \PhpOffice\PhpWord\PhpWord $phpWord
+     * @param \Alireza1250ssss\PhpWord\PhpWord $phpWord
      */
     private function getAutoStyles(PhpWord $phpWord)
     {
@@ -257,7 +257,7 @@ class Content extends AbstractPart
      *
      * Table style can be null or string of the style name
      *
-     * @param \PhpOffice\PhpWord\Element\AbstractContainer $container
+     * @param \Alireza1250ssss\PhpWord\Element\AbstractContainer $container
      * @param int $paragraphStyleCount
      * @param int $fontStyleCount
      * @todo Simplify the logic
@@ -277,13 +277,13 @@ class Content extends AbstractPart
                 $style = $element->getStyle();
                 $style->setStyleName('fr' . $element->getMediaIndex());
                 $this->autoStyles['Image'][] = $style;
-                $sty = new \PhpOffice\PhpWord\Style\Paragraph();
+                $sty = new \Alireza1250ssss\PhpWord\Style\Paragraph();
                 $sty->setStyleName('IM' . $element->getMediaIndex());
                 $sty->setAuto();
                 $sty->setAlignment($style->getAlignment());
                 $this->imageParagraphStyles[] = $sty;
             } elseif ($element instanceof Table) {
-                /** @var \PhpOffice\PhpWord\Style\Table $style */
+                /** @var \Alireza1250ssss\PhpWord\Style\Table $style */
                 $style = $element->getStyle();
                 if (is_string($style)) {
                     $style = Style::getStyle($style);
@@ -301,7 +301,7 @@ class Content extends AbstractPart
     /**
      * Get style of individual element
      *
-     * @param \PhpOffice\PhpWord\Element\Text $element
+     * @param \Alireza1250ssss\PhpWord\Element\Text $element
      * @param int $paragraphStyleCount
      * @param int $fontStyleCount
      */
@@ -347,7 +347,7 @@ class Content extends AbstractPart
     /**
      * Get font style of individual field element
      *
-     * @param \PhpOffice\PhpWord\Element\Field $element
+     * @param \Alireza1250ssss\PhpWord\Element\Field $element
      * @param int $paragraphStyleCount
      * @param int $fontStyleCount
      */
@@ -373,7 +373,7 @@ class Content extends AbstractPart
     /**
      * Get style of individual element
      *
-     * @param \PhpOffice\PhpWord\Element\TextRun $element
+     * @param \Alireza1250ssss\PhpWord\Element\TextRun $element
      * @param int $paragraphStyleCount
      */
     private function getElementStyleTextRun($element, &$paragraphStyleCount)
@@ -405,7 +405,7 @@ class Content extends AbstractPart
      * Finds all tracked changes
      *
      * @param AbstractContainer $container
-     * @param \PhpOffice\PhpWord\Element\AbstractElement[] $trackedChanges
+     * @param \Alireza1250ssss\PhpWord\Element\AbstractElement[] $trackedChanges
      */
     private function collectTrackedChanges(AbstractContainer $container, &$trackedChanges = array())
     {

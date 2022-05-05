@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Alireza1250ssss\PhpWord\Style;
 
-use PhpOffice\PhpWord\SimpleType\Jc;
+use Alireza1250ssss\PhpWord\SimpleType\Jc;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Image
+ * Test class for Alireza1250ssss\PhpWord\Style\Image
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\Image
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Style\Image
  * @runTestsInSeparateProcesses
  */
 class ImageTest extends \PHPUnit\Framework\TestCase
@@ -68,11 +68,11 @@ class ImageTest extends \PHPUnit\Framework\TestCase
             'marginTop'          => 240,
             'marginLeft'         => 240,
             'position'           => 10,
-            'positioning'        => \PhpOffice\PhpWord\Style\Image::POSITION_ABSOLUTE,
-            'posHorizontal'      => \PhpOffice\PhpWord\Style\Image::POSITION_HORIZONTAL_CENTER,
-            'posVertical'        => \PhpOffice\PhpWord\Style\Image::POSITION_VERTICAL_TOP,
-            'posHorizontalRel'   => \PhpOffice\PhpWord\Style\Image::POSITION_RELATIVE_TO_COLUMN,
-            'posVerticalRel'     => \PhpOffice\PhpWord\Style\Image::POSITION_RELATIVE_TO_IMARGIN,
+            'positioning'        => \Alireza1250ssss\PhpWord\Style\Image::POSITION_ABSOLUTE,
+            'posHorizontal'      => \Alireza1250ssss\PhpWord\Style\Image::POSITION_HORIZONTAL_CENTER,
+            'posVertical'        => \Alireza1250ssss\PhpWord\Style\Image::POSITION_VERTICAL_TOP,
+            'posHorizontalRel'   => \Alireza1250ssss\PhpWord\Style\Image::POSITION_RELATIVE_TO_COLUMN,
+            'posVerticalRel'     => \Alireza1250ssss\PhpWord\Style\Image::POSITION_RELATIVE_TO_IMARGIN,
             'wrapDistanceLeft'   => 10,
             'wrapDistanceRight'  => 20,
             'wrapDistanceTop'    => 30,

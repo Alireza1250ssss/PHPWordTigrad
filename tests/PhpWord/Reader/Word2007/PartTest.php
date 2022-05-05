@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Reader\Word2007;
+namespace Alireza1250ssss\PhpWord\Reader\Word2007;
 
-use PhpOffice\PhpWord\AbstractTestReader;
+use Alireza1250ssss\PhpWord\AbstractTestReader;
 
 /**
- * Test class for PhpOffice\PhpWord\Reader\Word2007 subnamespace
+ * Test class for Alireza1250ssss\PhpWord\Reader\Word2007 subnamespace
  */
 class PartTest extends AbstractTestReader
 {
@@ -116,48 +116,48 @@ class PartTest extends AbstractTestReader
         $phpWord = $this->getDocumentFromString(array('document' => $documentXml, 'footnotes' => $footnotesXml, 'endnotes' => $endnotesXml));
 
         $elements = $phpWord->getSection(0)->getElements();
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\TextRun', $elements[0]);
-        /** @var \PhpOffice\PhpWord\Element\TextRun $textRun */
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\TextRun', $elements[0]);
+        /** @var \Alireza1250ssss\PhpWord\Element\TextRun $textRun */
         $textRun = $elements[0];
 
         //test the text in the first paragraph
-        /** @var \PhpOffice\PhpWord\Element\Text $text */
+        /** @var \Alireza1250ssss\PhpWord\Element\Text $text */
         $text = $elements[0]->getElement(0);
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\Text', $text);
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\Text', $text);
         $this->assertEquals('This is a test', $text->getText());
 
         //test the presence of the footnote in the document.xml
-        /** @var \PhpOffice\PhpWord\Element\Footnote $footnote */
+        /** @var \Alireza1250ssss\PhpWord\Element\Footnote $footnote */
         $documentFootnote = $textRun->getElement(1);
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\Footnote', $documentFootnote);
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\Footnote', $documentFootnote);
         $this->assertEquals(1, $documentFootnote->getRelationId());
 
         //test the presence of the footnote in the footnote.xml
-        /** @var \PhpOffice\PhpWord\Element\Footnote $footnote */
+        /** @var \Alireza1250ssss\PhpWord\Element\Footnote $footnote */
         $footnote = $phpWord->getFootnotes()->getItem(1);
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\Footnote', $footnote);
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\Text', $footnote->getElement(0));
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\Footnote', $footnote);
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\Text', $footnote->getElement(0));
         $this->assertEquals('footnote text', $footnote->getElement(0)->getText());
         $this->assertEquals(1, $footnote->getRelationId());
 
         //test the text in the second paragraph
-        /** @var \PhpOffice\PhpWord\Element\Text $text */
+        /** @var \Alireza1250ssss\PhpWord\Element\Text $text */
         $text = $elements[1]->getElement(0);
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\Text', $text);
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\Text', $text);
         $this->assertEquals('And another one', $text->getText());
 
         //test the presence of the endnote in the document.xml
-        /** @var \PhpOffice\PhpWord\Element\Endnote $endnote */
+        /** @var \Alireza1250ssss\PhpWord\Element\Endnote $endnote */
         $documentEndnote = $elements[1]->getElement(1);
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\Endnote', $documentEndnote);
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\Endnote', $documentEndnote);
         $this->assertEquals(2, $documentEndnote->getRelationId());
 
         //test the presence of the endnote in the endnote.xml
-        /** @var \PhpOffice\PhpWord\Element\Endnote $endnote */
+        /** @var \Alireza1250ssss\PhpWord\Element\Endnote $endnote */
         $endnote = $phpWord->getEndnotes()->getItem(1);
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\Endnote', $endnote);
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\Endnote', $endnote);
         $this->assertEquals(2, $endnote->getRelationId());
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\Text', $endnote->getElement(0));
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\Text', $endnote->getElement(0));
         $this->assertEquals('This is an endnote', $endnote->getElement(0)->getText());
     }
 
@@ -211,25 +211,25 @@ class PartTest extends AbstractTestReader
         $phpWord = $this->getDocumentFromString(array('document' => $documentXml, 'styles' => $stylesXml));
 
         $elements = $phpWord->getSection(0)->getElements();
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\Title', $elements[0]);
-        /** @var \PhpOffice\PhpWord\Element\Title $title */
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\Title', $elements[0]);
+        /** @var \Alireza1250ssss\PhpWord\Element\Title $title */
         $title = $elements[0];
         $this->assertEquals('Heading1', $title->getStyle());
 
-        /** @var \PhpOffice\PhpWord\Element\Text $text */
+        /** @var \Alireza1250ssss\PhpWord\Element\Text $text */
         $text = $title->getText()->getElement(0);
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\Text', $text);
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\Text', $text);
         $this->assertEquals('This is a bold ', $text->getText());
 
-        /** @var \PhpOffice\PhpWord\Element\Text $text */
+        /** @var \Alireza1250ssss\PhpWord\Element\Text $text */
         $text = $title->getText()->getElement(1);
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\Text', $text);
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\Text', $text);
         $this->assertEquals('heading', $text->getText());
         $this->assertFalse($text->getFontStyle()->isBold());
 
-        /** @var \PhpOffice\PhpWord\Element\Text $text */
+        /** @var \Alireza1250ssss\PhpWord\Element\Text $text */
         $text = $title->getText()->getElement(2);
-        $this->assertInstanceOf('PhpOffice\PhpWord\Element\Text', $text);
+        $this->assertInstanceOf('Alireza1250ssss\PhpWord\Element\Text', $text);
         $this->assertEquals(' but with parts not in bold', $text->getText());
     }
 }

@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\HTML\Style;
+namespace Alireza1250ssss\PhpWord\Writer\HTML\Style;
 
-use PhpOffice\PhpWord\SimpleType\Jc;
+use Alireza1250ssss\PhpWord\SimpleType\Jc;
 
 /**
  * Paragraph style HTML writer
@@ -34,7 +34,7 @@ class Paragraph extends AbstractStyle
     public function write()
     {
         $style = $this->getStyle();
-        if (!$style instanceof \PhpOffice\PhpWord\Style\Paragraph) {
+        if (!$style instanceof \Alireza1250ssss\PhpWord\Style\Paragraph) {
             return '';
         }
         $css = array();

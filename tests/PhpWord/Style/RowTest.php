@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Alireza1250ssss\PhpWord\Style;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Row
+ * Test class for Alireza1250ssss\PhpWord\Style\Row
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\Row
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Style\Row
  * @runTestsInSeparateProcesses
  */
 class RowTest extends \PHPUnit\Framework\TestCase

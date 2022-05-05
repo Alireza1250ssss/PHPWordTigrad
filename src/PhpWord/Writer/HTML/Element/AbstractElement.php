@@ -15,11 +15,11 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\HTML\Element;
+namespace Alireza1250ssss\PhpWord\Writer\HTML\Element;
 
 use Laminas\Escaper\Escaper;
-use PhpOffice\PhpWord\Element\AbstractElement as Element;
-use PhpOffice\PhpWord\Writer\AbstractWriter;
+use Alireza1250ssss\PhpWord\Element\AbstractElement as Element;
+use Alireza1250ssss\PhpWord\Writer\AbstractWriter;
 
 /**
  * Abstract HTML element writer
@@ -31,14 +31,14 @@ abstract class AbstractElement
     /**
      * Parent writer
      *
-     * @var \PhpOffice\PhpWord\Writer\AbstractWriter
+     * @var \Alireza1250ssss\PhpWord\Writer\AbstractWriter
      */
     protected $parentWriter;
 
     /**
      * Element
      *
-     * @var \PhpOffice\PhpWord\Element\AbstractElement
+     * @var \Alireza1250ssss\PhpWord\Element\AbstractElement
      */
     protected $element;
 
@@ -50,7 +50,7 @@ abstract class AbstractElement
     protected $withoutP = false;
 
     /**
-     * @var \Laminas\Escaper\Escaper|\PhpOffice\PhpWord\Escaper\AbstractEscaper
+     * @var \Laminas\Escaper\Escaper|\Alireza1250ssss\PhpWord\Escaper\AbstractEscaper
      */
     protected $escaper;
 
@@ -62,8 +62,8 @@ abstract class AbstractElement
     /**
      * Create new instance
      *
-     * @param \PhpOffice\PhpWord\Writer\AbstractWriter $parentWriter
-     * @param \PhpOffice\PhpWord\Element\AbstractElement $element
+     * @param \Alireza1250ssss\PhpWord\Writer\AbstractWriter $parentWriter
+     * @param \Alireza1250ssss\PhpWord\Element\AbstractElement $element
      * @param bool $withoutP
      */
     public function __construct(AbstractWriter $parentWriter, Element $element, $withoutP = false)

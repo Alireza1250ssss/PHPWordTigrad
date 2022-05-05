@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord;
+namespace Alireza1250ssss\PhpWord;
 
-use PhpOffice\PhpWord\Metadata\DocInfo;
+use Alireza1250ssss\PhpWord\Metadata\DocInfo;
 
 /**
- * Test class for PhpOffice\PhpWord\PhpWord
+ * Test class for Alireza1250ssss\PhpWord\PhpWord
  *
  * @runTestsInSeparateProcesses
  */
@@ -78,7 +78,7 @@ class PhpWordTest extends \PHPUnit\Framework\TestCase
     {
         $phpWord = new PhpWord();
         $phpWord->setDefaultParagraphStyle(array());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Paragraph', Style::getStyle('Normal'));
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Paragraph', Style::getStyle('Normal'));
     }
 
     /**
@@ -97,7 +97,7 @@ class PhpWordTest extends \PHPUnit\Framework\TestCase
             $method = "add{$key}Style";
             $styleId = "{$key} Style";
             $phpWord->$method($styleId, array());
-            $this->assertInstanceOf("PhpOffice\\PhpWord\\Style\\{$value}", Style::getStyle($styleId));
+            $this->assertInstanceOf("Alireza1250ssss\\PhpWord\\Style\\{$value}", Style::getStyle($styleId));
         }
     }
 
@@ -110,7 +110,7 @@ class PhpWordTest extends \PHPUnit\Framework\TestCase
         $titleLevel = 1;
         $titleName = "Heading_{$titleLevel}";
         $phpWord->addTitleStyle($titleLevel, array());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Font', Style::getStyle($titleName));
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Font', Style::getStyle($titleName));
     }
 
     /**
@@ -124,7 +124,7 @@ class PhpWordTest extends \PHPUnit\Framework\TestCase
 
         $phpWord = new PhpWord();
         $this->assertInstanceOf(
-            'PhpOffice\\PhpWord\\TemplateProcessor',
+            'Alireza1250ssss\\PhpWord\\TemplateProcessor',
             $phpWord->loadTemplate($templateFqfn)
         );
     }
@@ -134,7 +134,7 @@ class PhpWordTest extends \PHPUnit\Framework\TestCase
      *
      * @deprecated 0.12.0
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\Exception
+     * @expectedException \Alireza1250ssss\PhpWord\Exception\Exception
      */
     public function testLoadTemplateException()
     {
@@ -173,7 +173,7 @@ class PhpWordTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers \PhpOffice\PhpWord\PhpWord::getSection
+     * @covers \Alireza1250ssss\PhpWord\PhpWord::getSection
      */
     public function testGetNotExistingSection()
     {
@@ -184,7 +184,7 @@ class PhpWordTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers \PhpOffice\PhpWord\PhpWord::getSection
+     * @covers \Alireza1250ssss\PhpWord\PhpWord::getSection
      */
     public function testGetSection()
     {
@@ -196,7 +196,7 @@ class PhpWordTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers \PhpOffice\PhpWord\PhpWord::sortSections
+     * @covers \Alireza1250ssss\PhpWord\PhpWord::sortSections
      */
     public function testSortSections()
     {
@@ -227,11 +227,11 @@ class PhpWordTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers \PhpOffice\PhpWord\PhpWord::getSettings
+     * @covers \Alireza1250ssss\PhpWord\PhpWord::getSettings
      */
     public function testGetSettings()
     {
         $phpWord = new PhpWord();
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Metadata\\Settings', $phpWord->getSettings());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Metadata\\Settings', $phpWord->getSettings());
     }
 }

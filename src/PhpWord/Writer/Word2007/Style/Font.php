@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Style;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007\Style;
 
 /**
  * Font style writer
@@ -44,8 +44,8 @@ class Font extends AbstractStyle
             $xmlWriter->startElement('w:rStyle');
             $xmlWriter->writeAttribute('w:val', $this->style);
             $xmlWriter->endElement();
-            $style = \PhpOffice\PhpWord\Style::getStyle($this->style);
-            if ($style instanceof \PhpOffice\PhpWord\Style\Font) {
+            $style = \Alireza1250ssss\PhpWord\Style::getStyle($this->style);
+            if ($style instanceof \Alireza1250ssss\PhpWord\Style\Font) {
                 $xmlWriter->writeElementIf($style->isRTL(), 'w:rtl');
             }
             $xmlWriter->endElement();
@@ -60,7 +60,7 @@ class Font extends AbstractStyle
     private function writeStyle()
     {
         $style = $this->getStyle();
-        if (!$style instanceof \PhpOffice\PhpWord\Style\Font) {
+        if (!$style instanceof \Alireza1250ssss\PhpWord\Style\Font) {
             return;
         }
 

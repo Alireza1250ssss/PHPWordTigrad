@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\Header
+ * Test class for Alireza1250ssss\PhpWord\Element\Header
  *
  * @runTestsInSeparateProcesses
  */
@@ -38,7 +38,7 @@ class CommentTest extends \PHPUnit\Framework\TestCase
         $oComment->setStartElement($oText);
         $oComment->setEndElement($oText);
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Comment', $oComment);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Comment', $oComment);
         $this->assertEquals($author, $oComment->getAuthor());
         $this->assertEquals($date, $oComment->getDate());
         $this->assertEquals($initials, $oComment->getInitials());
@@ -54,7 +54,7 @@ class CommentTest extends \PHPUnit\Framework\TestCase
         $oComment = new Comment('Test User', new \DateTime(), 'my_initials');
         $element = $oComment->addText('text');
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Text', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Text', $element);
         $this->assertCount(1, $oComment->getElements());
         $this->assertEquals('text', $element->getText());
     }

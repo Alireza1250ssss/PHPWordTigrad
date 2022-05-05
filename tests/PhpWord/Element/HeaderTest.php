@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
-use PhpOffice\PhpWord\AbstractWebServerEmbeddedTest;
+use Alireza1250ssss\PhpWord\AbstractWebServerEmbeddedTest;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\Header
+ * Test class for Alireza1250ssss\PhpWord\Element\Header
  *
  * @runTestsInSeparateProcesses
  */
@@ -34,7 +34,7 @@ class HeaderTest extends AbstractWebServerEmbeddedTest
         $iVal = rand(1, 1000);
         $oHeader = new Header($iVal);
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Header', $oHeader);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Header', $oHeader);
         $this->assertEquals($iVal, $oHeader->getSectionId());
         $this->assertEquals(Header::AUTO, $oHeader->getType());
     }
@@ -47,7 +47,7 @@ class HeaderTest extends AbstractWebServerEmbeddedTest
         $oHeader = new Header(1);
         $element = $oHeader->addText('text');
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Text', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Text', $element);
         $this->assertCount(1, $oHeader->getElements());
         $this->assertEquals('text', $element->getText());
     }
@@ -60,7 +60,7 @@ class HeaderTest extends AbstractWebServerEmbeddedTest
         $oHeader = new Header(1);
         $element = $oHeader->addText(utf8_decode('ééé'));
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Text', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Text', $element);
         $this->assertCount(1, $oHeader->getElements());
         $this->assertEquals('ééé', $element->getText());
     }
@@ -93,7 +93,7 @@ class HeaderTest extends AbstractWebServerEmbeddedTest
     {
         $oHeader = new Header(1);
         $element = $oHeader->addTextRun();
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\TextRun', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\TextRun', $element);
         $this->assertCount(1, $oHeader->getElements());
     }
 
@@ -104,7 +104,7 @@ class HeaderTest extends AbstractWebServerEmbeddedTest
     {
         $oHeader = new Header(1);
         $element = $oHeader->addTable();
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Table', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Table', $element);
         $this->assertCount(1, $oHeader->getElements());
     }
 
@@ -118,7 +118,7 @@ class HeaderTest extends AbstractWebServerEmbeddedTest
         $element = $oHeader->addImage($src);
 
         $this->assertCount(1, $oHeader->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Image', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Image', $element);
     }
 
     /**
@@ -130,7 +130,7 @@ class HeaderTest extends AbstractWebServerEmbeddedTest
         $element = $oHeader->addImage(self::getRemoteGifImageUrl());
 
         $this->assertCount(1, $oHeader->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Image', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Image', $element);
     }
 
     /**
@@ -142,7 +142,7 @@ class HeaderTest extends AbstractWebServerEmbeddedTest
         $element = $oHeader->addPreserveText('text');
 
         $this->assertCount(1, $oHeader->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\PreserveText', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\PreserveText', $element);
     }
 
     /**
@@ -154,7 +154,7 @@ class HeaderTest extends AbstractWebServerEmbeddedTest
         $element = $oHeader->addPreserveText(utf8_decode('ééé'));
 
         $this->assertCount(1, $oHeader->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\PreserveText', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\PreserveText', $element);
         $this->assertEquals(array('ééé'), $element->getText());
     }
 
@@ -168,7 +168,7 @@ class HeaderTest extends AbstractWebServerEmbeddedTest
         $element = $oHeader->addWatermark($src);
 
         $this->assertCount(1, $oHeader->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Image', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Image', $element);
     }
 
     /**

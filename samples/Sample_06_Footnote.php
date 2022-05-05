@@ -1,13 +1,13 @@
 <?php
-use PhpOffice\PhpWord\ComplexType\FootnoteProperties;
-use PhpOffice\PhpWord\SimpleType\NumberFormat;
+use Alireza1250ssss\PhpWord\ComplexType\FootnoteProperties;
+use Alireza1250ssss\PhpWord\SimpleType\NumberFormat;
 
 include_once 'Sample_Header.php';
 
 // New Word Document
 echo date('H:i:s'), ' Create new PhpWord object', EOL;
-$phpWord = new \PhpOffice\PhpWord\PhpWord();
-\PhpOffice\PhpWord\Settings::setCompatibility(false);
+$phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
+\Alireza1250ssss\PhpWord\Settings::setCompatibility(false);
 
 // Define styles
 $paragraphStyleName = 'pStyle';
@@ -20,7 +20,7 @@ $coloredFontStyleName = 'ColoredText';
 $phpWord->addFontStyle($coloredFontStyleName, array('color' => 'FF8080', 'bgColor' => 'FFFFCC'));
 
 $linkFontStyleName = 'NLink';
-$phpWord->addLinkStyle($linkFontStyleName, array('color' => '0000FF', 'underline' => \PhpOffice\PhpWord\Style\Font::UNDERLINE_SINGLE));
+$phpWord->addLinkStyle($linkFontStyleName, array('color' => '0000FF', 'underline' => \Alireza1250ssss\PhpWord\Style\Font::UNDERLINE_SINGLE));
 
 // New portrait section
 $section = $phpWord->addSection();

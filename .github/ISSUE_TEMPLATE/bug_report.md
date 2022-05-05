@@ -17,7 +17,7 @@ Please provide a code sample that reproduces the issue.
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
-$phpWord = new \PhpOffice\PhpWord\PhpWord();
+$phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
 $section = $phpWord->addSection();
 $section->...
 ```

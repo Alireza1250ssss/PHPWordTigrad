@@ -15,15 +15,15 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Style;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007\Style;
 
-use PhpOffice\PhpWord\Style\Paragraph as ParagraphStyle;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Alireza1250ssss\PhpWord\Style\Paragraph as ParagraphStyle;
+use Alireza1250ssss\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Style\Paragraph
+ * Test class for Alireza1250ssss\PhpWord\Writer\Word2007\Style\Paragraph
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Writer\Word2007\Style\Paragraph
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Writer\Word2007\Style\Paragraph
  * @runTestsInSeparateProcesses
  */
 class ParagraphTest extends \PHPUnit\Framework\TestCase
@@ -41,7 +41,7 @@ class ParagraphTest extends \PHPUnit\Framework\TestCase
      */
     public function testParagraphNumbering()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
         $phpWord->addParagraphStyle('testStyle', array('indent' => '10'));
         $section = $phpWord->addSection();
         $section->addText('test', null, array('numStyle' => 'testStyle', 'numLevel' => '1'));
@@ -53,7 +53,7 @@ class ParagraphTest extends \PHPUnit\Framework\TestCase
 
     public function testLineSpacingExact()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
         $section = $phpWord->addSection();
         $section->addText('test', null, array('spacing' => 240, 'spacingLineRule' => 'exact'));
         $doc = TestHelperDOCX::getDocument($phpWord, 'Word2007');
@@ -66,7 +66,7 @@ class ParagraphTest extends \PHPUnit\Framework\TestCase
 
     public function testLineSpacingAuto()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
         $section = $phpWord->addSection();
         $section->addText('test', null, array('spacing' => 240, 'spacingLineRule' => 'auto'));
         $doc = TestHelperDOCX::getDocument($phpWord, 'Word2007');
@@ -82,7 +82,7 @@ class ParagraphTest extends \PHPUnit\Framework\TestCase
         $paragraphStyle = new ParagraphStyle();
         $paragraphStyle->setSuppressAutoHyphens(true);
 
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
         $section = $phpWord->addSection();
         $section->addText('test', null, $paragraphStyle);
         $doc = TestHelperDOCX::getDocument($phpWord, 'Word2007');

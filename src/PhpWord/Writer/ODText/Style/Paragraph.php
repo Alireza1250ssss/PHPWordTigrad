@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Style;
+namespace Alireza1250ssss\PhpWord\Writer\ODText\Style;
 
-use PhpOffice\PhpWord\Shared\Converter;
+use Alireza1250ssss\PhpWord\Shared\Converter;
 
 /**
  * Font style writer
@@ -32,7 +32,7 @@ class Paragraph extends AbstractStyle
     public function write()
     {
         $style = $this->getStyle();
-        if (!$style instanceof \PhpOffice\PhpWord\Style\Paragraph) {
+        if (!$style instanceof \Alireza1250ssss\PhpWord\Style\Paragraph) {
             return;
         }
         $xmlWriter = $this->getXmlWriter();
@@ -60,13 +60,13 @@ class Paragraph extends AbstractStyle
             } elseif (substr($styleName, 0, 2) === 'HD') {
                 $styleAuto = true;
                 $psm = 'Heading_' . substr($styleName, 2);
-                $stylep = \PhpOffice\PhpWord\Style::getStyle($psm);
-                if ($stylep instanceof \PhpOffice\PhpWord\Style\Font) {
+                $stylep = \Alireza1250ssss\PhpWord\Style::getStyle($psm);
+                if ($stylep instanceof \Alireza1250ssss\PhpWord\Style\Font) {
                     if (method_exists($stylep, 'getParagraph')) {
                         $stylep = $stylep->getParagraph();
                     }
                 }
-                if ($stylep instanceof \PhpOffice\PhpWord\Style\Paragraph) {
+                if ($stylep instanceof \Alireza1250ssss\PhpWord\Style\Paragraph) {
                     if ($stylep->hasPageBreakBefore()) {
                         $breakbefore = true;
                     }
@@ -134,7 +134,7 @@ class Paragraph extends AbstractStyle
 
         //Indentation
         $indent = $style->getIndentation();
-        //if ($indent instanceof \PhpOffice\PhpWord\Style\Indentation) {
+        //if ($indent instanceof \Alireza1250ssss\PhpWord\Style\Indentation) {
         if (!empty($indent)) {
             $marg = $indent->getLeft();
             $xmlWriter->writeAttributeIf($marg !== null, 'fo:margin-left', (string) ($marg / Converter::INCH_TO_TWIP) . 'in');

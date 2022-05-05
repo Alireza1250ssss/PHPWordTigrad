@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\RTF\Style;
+namespace Alireza1250ssss\PhpWord\Writer\RTF\Style;
 
 /**
  * RTF indentation style writer
@@ -32,7 +32,7 @@ class Indentation extends AbstractStyle
     public function write()
     {
         $style = $this->getStyle();
-        if (!$style instanceof \PhpOffice\PhpWord\Style\Indentation) {
+        if (!$style instanceof \Alireza1250ssss\PhpWord\Style\Indentation) {
             return '';
         }
 

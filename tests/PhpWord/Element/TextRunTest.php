@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\SimpleType\Jc;
-use PhpOffice\PhpWord\Style\Paragraph;
+use Alireza1250ssss\PhpWord\PhpWord;
+use Alireza1250ssss\PhpWord\SimpleType\Jc;
+use Alireza1250ssss\PhpWord\Style\Paragraph;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\TextRun
+ * Test class for Alireza1250ssss\PhpWord\Element\TextRun
  *
  * @runTestsInSeparateProcesses
  */
@@ -35,9 +35,9 @@ class TextRunTest extends \PHPUnit\Framework\TestCase
     {
         $oTextRun = new TextRun();
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\TextRun', $oTextRun);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\TextRun', $oTextRun);
         $this->assertCount(0, $oTextRun->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Paragraph', $oTextRun->getParagraphStyle());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Paragraph', $oTextRun->getParagraphStyle());
     }
 
     /**
@@ -47,7 +47,7 @@ class TextRunTest extends \PHPUnit\Framework\TestCase
     {
         $oTextRun = new TextRun('pStyle');
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\TextRun', $oTextRun);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\TextRun', $oTextRun);
         $this->assertCount(0, $oTextRun->getElements());
         $this->assertEquals('pStyle', $oTextRun->getParagraphStyle());
     }
@@ -59,9 +59,9 @@ class TextRunTest extends \PHPUnit\Framework\TestCase
     {
         $oTextRun = new TextRun(array('spacing' => 100));
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\TextRun', $oTextRun);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\TextRun', $oTextRun);
         $this->assertCount(0, $oTextRun->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Paragraph', $oTextRun->getParagraphStyle());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Paragraph', $oTextRun->getParagraphStyle());
     }
 
     /**
@@ -73,9 +73,9 @@ class TextRunTest extends \PHPUnit\Framework\TestCase
         $oParagraphStyle->setAlignment(Jc::BOTH);
         $oTextRun = new TextRun($oParagraphStyle);
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\TextRun', $oTextRun);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\TextRun', $oTextRun);
         $this->assertCount(0, $oTextRun->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Paragraph', $oTextRun->getParagraphStyle());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Paragraph', $oTextRun->getParagraphStyle());
         $this->assertEquals(Jc::BOTH, $oTextRun->getParagraphStyle()->getAlignment());
     }
 
@@ -87,7 +87,7 @@ class TextRunTest extends \PHPUnit\Framework\TestCase
         $oTextRun = new TextRun();
         $element = $oTextRun->addText('text');
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Text', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Text', $element);
         $this->assertCount(1, $oTextRun->getElements());
         $this->assertEquals('text', $element->getText());
     }
@@ -100,7 +100,7 @@ class TextRunTest extends \PHPUnit\Framework\TestCase
         $oTextRun = new TextRun();
         $element = $oTextRun->addText(utf8_decode('ééé'));
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Text', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Text', $element);
         $this->assertCount(1, $oTextRun->getElements());
         $this->assertEquals('ééé', $element->getText());
     }
@@ -113,7 +113,7 @@ class TextRunTest extends \PHPUnit\Framework\TestCase
         $oTextRun = new TextRun();
         $element = $oTextRun->addLink('https://github.com/PHPOffice/PHPWord');
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Link', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Link', $element);
         $this->assertCount(1, $oTextRun->getElements());
         $this->assertEquals('https://github.com/PHPOffice/PHPWord', $element->getSource());
     }
@@ -126,7 +126,7 @@ class TextRunTest extends \PHPUnit\Framework\TestCase
         $oTextRun = new TextRun();
         $element = $oTextRun->addLink('https://github.com/PHPOffice/PHPWord', 'PHPWord on GitHub');
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Link', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Link', $element);
         $this->assertCount(1, $oTextRun->getElements());
         $this->assertEquals('https://github.com/PHPOffice/PHPWord', $element->getSource());
         $this->assertEquals('PHPWord on GitHub', $element->getText());
@@ -153,7 +153,7 @@ class TextRunTest extends \PHPUnit\Framework\TestCase
         $oTextRun = new TextRun();
         $element = $oTextRun->addImage($src);
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Image', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Image', $element);
         $this->assertCount(1, $oTextRun->getElements());
     }
 
@@ -166,7 +166,7 @@ class TextRunTest extends \PHPUnit\Framework\TestCase
         $oTextRun->setPhpWord(new PhpWord());
         $element = $oTextRun->addFootnote();
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Footnote', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Footnote', $element);
         $this->assertCount(1, $oTextRun->getElements());
     }
 
@@ -179,6 +179,6 @@ class TextRunTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals('paragraphStyle', $oText->getParagraphStyle());
 
         $oText->setParagraphStyle(array('alignment' => Jc::CENTER, 'spaceAfter' => 100));
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Paragraph', $oText->getParagraphStyle());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Paragraph', $oText->getParagraphStyle());
     }
 }

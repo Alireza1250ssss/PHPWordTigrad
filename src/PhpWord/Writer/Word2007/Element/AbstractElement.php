@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Element;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007\Element;
 
-use PhpOffice\PhpWord\Element\AbstractElement as Element;
-use PhpOffice\PhpWord\Settings;
-use PhpOffice\PhpWord\Shared\Text as SharedText;
-use PhpOffice\PhpWord\Shared\XMLWriter;
+use Alireza1250ssss\PhpWord\Element\AbstractElement as Element;
+use Alireza1250ssss\PhpWord\Settings;
+use Alireza1250ssss\PhpWord\Shared\Text as SharedText;
+use Alireza1250ssss\PhpWord\Shared\XMLWriter;
 
 /**
  * Abstract element writer
@@ -32,14 +32,14 @@ abstract class AbstractElement
     /**
      * XML writer
      *
-     * @var \PhpOffice\PhpWord\Shared\XMLWriter
+     * @var \Alireza1250ssss\PhpWord\Shared\XMLWriter
      */
     private $xmlWriter;
 
     /**
      * Element
      *
-     * @var \PhpOffice\PhpWord\Element\AbstractElement
+     * @var \Alireza1250ssss\PhpWord\Element\AbstractElement
      */
     private $element;
 
@@ -58,8 +58,8 @@ abstract class AbstractElement
     /**
      * Create new instance
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLWriter $xmlWriter
-     * @param \PhpOffice\PhpWord\Element\AbstractElement $element
+     * @param \Alireza1250ssss\PhpWord\Shared\XMLWriter $xmlWriter
+     * @param \Alireza1250ssss\PhpWord\Element\AbstractElement $element
      * @param bool $withoutP
      */
     public function __construct(XMLWriter $xmlWriter, Element $element, $withoutP = false)
@@ -72,7 +72,7 @@ abstract class AbstractElement
     /**
      * Get XML Writer
      *
-     * @return \PhpOffice\PhpWord\Shared\XMLWriter
+     * @return \Alireza1250ssss\PhpWord\Shared\XMLWriter
      */
     protected function getXmlWriter()
     {
@@ -82,7 +82,7 @@ abstract class AbstractElement
     /**
      * Get element
      *
-     * @return \PhpOffice\PhpWord\Element\AbstractElement
+     * @return \Alireza1250ssss\PhpWord\Element\AbstractElement
      */
     protected function getElement()
     {
@@ -92,7 +92,7 @@ abstract class AbstractElement
     /**
      * Start w:p DOM element.
      *
-     * @uses \PhpOffice\PhpWord\Writer\Word2007\Element\PageBreak::write()
+     * @uses \Alireza1250ssss\PhpWord\Writer\Word2007\Element\PageBreak::write()
      */
     protected function startElementP()
     {
@@ -187,10 +187,10 @@ abstract class AbstractElement
     private function writeTextStyle($styleType)
     {
         $method = "get{$styleType}Style";
-        $class = "PhpOffice\\PhpWord\\Writer\\Word2007\\Style\\{$styleType}";
+        $class = "Alireza1250ssss\\PhpWord\\Writer\\Word2007\\Style\\{$styleType}";
         $styleObject = $this->element->$method();
 
-        /** @var \PhpOffice\PhpWord\Writer\Word2007\Style\AbstractStyle $styleWriter Type Hint */
+        /** @var \Alireza1250ssss\PhpWord\Writer\Word2007\Style\AbstractStyle $styleWriter Type Hint */
         $styleWriter = new $class($this->xmlWriter, $styleObject);
         if (method_exists($styleWriter, 'setIsInline')) {
             $styleWriter->setIsInline(true);

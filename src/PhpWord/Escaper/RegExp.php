@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Escaper;
+namespace Alireza1250ssss\PhpWord\Escaper;
 
 /**
  * @since 0.13.0

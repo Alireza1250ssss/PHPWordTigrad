@@ -29,11 +29,11 @@ Available Section style options:
 - ``marginRight``. Page margin right in *twip*.
 - ``marginBottom``. Page margin bottom in *twip*.
 - ``orientation``. Page orientation (``portrait``, which is default, or ``landscape``).
-   See ``\PhpOffice\PhpWord\Style\Section::ORIENTATION_...`` class constants for possible values
+   See ``\Alireza1250ssss\PhpWord\Style\Section::ORIENTATION_...`` class constants for possible values
 - ``pageSizeH``. Page height in *twip*. Implicitly defined by ``orientation`` option. Any changes are discouraged.
 - ``pageSizeW``. Page width in *twip*. Implicitly defined by ``orientation`` option. Any changes are discouraged.
 - ``vAlign``. Vertical Page Alignment
-   See ``\PhpOffice\PhpWord\SimpleType\VerticalJc`` for possible values
+   See ``\Alireza1250ssss\PhpWord\SimpleType\VerticalJc`` for possible values
 
 .. _font-style:
 
@@ -48,7 +48,7 @@ Available Font style options:
 - ``color``. Font color, e.g. *FF0000*.
 - ``doubleStrikethrough``. Double strikethrough, *true* or *false*.
 - ``fgColor``. Font highlight color, e.g. *yellow*, *green*, *blue*.
-   See ``\PhpOffice\PhpWord\Style\Font::FGCOLOR_...`` class constants for possible values
+   See ``\Alireza1250ssss\PhpWord\Style\Font::FGCOLOR_...`` class constants for possible values
 - ``hint``. Font content type, *default*, *eastAsia*, or *cs*.
 - ``italic``. Italic, *true* or *false*.
 - ``name``. Font name, e.g. *Arial*.
@@ -59,9 +59,9 @@ Available Font style options:
 - ``subScript``. Subscript, *true* or *false*.
 - ``superScript``. Superscript, *true* or *false*.
 - ``underline``. Underline, *single*, *dash*, *dotted*, etc.
-   See ``\PhpOffice\PhpWord\Style\Font::UNDERLINE_...`` class constants for possible values
+   See ``\Alireza1250ssss\PhpWord\Style\Font::UNDERLINE_...`` class constants for possible values
 - ``lang``. Language, either a language code like *en-US*, *fr-BE*, etc. or an object (or as an array) if you need to set eastAsian or bidirectional languages
-   See ``\PhpOffice\PhpWord\Style\Language`` class for some language codes.
+   See ``\Alireza1250ssss\PhpWord\Style\Language`` class for some language codes.
 - ``position``. The text position, raised or lowered, in half points
 - ``hidden``. Hidden text, *true* or *false*.
 
@@ -73,12 +73,12 @@ Paragraph
 Available Paragraph style options:
 
 - ``alignment``. Supports all alignment modes since 1st Edition of ECMA-376 standard up till ISO/IEC 29500:2012.
-   See ``\PhpOffice\PhpWord\SimpleType\Jc`` class constants for possible values.
+   See ``\Alireza1250ssss\PhpWord\SimpleType\Jc`` class constants for possible values.
 - ``basedOn``. Parent style.
 - ``hanging``. Hanging indentation in *half inches*.
 - ``indent``. Indent (left indentation) in *half inches*.
 - ``indentation``. An array of indentation key => value pairs in *twip*. Supports *left*, *right*, *firstLine* and *hanging* indentation.
-   See ``\PhpOffice\PhpWord\Style\Indentation`` for possible identation types.
+   See ``\Alireza1250ssss\PhpWord\Style\Indentation`` for possible identation types.
 - ``keepLines``. Keep all lines on one page, *true* or *false*.
 - ``keepNext``. Keep paragraph with next paragraph, *true* or *false*.
 - ``lineHeight``. Text line height, e.g. *1.0*, *1.5*, etc.
@@ -88,7 +88,7 @@ Available Paragraph style options:
 - ``spaceAfter``. Space after paragraph in *twip*.
 - ``spacing``. Space between lines in *twip*. If spacingLineRule is auto, 240 (height of 1 line) will be added, so if you want a double line height, set this to 240.
 - ``spacingLineRule``. Line Spacing Rule. *auto*, *exact*, *atLeast*
-   See ``\PhpOffice\PhpWord\SimpleType\LineSpacingRule`` class constants for possible values.
+   See ``\Alireza1250ssss\PhpWord\SimpleType\LineSpacingRule`` class constants for possible values.
 - ``suppressAutoHyphens``. Hyphenation for paragraph, *true* or *false*.
 - ``tabs``. Set of custom tab stops.
 - ``widowControl``. Allow first/last line to display on a separate page, *true* or *false*.
@@ -96,7 +96,7 @@ Available Paragraph style options:
 - ``bidi``. Right to Left Paragraph Layout, *true* or *false*.
 - ``shading``. Paragraph Shading.
 - ``textAlignment``. Vertical Character Alignment on Line.
-   See ``\PhpOffice\PhpWord\SimpleType\TextAlignment`` class constants for possible values.
+   See ``\Alireza1250ssss\PhpWord\SimpleType\TextAlignment`` class constants for possible values.
 
 .. _table-style:
 
@@ -106,15 +106,15 @@ Table
 Available Table style options:
 
 - ``alignment``. Supports all alignment modes since 1st Edition of ECMA-376 standard up till ISO/IEC 29500:2012.
-   See ``\PhpOffice\PhpWord\SimpleType\JcTable`` and ``\PhpOffice\PhpWord\SimpleType\Jc`` class constants for possible values.
+   See ``\Alireza1250ssss\PhpWord\SimpleType\JcTable`` and ``\Alireza1250ssss\PhpWord\SimpleType\Jc`` class constants for possible values.
 - ``bgColor``. Background color, e.g. '9966CC'.
 - ``border(Top|Right|Bottom|Left)Color``. Border color, e.g. '9966CC'.
 - ``border(Top|Right|Bottom|Left)Size``. Border size in *twip*.
 - ``cellMargin(Top|Right|Bottom|Left)``. Cell margin in *twip*.
-- ``indent``. Table indent from leading margin. Must be an instance of ``\PhpOffice\PhpWord\ComplexType\TblWidth``.
+- ``indent``. Table indent from leading margin. Must be an instance of ``\Alireza1250ssss\PhpWord\ComplexType\TblWidth``.
 - ``width``. Table width in Fiftieths of a Percent or Twentieths of a Point.
-- ``unit``. The unit to use for the width. One of ``\PhpOffice\PhpWord\SimpleType\TblWidth``. Defaults to *auto*.
-- ``layout``. Table layout, either *fixed* or *autofit*  See ``\PhpOffice\PhpWord\Style\Table`` for constants.
+- ``unit``. The unit to use for the width. One of ``\Alireza1250ssss\PhpWord\SimpleType\TblWidth``. Defaults to *auto*.
+- ``layout``. Table layout, either *fixed* or *autofit*  See ``\Alireza1250ssss\PhpWord\Style\Table`` for constants.
 - ``cellSpacing`` Cell spacing in *twip*
 - ``position`` Floating Table Positioning, see below for options
 - ``bidiVisual`` Present table as Right-To-Left
@@ -125,11 +125,11 @@ Floating Table Positioning options:
 - ``rightFromText`` Distance From Right of Table to Text in *twip*
 - ``topFromText`` Distance From Top of Table to Text in *twip*
 - ``bottomFromText`` Distance From Top of Table to Text in *twip*
-- ``vertAnchor`` Table Vertical Anchor, one of ``\PhpOffice\PhpWord\Style\TablePosition::VANCHOR_*``
-- ``horzAnchor`` Table Horizontal Anchor, one of ``\PhpOffice\PhpWord\Style\TablePosition::HANCHOR_*``
-- ``tblpXSpec`` Relative Horizontal Alignment From Anchor, one of ``\PhpOffice\PhpWord\Style\TablePosition::XALIGN_*``
+- ``vertAnchor`` Table Vertical Anchor, one of ``\Alireza1250ssss\PhpWord\Style\TablePosition::VANCHOR_*``
+- ``horzAnchor`` Table Horizontal Anchor, one of ``\Alireza1250ssss\PhpWord\Style\TablePosition::HANCHOR_*``
+- ``tblpXSpec`` Relative Horizontal Alignment From Anchor, one of ``\Alireza1250ssss\PhpWord\Style\TablePosition::XALIGN_*``
 - ``tblpX`` Absolute Horizontal Distance From Anchorin *twip*
-- ``tblpYSpec`` Relative Vertical Alignment From Anchor, one of ``\PhpOffice\PhpWord\Style\TablePosition::YALIGN_*``
+- ``tblpYSpec`` Relative Vertical Alignment From Anchor, one of ``\Alireza1250ssss\PhpWord\Style\TablePosition::YALIGN_*``
 - ``tblpY`` Absolute Vertical Distance From Anchorin *twip*
 
 Available Row style options:
@@ -143,10 +143,10 @@ Available Cell style options:
 - ``bgColor``. Background color, e.g. '9966CC'.
 - ``border(Top|Right|Bottom|Left)Color``. Border color, e.g. '9966CC'.
 - ``border(Top|Right|Bottom|Left)Size``. Border size in *twip*.
-- ``border(Top|Right|Bottom|Left)Style``. Border style. You can use constants from ``\PhpOffice\PhpWord\SimpleType\Border``
+- ``border(Top|Right|Bottom|Left)Style``. Border style. You can use constants from ``\Alireza1250ssss\PhpWord\SimpleType\Border``
 - ``gridSpan``. Number of columns spanned.
 - ``textDirection(btLr|tbRl)``. Direction of text.
-   You can use constants ``\PhpOffice\PhpWord\Style\Cell::TEXT_DIR_BTLR`` and ``\PhpOffice\PhpWord\Style\Cell::TEXT_DIR_TBRL``
+   You can use constants ``\Alireza1250ssss\PhpWord\Style\Cell::TEXT_DIR_BTLR`` and ``\Alireza1250ssss\PhpWord\Style\Cell::TEXT_DIR_TBRL``
 - ``valign``. Vertical alignment, *top*, *center*, *both*, *bottom*.
 - ``vMerge``. *restart* or *continue*.
 - ``width``. Cell width in *twip*.
@@ -158,7 +158,7 @@ Image
 
 Available Image style options:
 
-- ``alignment``. See ``\PhpOffice\PhpWord\SimpleType\Jc`` class for the details.
+- ``alignment``. See ``\Alireza1250ssss\PhpWord\SimpleType\Jc`` class for the details.
 - ``height``. Height in *pt*.
 - ``marginLeft``. Left margin in inches, can be negative.
 - ``marginTop``. Top margin in inches, can be negative.
@@ -177,7 +177,7 @@ Numbering level
 Available NumberingLevel style options:
 
 - ``alignment``. Supports all alignment modes since 1st Edition of ECMA-376 standard up till ISO/IEC 29500:2012.
-   See ``\PhpOffice\PhpWord\SimpleType\Jc`` class constants for possible values.
+   See ``\Alireza1250ssss\PhpWord\SimpleType\Jc`` class constants for possible values.
 - ``font``. Font name.
 - ``format``. Numbering format bullet\|decimal\|upperRoman\|lowerRoman\|upperLetter\|lowerLetter.
 - ``hanging``. See paragraph style.

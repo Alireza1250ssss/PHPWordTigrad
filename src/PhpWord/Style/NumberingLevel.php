@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Alireza1250ssss\PhpWord\Style;
 
-use PhpOffice\PhpWord\SimpleType\Jc;
-use PhpOffice\PhpWord\SimpleType\NumberFormat;
+use Alireza1250ssss\PhpWord\SimpleType\Jc;
+use Alireza1250ssss\PhpWord\SimpleType\NumberFormat;
 
 /**
  * Numbering level definition
@@ -44,7 +44,7 @@ class NumberingLevel extends AbstractStyle
     private $start = 1;
 
     /**
-     * Numbering format w:numFmt, one of PhpOffice\PhpWord\SimpleType\NumberFormat
+     * Numbering format w:numFmt, one of Alireza1250ssss\PhpWord\SimpleType\NumberFormat
      *
      * @var string
      * @see  http://www.schemacentral.com/sc/ooxml/t-w_ST_NumberFormat.html
@@ -86,7 +86,7 @@ class NumberingLevel extends AbstractStyle
     /**
      * Justification, w:lvlJc
      *
-     * @var string, one of PhpOffice\PhpWord\SimpleType\Jc
+     * @var string, one of Alireza1250ssss\PhpWord\SimpleType\Jc
      */
     private $alignment = '';
 

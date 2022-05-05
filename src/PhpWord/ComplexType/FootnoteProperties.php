@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\ComplexType;
+namespace Alireza1250ssss\PhpWord\ComplexType;
 
-use PhpOffice\PhpWord\SimpleType\NumberFormat;
+use Alireza1250ssss\PhpWord\SimpleType\NumberFormat;
 
 /**
  * Footnote properties
@@ -43,7 +43,7 @@ final class FootnoteProperties
     private $pos;
 
     /**
-     * Footnote Numbering Format w:numFmt, one of PhpOffice\PhpWord\SimpleType\NumberFormat
+     * Footnote Numbering Format w:numFmt, one of Alireza1250ssss\PhpWord\SimpleType\NumberFormat
      *
      * @var string
      */

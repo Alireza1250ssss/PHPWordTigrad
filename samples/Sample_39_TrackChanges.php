@@ -1,11 +1,11 @@
 <?php
-use PhpOffice\PhpWord\Element\TrackChange;
+use Alireza1250ssss\PhpWord\Element\TrackChange;
 
 include_once 'Sample_Header.php';
 
 // New Word Document
 echo date('H:i:s') , ' Create new PhpWord object' , EOL;
-$phpWord = new \PhpOffice\PhpWord\PhpWord();
+$phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
 
 // New portrait section
 $section = $phpWord->addSection();

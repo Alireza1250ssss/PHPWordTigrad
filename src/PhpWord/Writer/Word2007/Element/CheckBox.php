@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Element;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007\Element;
 
 /**
  * CheckBox element writer
@@ -31,7 +31,7 @@ class CheckBox extends Text
     {
         $xmlWriter = $this->getXmlWriter();
         $element = $this->getElement();
-        if (!$element instanceof \PhpOffice\PhpWord\Element\CheckBox) {
+        if (!$element instanceof \Alireza1250ssss\PhpWord\Element\CheckBox) {
             return;
         }
 

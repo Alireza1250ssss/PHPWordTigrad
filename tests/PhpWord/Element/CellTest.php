@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
-use PhpOffice\PhpWord\AbstractWebServerEmbeddedTest;
+use Alireza1250ssss\PhpWord\AbstractWebServerEmbeddedTest;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\Cell
+ * Test class for Alireza1250ssss\PhpWord\Element\Cell
  *
  * @runTestsInSeparateProcesses
  */
@@ -33,7 +33,7 @@ class CellTest extends AbstractWebServerEmbeddedTest
     {
         $oCell = new Cell();
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Cell', $oCell);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Cell', $oCell);
         $this->assertNull($oCell->getWidth());
     }
 
@@ -44,7 +44,7 @@ class CellTest extends AbstractWebServerEmbeddedTest
     {
         $oCell = new Cell(null, array('valign' => 'center'));
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Cell', $oCell->getStyle());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Cell', $oCell->getStyle());
         $this->assertNull($oCell->getWidth());
     }
 
@@ -57,7 +57,7 @@ class CellTest extends AbstractWebServerEmbeddedTest
         $element = $oCell->addText('text');
 
         $this->assertCount(1, $oCell->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Text', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Text', $element);
     }
 
     /**
@@ -69,7 +69,7 @@ class CellTest extends AbstractWebServerEmbeddedTest
         $element = $oCell->addText(utf8_decode('ééé'));
 
         $this->assertCount(1, $oCell->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Text', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Text', $element);
         $this->assertEquals('ééé', $element->getText());
     }
 
@@ -82,7 +82,7 @@ class CellTest extends AbstractWebServerEmbeddedTest
         $element = $oCell->addLink(utf8_decode('ééé'), utf8_decode('ééé'));
 
         $this->assertCount(1, $oCell->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Link', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Link', $element);
     }
 
     /**
@@ -105,7 +105,7 @@ class CellTest extends AbstractWebServerEmbeddedTest
         $element = $oCell->addListItem('text');
 
         $this->assertCount(1, $oCell->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\ListItem', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\ListItem', $element);
         $this->assertEquals('text', $element->getTextObject()->getText());
     }
 
@@ -118,7 +118,7 @@ class CellTest extends AbstractWebServerEmbeddedTest
         $element = $oCell->addListItem(utf8_decode('ééé'));
 
         $this->assertCount(1, $oCell->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\ListItem', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\ListItem', $element);
         $this->assertEquals('ééé', $element->getTextObject()->getText());
     }
 
@@ -132,7 +132,7 @@ class CellTest extends AbstractWebServerEmbeddedTest
         $element = $oCell->addImage($src);
 
         $this->assertCount(1, $oCell->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Image', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Image', $element);
     }
 
     /**
@@ -145,7 +145,7 @@ class CellTest extends AbstractWebServerEmbeddedTest
         $element = $oCell->addImage($src);
 
         $this->assertCount(1, $oCell->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Image', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Image', $element);
     }
 
     /**
@@ -158,7 +158,7 @@ class CellTest extends AbstractWebServerEmbeddedTest
         $element = $oCell->addImage($src);
 
         $this->assertCount(1, $oCell->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Image', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Image', $element);
     }
 
     /**
@@ -170,7 +170,7 @@ class CellTest extends AbstractWebServerEmbeddedTest
         $element = $oCell->addImage(self::getRemoteGifImageUrl());
 
         $this->assertCount(1, $oCell->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Image', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Image', $element);
     }
 
     /**
@@ -183,13 +183,13 @@ class CellTest extends AbstractWebServerEmbeddedTest
         $element = $oCell->addObject($src);
 
         $this->assertCount(1, $oCell->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\OLEObject', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\OLEObject', $element);
     }
 
     /**
      * Test add object exception
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\InvalidObjectException
+     * @expectedException \Alireza1250ssss\PhpWord\Exception\InvalidObjectException
      */
     public function testAddObjectException()
     {
@@ -208,7 +208,7 @@ class CellTest extends AbstractWebServerEmbeddedTest
         $element = $oCell->addPreserveText('text');
 
         $this->assertCount(1, $oCell->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\PreserveText', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\PreserveText', $element);
     }
 
     /**
@@ -221,7 +221,7 @@ class CellTest extends AbstractWebServerEmbeddedTest
         $element = $oCell->addPreserveText(utf8_decode('ééé'));
 
         $this->assertCount(1, $oCell->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\PreserveText', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\PreserveText', $element);
         $this->assertEquals(array('ééé'), $element->getText());
     }
 
@@ -246,7 +246,7 @@ class CellTest extends AbstractWebServerEmbeddedTest
         $element = $oCell->addTextRun();
 
         $this->assertCount(1, $oCell->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\TextRun', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\TextRun', $element);
     }
 
     /**
@@ -258,7 +258,7 @@ class CellTest extends AbstractWebServerEmbeddedTest
         $element = $oCell->addCheckBox(utf8_decode('ééé'), utf8_decode('ééé'));
 
         $this->assertCount(1, $oCell->getElements());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\CheckBox', $element);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\CheckBox', $element);
     }
 
     /**

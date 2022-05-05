@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\ComplexType;
+namespace Alireza1250ssss\PhpWord\ComplexType;
 
 /**
- * Test class for PhpOffice\PhpWord\ComplexType\ProofState
+ * Test class for Alireza1250ssss\PhpWord\ComplexType\ProofState
  *
- * @coversDefaultClass \PhpOffice\PhpWord\ComplexType\ProofState
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\ComplexType\ProofState
  */
 class ProofStateTest extends \PHPUnit\Framework\TestCase
 {

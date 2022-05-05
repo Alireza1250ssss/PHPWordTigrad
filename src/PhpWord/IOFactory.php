@@ -15,11 +15,11 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord;
+namespace Alireza1250ssss\PhpWord;
 
-use PhpOffice\PhpWord\Exception\Exception;
-use PhpOffice\PhpWord\Reader\ReaderInterface;
-use PhpOffice\PhpWord\Writer\WriterInterface;
+use Alireza1250ssss\PhpWord\Exception\Exception;
+use Alireza1250ssss\PhpWord\Reader\ReaderInterface;
+use Alireza1250ssss\PhpWord\Writer\WriterInterface;
 
 abstract class IOFactory
 {
@@ -29,7 +29,7 @@ abstract class IOFactory
      * @param PhpWord $phpWord
      * @param string $name
      *
-     * @throws \PhpOffice\PhpWord\Exception\Exception
+     * @throws \Alireza1250ssss\PhpWord\Exception\Exception
      *
      * @return WriterInterface
      */
@@ -39,7 +39,7 @@ abstract class IOFactory
             throw new Exception("\"{$name}\" is not a valid writer.");
         }
 
-        $fqName = "PhpOffice\\PhpWord\\Writer\\{$name}";
+        $fqName = "Alireza1250ssss\\PhpWord\\Writer\\{$name}";
 
         return new $fqName($phpWord);
     }
@@ -63,15 +63,15 @@ abstract class IOFactory
      *
      * @param string $type
      * @param string $name
-     * @param \PhpOffice\PhpWord\PhpWord $phpWord
+     * @param \Alireza1250ssss\PhpWord\PhpWord $phpWord
      *
-     * @throws \PhpOffice\PhpWord\Exception\Exception
+     * @throws \Alireza1250ssss\PhpWord\Exception\Exception
      *
-     * @return \PhpOffice\PhpWord\Writer\WriterInterface|\PhpOffice\PhpWord\Reader\ReaderInterface
+     * @return \Alireza1250ssss\PhpWord\Writer\WriterInterface|\Alireza1250ssss\PhpWord\Reader\ReaderInterface
      */
     private static function createObject($type, $name, $phpWord = null)
     {
-        $class = "PhpOffice\\PhpWord\\{$type}\\{$name}";
+        $class = "Alireza1250ssss\\PhpWord\\{$type}\\{$name}";
         if (class_exists($class) && self::isConcreteClass($class)) {
             return new $class($phpWord);
         }
@@ -83,11 +83,11 @@ abstract class IOFactory
      *
      * @param string $filename The name of the file
      * @param string $readerName
-     * @return \PhpOffice\PhpWord\PhpWord $phpWord
+     * @return \Alireza1250ssss\PhpWord\PhpWord $phpWord
      */
     public static function load($filename, $readerName = 'Word2007')
     {
-        /** @var \PhpOffice\PhpWord\Reader\ReaderInterface $reader */
+        /** @var \Alireza1250ssss\PhpWord\Reader\ReaderInterface $reader */
         $reader = self::createReader($readerName);
 
         return $reader->load($filename);

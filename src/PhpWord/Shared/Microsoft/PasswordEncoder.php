@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Shared\Microsoft;
+namespace Alireza1250ssss\PhpWord\Shared\Microsoft;
 
 /**
  * Password encoder for microsoft office applications

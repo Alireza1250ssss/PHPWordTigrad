@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Shared;
+namespace Alireza1250ssss\PhpWord\Shared;
 
-use PhpOffice\PhpWord\Exception\Exception;
-use PhpOffice\PhpWord\Settings;
+use Alireza1250ssss\PhpWord\Exception\Exception;
+use Alireza1250ssss\PhpWord\Settings;
 
 /**
  * ZipArchive wrapper
@@ -158,7 +158,7 @@ class ZipArchive
     /**
      * Close the active archive
      *
-     * @throws \PhpOffice\PhpWord\Exception\Exception
+     * @throws \Alireza1250ssss\PhpWord\Exception\Exception
      *
      * @return bool
      *

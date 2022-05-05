@@ -1,7 +1,7 @@
 <?php
 include_once 'Sample_Header.php';
 
-use PhpOffice\PhpWord\Settings;
+use Alireza1250ssss\PhpWord\Settings;
 
 $requirements = array(
     'php'   => array('PHP 5.3.3', version_compare(PHP_VERSION, '5.3.3', '>=')),

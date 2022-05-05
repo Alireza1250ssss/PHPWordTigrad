@@ -82,7 +82,7 @@ If you want to enable track changes on added text you can mark it as INSERTED or
 .. code-block:: php
 
     $text = $section->addText('Hello World!');
-    $text->setChanged(\PhpOffice\PhpWord\Element\ChangedElement::TYPE_INSERTED, 'Fred', (new \DateTime()));
+    $text->setChanged(\Alireza1250ssss\PhpWord\Element\ChangedElement::TYPE_INSERTED, 'Fred', (new \DateTime()));
 
 Titles
 ~~~~~~
@@ -99,7 +99,7 @@ If `depth` is 0, a Title will be inserted, otherwise a Heading1, Heading2, ...
 - ``depth``.
 - ``$fontStyle``. See :ref:`font-style`.
 - ``$paragraphStyle``. See :ref:`paragraph-style`.
-- ``$text``. Text to be displayed in the document. This can be `string` or a `\PhpOffice\PhpWord\Element\TextRun`
+- ``$text``. Text to be displayed in the document. This can be `string` or a `\Alireza1250ssss\PhpWord\Element\TextRun`
 
 It's necessary to add a title style to your document because otherwise the title won't be detected as a real title.
 
@@ -314,7 +314,7 @@ Your TOC can only be generated if you have add at least one title (See "Titles")
 
 Options for ``$tocStyle``:
 
-- ``tabLeader``. Fill type between the title text and the page number. Use the defined constants in ``\PhpOffice\PhpWord\Style\TOC``.
+- ``tabLeader``. Fill type between the title text and the page number. Use the defined constants in ``\Alireza1250ssss\PhpWord\Style\TOC``.
 - ``tabPos``. The position of the tab where the page number appears in *twip*.
 - ``indent``. The indent factor of the titles in *twip*.
 
@@ -359,15 +359,15 @@ The footnote numbering can be controlled by setting the FootnoteProperties on th
 
 .. code-block:: php
 
-    $fp = new \PhpOffice\PhpWord\ComplexType\FootnoteProperties();
+    $fp = new \Alireza1250ssss\PhpWord\ComplexType\FootnoteProperties();
     //sets the position of the footnote (pageBottom (default), beneathText, sectEnd, docEnd)
-    $fp->setPos(\PhpOffice\PhpWord\ComplexType\FootnoteProperties::POSITION_BENEATH_TEXT);
+    $fp->setPos(\Alireza1250ssss\PhpWord\ComplexType\FootnoteProperties::POSITION_BENEATH_TEXT);
     //set the number format to use (decimal (default), upperRoman, upperLetter, ...)
-    $fp->setNumFmt(\PhpOffice\PhpWord\SimpleType\NumberFormat::LOWER_ROMAN);
+    $fp->setNumFmt(\Alireza1250ssss\PhpWord\SimpleType\NumberFormat::LOWER_ROMAN);
     //force starting at other than 1
     $fp->setNumStart(2);
     //when to restart counting (continuous (default), eachSect, eachPage)
-    $fp->setNumRestart(\PhpOffice\PhpWord\ComplexType\FootnoteProperties::RESTART_NUMBER_EACH_PAGE);
+    $fp->setNumRestart(\Alireza1250ssss\PhpWord\ComplexType\FootnoteProperties::RESTART_NUMBER_EACH_PAGE);
     //And finaly, set it on the Section
     $section->setFootnoteProperties($fp);
 
@@ -407,7 +407,7 @@ Currently the following fields are supported:
 
 - ``$fontStyle``. See :ref:`font-style`.
 
-See ``\PhpOffice\PhpWord\Element\Field`` for list of properties and options available for each field type.
+See ``\Alireza1250ssss\PhpWord\Element\Field`` for list of properties and options available for each field type.
 Options which are not specifically defined can be added. Those must start with a ``\``.
 
 For instance for the INDEX field, you can do the following (See `Index Field for list of available options <https://support.office.com/en-us/article/Field-codes-Index-field-adafcf4a-cb30-43f6-85c7-743da1635d9e?ui=en-US&rs=en-US&ad=US>`_ ):
@@ -472,7 +472,7 @@ The comment can contain formatted text. Once the comment has been added, it can 
 .. code-block:: php
 
     // first create a comment
-    $comment= new \PhpOffice\PhpWord\Element\Comment('Authors name', new \DateTime(), 'my_initials');
+    $comment= new \Alireza1250ssss\PhpWord\Element\Comment('Authors name', new \DateTime(), 'my_initials');
     $comment->addText('Test', array('bold' => true));
 
     // add it to the document
@@ -494,7 +494,7 @@ Either by calling the `setChangeInfo()`, or by setting the `TrackChange` instanc
 
 .. code-block:: php
 
-    $phpWord = new \PhpOffice\PhpWord\PhpWord();
+    $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
 
     // New portrait section
     $section = $phpWord->addSection();

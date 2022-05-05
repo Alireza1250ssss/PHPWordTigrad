@@ -16,7 +16,7 @@ folder <https://github.com/PHPOffice/PHPWord/tree/master/samples/>`__.
     require_once 'bootstrap.php';
 
     // Creating the new document...
-    $phpWord = new \PhpOffice\PhpWord\PhpWord();
+    $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
 
     /* Note: any element you append to a document must reside inside of a Section. */
 
@@ -58,7 +58,7 @@ folder <https://github.com/PHPOffice/PHPWord/tree/master/samples/>`__.
     );
 
     // Adding Text element with font customized using explicitly created font style object...
-    $fontStyle = new \PhpOffice\PhpWord\Style\Font();
+    $fontStyle = new \Alireza1250ssss\PhpWord\Style\Font();
     $fontStyle->setBold(true);
     $fontStyle->setName('Tahoma');
     $fontStyle->setSize(13);
@@ -66,15 +66,15 @@ folder <https://github.com/PHPOffice/PHPWord/tree/master/samples/>`__.
     $myTextElement->setFontStyle($fontStyle);
 
     // Saving the document as OOXML file...
-    $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
+    $objWriter = \Alireza1250ssss\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
     $objWriter->save('helloWorld.docx');
 
     // Saving the document as ODF file...
-    $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'ODText');
+    $objWriter = \Alireza1250ssss\PhpWord\IOFactory::createWriter($phpWord, 'ODText');
     $objWriter->save('helloWorld.odt');
 
     // Saving the document as HTML file...
-    $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'HTML');
+    $objWriter = \Alireza1250ssss\PhpWord\IOFactory::createWriter($phpWord, 'HTML');
     $objWriter->save('helloWorld.html');
 
     /* Note: we skip RTF, because it's not XML-based and requires a different example. */
@@ -83,7 +83,7 @@ folder <https://github.com/PHPOffice/PHPWord/tree/master/samples/>`__.
 PHPWord Settings
 ----------------
 
-The ``PhpOffice\PhpWord\Settings`` class provides some options that will
+The ``Alireza1250ssss\PhpWord\Settings`` class provides some options that will
 affect the behavior of PHPWord. Below are the options.
 
 XML Writer compatibility
@@ -101,7 +101,7 @@ during development to make the resulting XML file easier to read.
 
 .. code-block:: php
 
-    \PhpOffice\PhpWord\Settings::setCompatibility(false);
+    \Alireza1250ssss\PhpWord\Settings::setCompatibility(false);
 
 Zip class
 ~~~~~~~~~
@@ -114,7 +114,7 @@ included in PHPWord.
 
 .. code-block:: php
 
-    \PhpOffice\PhpWord\Settings::setZipClass(\PhpOffice\PhpWord\Settings::PCLZIP);
+    \Alireza1250ssss\PhpWord\Settings::setZipClass(\Alireza1250ssss\PhpWord\Settings::PCLZIP);
 
 Output escaping
 ~~~~~~~~~~~~~~~
@@ -128,7 +128,7 @@ To turn it on set ``outputEscapingEnabled`` option to ``true`` in your PHPWord c
 
 .. code-block:: php
 
-    \PhpOffice\PhpWord\Settings::setOutputEscapingEnabled(true);
+    \Alireza1250ssss\PhpWord\Settings::setOutputEscapingEnabled(true);
 
 Default Paper
 ~~~~~~~~~~~~~
@@ -138,7 +138,7 @@ You can alter the default paper by using the following function:
 
 .. code-block:: php
 
-    \PhpOffice\PhpWord\Settings::setDefaultPaper('Letter');
+    \Alireza1250ssss\PhpWord\Settings::setDefaultPaper('Letter');
 
 Default font
 ~~~~~~~~~~~~
@@ -228,7 +228,7 @@ The default language of the document can be change with the following.
     $phpWord->getSettings()->setThemeFontLang(new Language(Language::FR_BE));
 
 ``Language`` has 3 parameters, one for Latin languages, one for East Asian languages and one for Complex (Bi-Directional) languages.
-A couple of language codes are provided in the ``PhpOffice\PhpWord\Style\Language`` class but any valid code/ID can be used.
+A couple of language codes are provided in the ``Alireza1250ssss\PhpWord\Style\Language`` class but any valid code/ID can be used.
 
 In case you are generating an RTF document the language need to be set differently.
 
@@ -271,15 +271,15 @@ points to twip.
 
     // Paragraph with 6 points space after
     $phpWord->addParagraphStyle('My Style', array(
-        'spaceAfter' => \PhpOffice\PhpWord\Shared\Converter::pointToTwip(6))
+        'spaceAfter' => \Alireza1250ssss\PhpWord\Shared\Converter::pointToTwip(6))
     );
 
     $section = $phpWord->addSection();
     $sectionStyle = $section->getStyle();
     // half inch left margin
-    $sectionStyle->setMarginLeft(\PhpOffice\PhpWord\Shared\Converter::inchToTwip(.5));
+    $sectionStyle->setMarginLeft(\Alireza1250ssss\PhpWord\Shared\Converter::inchToTwip(.5));
     // 2 cm right margin
-    $sectionStyle->setMarginRight(\PhpOffice\PhpWord\Shared\Converter::cmToTwip(2));
+    $sectionStyle->setMarginRight(\Alireza1250ssss\PhpWord\Shared\Converter::cmToTwip(2));
 
 Document protection
 -------------------
@@ -332,7 +332,7 @@ The smaller the hyphenation zone the more words are hyphenated. Or in other word
 
 .. code-block:: php
 
-    $phpWord->getSettings()->setHyphenationZone(\PhpOffice\PhpWord\Shared\Converter::cmToTwip(1));
+    $phpWord->getSettings()->setHyphenationZone(\Alireza1250ssss\PhpWord\Shared\Converter::cmToTwip(1));
 
 Hyphenate Caps
 ~~~~~~~~~~~~~~

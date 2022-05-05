@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\PDF;
+namespace Alireza1250ssss\PhpWord\Writer\PDF;
 
-use PhpOffice\PhpWord\Exception\Exception;
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Settings;
-use PhpOffice\PhpWord\Writer\HTML;
+use Alireza1250ssss\PhpWord\Exception\Exception;
+use Alireza1250ssss\PhpWord\PhpWord;
+use Alireza1250ssss\PhpWord\Settings;
+use Alireza1250ssss\PhpWord\Writer\HTML;
 
 /**
  * Abstract PDF renderer
@@ -78,7 +78,7 @@ abstract class AbstractRenderer extends HTML
      *
      * @param PhpWord $phpWord PhpWord object
      *
-     * @throws \PhpOffice\PhpWord\Exception\Exception
+     * @throws \Alireza1250ssss\PhpWord\Exception\Exception
      */
     public function __construct(PhpWord $phpWord)
     {
@@ -175,7 +175,7 @@ abstract class AbstractRenderer extends HTML
      *
      * @param string $filename Name of the file to save as
      *
-     * @throws \PhpOffice\PhpWord\Exception\Exception
+     * @throws \Alireza1250ssss\PhpWord\Exception\Exception
      * @return resource
      */
     protected function prepareForSave($filename = null)

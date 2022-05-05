@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Style;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007\Style;
 
-use PhpOffice\PhpWord\Style\Line as LineStyle;
+use Alireza1250ssss\PhpWord\Style\Line as LineStyle;
 
 /**
  * Line style writer

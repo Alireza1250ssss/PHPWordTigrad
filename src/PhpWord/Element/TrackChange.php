@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
 /**
  * TrackChange element
@@ -33,7 +33,7 @@ class TrackChange extends AbstractContainer
     protected $container = 'TrackChange';
 
     /**
-     * The type of change, (insert or delete), not applicable for PhpOffice\PhpWord\Element\Comment
+     * The type of change, (insert or delete), not applicable for Alireza1250ssss\PhpWord\Element\Comment
      *
      * @var string
      */

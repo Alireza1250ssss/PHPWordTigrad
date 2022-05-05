@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Collection;
+namespace Alireza1250ssss\PhpWord\Collection;
 
-use PhpOffice\PhpWord\Element\Footnote;
+use Alireza1250ssss\PhpWord\Element\Footnote;
 
 /**
- * Test class for PhpOffice\PhpWord\Collection subnamespace
+ * Test class for Alireza1250ssss\PhpWord\Collection subnamespace
  *
  * Using concrete class Footnotes instead of AbstractCollection
  */
@@ -36,7 +36,7 @@ class CollectionTest extends \PHPUnit\Framework\TestCase
 
         $this->assertEquals(2, $object->addItem(new Footnote())); // addItem #2. Should returns new item index
         $this->assertCount(2, $object->getItems()); // getItems returns array
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Footnote', $object->getItem(1)); // getItem returns object
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Footnote', $object->getItem(1)); // getItem returns object
         $this->assertNull($object->getItem(3)); // getItem returns null when invalid index is referenced
 
         $object->setItem(2, null); // Set item #2 to null

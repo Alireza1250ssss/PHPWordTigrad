@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Element;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007\Element;
 
 /**
  * TextRun element writer
@@ -31,7 +31,7 @@ class Title extends AbstractElement
     {
         $xmlWriter = $this->getXmlWriter();
         $element = $this->getElement();
-        if (!$element instanceof \PhpOffice\PhpWord\Element\Title) {
+        if (!$element instanceof \Alireza1250ssss\PhpWord\Element\Title) {
             return;
         }
 
@@ -67,7 +67,7 @@ class Title extends AbstractElement
             $this->writeText($text);
             $xmlWriter->endElement(); // w:t
             $xmlWriter->endElement(); // w:r
-        } elseif ($text instanceof \PhpOffice\PhpWord\Element\AbstractContainer) {
+        } elseif ($text instanceof \Alireza1250ssss\PhpWord\Element\AbstractContainer) {
             $containerWriter = new Container($xmlWriter, $text);
             $containerWriter->write();
         }

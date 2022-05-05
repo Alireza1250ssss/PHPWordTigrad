@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\RTF;
+namespace Alireza1250ssss\PhpWord\Writer\RTF;
 
-use PhpOffice\PhpWord\Writer\RTF;
-use PhpOffice\PhpWord\Writer\RTF\Style\Border;
+use Alireza1250ssss\PhpWord\Writer\RTF;
+use Alireza1250ssss\PhpWord\Writer\RTF\Style\Border;
 use PHPUnit\Framework\Assert;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\RTF\Style subnamespace
+ * Test class for Alireza1250ssss\PhpWord\Writer\RTF\Style subnamespace
  */
 class StyleTest extends \PHPUnit\Framework\TestCase
 {
@@ -38,7 +38,7 @@ class StyleTest extends \PHPUnit\Framework\TestCase
     {
         $styles = array('Font', 'Paragraph', 'Section', 'Tab', 'Indentation');
         foreach ($styles as $style) {
-            $objectClass = 'PhpOffice\\PhpWord\\Writer\\RTF\\Style\\' . $style;
+            $objectClass = 'Alireza1250ssss\\PhpWord\\Writer\\RTF\\Style\\' . $style;
             $object = new $objectClass();
 
             $this->assertEquals('', $object->write());
@@ -65,12 +65,12 @@ class StyleTest extends \PHPUnit\Framework\TestCase
 
     public function testIndentation()
     {
-        $indentation = new \PhpOffice\PhpWord\Style\Indentation();
+        $indentation = new \Alireza1250ssss\PhpWord\Style\Indentation();
         $indentation->setLeft(1);
         $indentation->setRight(2);
         $indentation->setFirstLine(3);
 
-        $indentWriter = new \PhpOffice\PhpWord\Writer\RTF\Style\Indentation($indentation);
+        $indentWriter = new \Alireza1250ssss\PhpWord\Writer\RTF\Style\Indentation($indentation);
         $indentWriter->setParentWriter(new RTF());
         $result = $indentWriter->write();
 
@@ -79,11 +79,11 @@ class StyleTest extends \PHPUnit\Framework\TestCase
 
     public function testRightTab()
     {
-        $tabRight = new \PhpOffice\PhpWord\Style\Tab();
-        $tabRight->setType(\PhpOffice\PhpWord\Style\Tab::TAB_STOP_RIGHT);
+        $tabRight = new \Alireza1250ssss\PhpWord\Style\Tab();
+        $tabRight->setType(\Alireza1250ssss\PhpWord\Style\Tab::TAB_STOP_RIGHT);
         $tabRight->setPosition(5);
 
-        $tabWriter = new \PhpOffice\PhpWord\Writer\RTF\Style\Tab($tabRight);
+        $tabWriter = new \Alireza1250ssss\PhpWord\Writer\RTF\Style\Tab($tabRight);
         $tabWriter->setParentWriter(new RTF());
         $result = $tabWriter->write();
 
@@ -92,10 +92,10 @@ class StyleTest extends \PHPUnit\Framework\TestCase
 
     public function testCenterTab()
     {
-        $tabRight = new \PhpOffice\PhpWord\Style\Tab();
-        $tabRight->setType(\PhpOffice\PhpWord\Style\Tab::TAB_STOP_CENTER);
+        $tabRight = new \Alireza1250ssss\PhpWord\Style\Tab();
+        $tabRight->setType(\Alireza1250ssss\PhpWord\Style\Tab::TAB_STOP_CENTER);
 
-        $tabWriter = new \PhpOffice\PhpWord\Writer\RTF\Style\Tab($tabRight);
+        $tabWriter = new \Alireza1250ssss\PhpWord\Writer\RTF\Style\Tab($tabRight);
         $tabWriter->setParentWriter(new RTF());
         $result = $tabWriter->write();
 
@@ -104,10 +104,10 @@ class StyleTest extends \PHPUnit\Framework\TestCase
 
     public function testDecimalTab()
     {
-        $tabRight = new \PhpOffice\PhpWord\Style\Tab();
-        $tabRight->setType(\PhpOffice\PhpWord\Style\Tab::TAB_STOP_DECIMAL);
+        $tabRight = new \Alireza1250ssss\PhpWord\Style\Tab();
+        $tabRight->setType(\Alireza1250ssss\PhpWord\Style\Tab::TAB_STOP_DECIMAL);
 
-        $tabWriter = new \PhpOffice\PhpWord\Writer\RTF\Style\Tab($tabRight);
+        $tabWriter = new \Alireza1250ssss\PhpWord\Writer\RTF\Style\Tab($tabRight);
         $tabWriter->setParentWriter(new RTF());
         $result = $tabWriter->write();
 
@@ -117,8 +117,8 @@ class StyleTest extends \PHPUnit\Framework\TestCase
     public function testRTL()
     {
         $parentWriter = new RTF();
-        $element = new \PhpOffice\PhpWord\Element\Text('אב גד', array('RTL'=> true));
-        $text = new \PhpOffice\PhpWord\Writer\RTF\Element\Text($parentWriter, $element);
+        $element = new \Alireza1250ssss\PhpWord\Element\Text('אב גד', array('RTL'=> true));
+        $text = new \Alireza1250ssss\PhpWord\Writer\RTF\Element\Text($parentWriter, $element);
         $expect = "\\pard\\nowidctlpar {\\rtlch\\cf0\\f0 \\uc0{\\u1488}\\uc0{\\u1489} \\uc0{\\u1490}\\uc0{\\u1491}}\\par\n";
         $this->assertEquals($expect, $this->removeCr($text));
     }
@@ -126,8 +126,8 @@ class StyleTest extends \PHPUnit\Framework\TestCase
     public function testPageBreakLineHeight()
     {
         $parentWriter = new RTF();
-        $element = new \PhpOffice\PhpWord\Element\Text('New page', null, array('lineHeight' => 1.08, 'pageBreakBefore' => true));
-        $text = new \PhpOffice\PhpWord\Writer\RTF\Element\Text($parentWriter, $element);
+        $element = new \Alireza1250ssss\PhpWord\Element\Text('New page', null, array('lineHeight' => 1.08, 'pageBreakBefore' => true));
+        $text = new \Alireza1250ssss\PhpWord\Writer\RTF\Element\Text($parentWriter, $element);
         $expect = "\\pard\\nowidctlpar \\sl259\\slmult1\\page{\\cf0\\f0 New page}\\par\n";
         $this->assertEquals($expect, $this->removeCr($text));
     }
@@ -135,9 +135,9 @@ class StyleTest extends \PHPUnit\Framework\TestCase
     public function testPageNumberRestart()
     {
         //$parentWriter = new RTF();
-        $phpword = new \PhpOffice\PhpWord\PhpWord();
+        $phpword = new \Alireza1250ssss\PhpWord\PhpWord();
         $section = $phpword->addSection(array('pageNumberingStart' => 5));
-        $styleWriter = new \PhpOffice\PhpWord\Writer\RTF\Style\Section($section->getStyle());
+        $styleWriter = new \Alireza1250ssss\PhpWord\Writer\RTF\Style\Section($section->getStyle());
         $wstyle = $this->removeCr($styleWriter);
         // following have default values which might change so don't use them
         $wstyle = preg_replace('/\\\\pgwsxn\\d+/', '', $wstyle);

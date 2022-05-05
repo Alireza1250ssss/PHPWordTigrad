@@ -15,15 +15,15 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer;
+namespace Alireza1250ssss\PhpWord\Writer;
 
-use PhpOffice\PhpWord\AbstractWebServerEmbeddedTest;
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Settings;
-use PhpOffice\PhpWord\SimpleType\Jc;
+use Alireza1250ssss\PhpWord\AbstractWebServerEmbeddedTest;
+use Alireza1250ssss\PhpWord\PhpWord;
+use Alireza1250ssss\PhpWord\Settings;
+use Alireza1250ssss\PhpWord\SimpleType\Jc;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\HTML
+ * Test class for Alireza1250ssss\PhpWord\Writer\HTML
  *
  * @runTestsInSeparateProcesses
  */
@@ -36,13 +36,13 @@ class HTMLTest extends AbstractWebServerEmbeddedTest
     {
         $object = new HTML(new PhpWord());
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\PhpWord', $object->getPhpWord());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\PhpWord', $object->getPhpWord());
     }
 
     /**
      * Construct with null
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\Exception
+     * @expectedException \Alireza1250ssss\PhpWord\Exception\Exception
      * @expectedExceptionMessage No PhpWord assigned.
      */
     public function testConstructWithNull()

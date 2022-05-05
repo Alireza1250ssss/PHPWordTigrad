@@ -28,7 +28,7 @@ Use ``php://output`` as the filename.
 
 .. code-block:: php
 
-    $phpWord = new \PhpOffice\PhpWord\PhpWord();
+    $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
     $section = $phpWord->createSection();
     $section->addText('Hello World!');
     $file = 'HelloWorld.docx';
@@ -38,7 +38,7 @@ Use ``php://output`` as the filename.
     header('Content-Transfer-Encoding: binary');
     header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
     header('Expires: 0');
-    $xmlWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
+    $xmlWriter = \Alireza1250ssss\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
     $xmlWriter->save("php://output");
 
 Create numbered headings
@@ -72,7 +72,7 @@ Apply 'HeadingN' paragraph style to TextRun or Link. Sample code:
 
 .. code-block:: php
 
-    $phpWord = new \PhpOffice\PhpWord\PhpWord();
+    $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
     $phpWord->addTitleStyle(1, array('size' => 16, 'bold' => true));
     $phpWord->addTitleStyle(2, array('size' => 14, 'bold' => true));
     $phpWord->addFontStyle('Link', array('color' => '0000FF', 'underline' => 'single'));

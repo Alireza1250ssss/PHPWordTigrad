@@ -15,11 +15,11 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Style;
+namespace Alireza1250ssss\PhpWord\Writer\ODText\Style;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Shared\Converter;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Alireza1250ssss\PhpWord\PhpWord;
+use Alireza1250ssss\PhpWord\Shared\Converter;
+use Alireza1250ssss\PhpWord\TestHelperDOCX;
 
 /**
  * Test class for Headers, Footers, Tabs in ODT
@@ -363,7 +363,7 @@ class ParagraphTest extends \PHPUnit\Framework\TestCase
      */
     public function testTextRun()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
         $phpWord->addParagraphStyle('parstyle1', array('align' => 'start'));
         $phpWord->addParagraphStyle('parstyle2', array('align' => 'end'));
         $section = $phpWord->addSection();
@@ -403,7 +403,7 @@ class ParagraphTest extends \PHPUnit\Framework\TestCase
      */
     public function testTextRunUnnamed()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
         $parstyle1 = array('align' => 'start');
         $parstyle2 = array('align' => 'end');
         $section = $phpWord->addSection();
@@ -437,7 +437,7 @@ class ParagraphTest extends \PHPUnit\Framework\TestCase
      */
     public function testEmptyFontAndParagraphStyles()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
         $section = $phpWord->addSection();
         $phpWord->addFontStyle('namedfont', array('name' => 'Courier New', 'size' => 8));
         $phpWord->addParagraphStyle('namedpar', array('lineHeight' => 1.08));

@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Part;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007\Part;
 
-use PhpOffice\PhpWord\Element\Section;
-use PhpOffice\PhpWord\Shared\XMLWriter;
-use PhpOffice\PhpWord\Writer\Word2007\Element\Container;
-use PhpOffice\PhpWord\Writer\Word2007\Style\Section as SectionStyleWriter;
+use Alireza1250ssss\PhpWord\Element\Section;
+use Alireza1250ssss\PhpWord\Shared\XMLWriter;
+use Alireza1250ssss\PhpWord\Writer\Word2007\Element\Container;
+use Alireza1250ssss\PhpWord\Writer\Word2007\Style\Section as SectionStyleWriter;
 
 /**
  * Word2007 document part writer: word/document.xml
@@ -80,8 +80,8 @@ class Document extends AbstractPart
     /**
      * Write begin section.
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLWriter $xmlWriter
-     * @param \PhpOffice\PhpWord\Element\Section $section
+     * @param \Alireza1250ssss\PhpWord\Shared\XMLWriter $xmlWriter
+     * @param \Alireza1250ssss\PhpWord\Element\Section $section
      */
     private function writeSection(XMLWriter $xmlWriter, Section $section)
     {
@@ -95,8 +95,8 @@ class Document extends AbstractPart
     /**
      * Write end section.
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLWriter $xmlWriter
-     * @param \PhpOffice\PhpWord\Element\Section $section
+     * @param \Alireza1250ssss\PhpWord\Shared\XMLWriter $xmlWriter
+     * @param \Alireza1250ssss\PhpWord\Element\Section $section
      */
     private function writeSectionSettings(XMLWriter $xmlWriter, Section $section)
     {

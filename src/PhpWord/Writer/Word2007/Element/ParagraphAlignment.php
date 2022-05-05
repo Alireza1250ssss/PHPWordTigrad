@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Element;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007\Element;
 
 /**
  * @since 0.13.0
@@ -31,7 +31,7 @@ class ParagraphAlignment
      *
      * @param string $value Any value provided by Jc simple type
      *
-     * @see \PhpOffice\PhpWord\SimpleType\Jc For the allowed values of $value parameter.
+     * @see \Alireza1250ssss\PhpWord\SimpleType\Jc For the allowed values of $value parameter.
      */
     final public function __construct($value)
     {

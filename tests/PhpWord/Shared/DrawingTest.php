@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Shared;
+namespace Alireza1250ssss\PhpWord\Shared;
 
 /**
- * Test class for PhpOffice\PhpWord\Shared\Drawing
+ * Test class for Alireza1250ssss\PhpWord\Shared\Drawing
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Shared\Drawing
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Shared\Drawing
  */
 class DrawingTest extends \PHPUnit\Framework\TestCase
 {

@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Alireza1250ssss\PhpWord\Style;
 
-use PhpOffice\PhpWord\ComplexType\TblWidth as TblWidthComplexType;
-use PhpOffice\PhpWord\SimpleType\JcTable;
-use PhpOffice\PhpWord\SimpleType\TblWidth;
+use Alireza1250ssss\PhpWord\ComplexType\TblWidth as TblWidthComplexType;
+use Alireza1250ssss\PhpWord\SimpleType\JcTable;
+use Alireza1250ssss\PhpWord\SimpleType\TblWidth;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Table
+ * Test class for Alireza1250ssss\PhpWord\Style\Table
  *
  * @runTestsInSeparateProcesses
  */
@@ -44,7 +44,7 @@ class TableTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals('FF0000', $object->getBgColor());
 
         $firstRow = $object->getFirstRow();
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Table', $firstRow);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Table', $firstRow);
         $this->assertEquals(3, $firstRow->getBorderBottomSize());
     }
 

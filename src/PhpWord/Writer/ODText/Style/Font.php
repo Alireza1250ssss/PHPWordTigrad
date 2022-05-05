@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Style;
+namespace Alireza1250ssss\PhpWord\Writer\ODText\Style;
 
 /**
  * Font style writer
@@ -30,16 +30,16 @@ class Font extends AbstractStyle
     public function write()
     {
         $style = $this->getStyle();
-        if (!$style instanceof \PhpOffice\PhpWord\Style\Font) {
+        if (!$style instanceof \Alireza1250ssss\PhpWord\Style\Font) {
             return;
         }
         $xmlWriter = $this->getXmlWriter();
 
         $stylep = (method_exists($style, 'getParagraph')) ? $style->getParagraph() : null;
-        if ($stylep instanceof \PhpOffice\PhpWord\Style\Paragraph) {
+        if ($stylep instanceof \Alireza1250ssss\PhpWord\Style\Paragraph) {
             $temp1 = clone $stylep;
             $temp1->setStyleName($style->getStyleName());
-            $temp2 = new \PhpOffice\PhpWord\Writer\ODText\Style\Paragraph($xmlWriter, $temp1);
+            $temp2 = new \Alireza1250ssss\PhpWord\Writer\ODText\Style\Paragraph($xmlWriter, $temp1);
             $temp2->write();
         }
 
@@ -61,7 +61,7 @@ class Font extends AbstractStyle
 
         // Color
         $color = $style->getColor();
-        $xmlWriter->writeAttributeIf($color != '', 'fo:color', '#' . \PhpOffice\PhpWord\Shared\Converter::stringToRgb($color));
+        $xmlWriter->writeAttributeIf($color != '', 'fo:color', '#' . \Alireza1250ssss\PhpWord\Shared\Converter::stringToRgb($color));
 
         // Bold & italic
         $xmlWriter->writeAttributeIf($style->isBold(), 'fo:font-weight', 'bold');

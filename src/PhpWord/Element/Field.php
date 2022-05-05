@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
-use PhpOffice\PhpWord\Style\Font;
+use Alireza1250ssss\PhpWord\Style\Font;
 
 /**
  * Field element
@@ -117,15 +117,15 @@ class Field extends AbstractElement
     /**
      * Font style
      *
-     * @var string|\PhpOffice\PhpWord\Style\Font
+     * @var string|\Alireza1250ssss\PhpWord\Style\Font
      */
     protected $fontStyle;
 
     /**
      * Set Font style
      *
-     * @param string|array|\PhpOffice\PhpWord\Style\Font $style
-     * @return string|\PhpOffice\PhpWord\Style\Font
+     * @param string|array|\Alireza1250ssss\PhpWord\Style\Font $style
+     * @return string|\Alireza1250ssss\PhpWord\Style\Font
      */
     public function setFontStyle($style = null)
     {
@@ -146,7 +146,7 @@ class Field extends AbstractElement
     /**
      * Get Font style
      *
-     * @return string|\PhpOffice\PhpWord\Style\Font
+     * @return string|\Alireza1250ssss\PhpWord\Style\Font
      */
     public function getFontStyle()
     {
@@ -160,7 +160,7 @@ class Field extends AbstractElement
      * @param array $properties
      * @param array $options
      * @param TextRun|string|null $text
-     * @param string|array|\PhpOffice\PhpWord\Style\Font $fontStyle
+     * @param string|array|\Alireza1250ssss\PhpWord\Style\Font $fontStyle
      */
     public function __construct($type = null, $properties = array(), $options = array(), $text = null, $fontStyle = null)
     {

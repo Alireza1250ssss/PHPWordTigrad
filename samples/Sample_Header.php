@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../bootstrap.php';
 
-use PhpOffice\PhpWord\Settings;
+use Alireza1250ssss\PhpWord\Settings;
 
 date_default_timezone_set('UTC');
 error_reporting(E_ALL);
@@ -61,7 +61,7 @@ if ($handle = opendir('.')) {
 /**
  * Write documents
  *
- * @param \PhpOffice\PhpWord\PhpWord $phpWord
+ * @param \Alireza1250ssss\PhpWord\PhpWord $phpWord
  * @param string $filename
  * @param array $writers
  *

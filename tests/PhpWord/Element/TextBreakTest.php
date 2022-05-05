@@ -15,15 +15,15 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
-use PhpOffice\PhpWord\Style\Font;
-use PhpOffice\PhpWord\Style\Paragraph;
+use Alireza1250ssss\PhpWord\Style\Font;
+use Alireza1250ssss\PhpWord\Style\Paragraph;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\TextBreak
+ * Test class for Alireza1250ssss\PhpWord\Element\TextBreak
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Element\TextBreak
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Element\TextBreak
  * @runTestsInSeparateProcesses
  */
 class TextBreakTest extends \PHPUnit\Framework\TestCase
@@ -58,8 +58,8 @@ class TextBreakTest extends \PHPUnit\Framework\TestCase
         $fStyle = array('size' => 12);
         $pStyle = array('spacing' => 240);
         $object = new TextBreak($fStyle, $pStyle);
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Font', $object->getFontStyle());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Paragraph', $object->getParagraphStyle());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Font', $object->getFontStyle());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Paragraph', $object->getParagraphStyle());
     }
 
     /**

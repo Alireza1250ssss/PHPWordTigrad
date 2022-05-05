@@ -15,17 +15,17 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Element;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007\Element;
 
-use PhpOffice\PhpWord\Element\Cell as CellElement;
-use PhpOffice\PhpWord\Element\Row as RowElement;
-use PhpOffice\PhpWord\Element\Table as TableElement;
-use PhpOffice\PhpWord\Shared\XMLWriter;
-use PhpOffice\PhpWord\Style\Cell as CellStyle;
-use PhpOffice\PhpWord\Style\Row as RowStyle;
-use PhpOffice\PhpWord\Writer\Word2007\Style\Cell as CellStyleWriter;
-use PhpOffice\PhpWord\Writer\Word2007\Style\Row as RowStyleWriter;
-use PhpOffice\PhpWord\Writer\Word2007\Style\Table as TableStyleWriter;
+use Alireza1250ssss\PhpWord\Element\Cell as CellElement;
+use Alireza1250ssss\PhpWord\Element\Row as RowElement;
+use Alireza1250ssss\PhpWord\Element\Table as TableElement;
+use Alireza1250ssss\PhpWord\Shared\XMLWriter;
+use Alireza1250ssss\PhpWord\Style\Cell as CellStyle;
+use Alireza1250ssss\PhpWord\Style\Row as RowStyle;
+use Alireza1250ssss\PhpWord\Writer\Word2007\Style\Cell as CellStyleWriter;
+use Alireza1250ssss\PhpWord\Writer\Word2007\Style\Row as RowStyleWriter;
+use Alireza1250ssss\PhpWord\Writer\Word2007\Style\Table as TableStyleWriter;
 
 /**
  * Table element writer
@@ -71,8 +71,8 @@ class Table extends AbstractElement
     /**
      * Write column.
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLWriter $xmlWriter
-     * @param \PhpOffice\PhpWord\Element\Table $element
+     * @param \Alireza1250ssss\PhpWord\Shared\XMLWriter $xmlWriter
+     * @param \Alireza1250ssss\PhpWord\Element\Table $element
      */
     private function writeColumns(XMLWriter $xmlWriter, TableElement $element)
     {
@@ -93,8 +93,8 @@ class Table extends AbstractElement
     /**
      * Write row.
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLWriter $xmlWriter
-     * @param \PhpOffice\PhpWord\Element\Row $row
+     * @param \Alireza1250ssss\PhpWord\Shared\XMLWriter $xmlWriter
+     * @param \Alireza1250ssss\PhpWord\Element\Row $row
      */
     private function writeRow(XMLWriter $xmlWriter, RowElement $row)
     {
@@ -119,8 +119,8 @@ class Table extends AbstractElement
     /**
      * Write cell.
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLWriter $xmlWriter
-     * @param \PhpOffice\PhpWord\Element\Cell $cell
+     * @param \Alireza1250ssss\PhpWord\Shared\XMLWriter $xmlWriter
+     * @param \Alireza1250ssss\PhpWord\Element\Cell $cell
      */
     private function writeCell(XMLWriter $xmlWriter, CellElement $cell)
     {

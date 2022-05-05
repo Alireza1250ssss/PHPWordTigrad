@@ -1,12 +1,12 @@
 <?php
-use PhpOffice\PhpWord\Element\Chart;
-use PhpOffice\PhpWord\Shared\Converter;
+use Alireza1250ssss\PhpWord\Element\Chart;
+use Alireza1250ssss\PhpWord\Shared\Converter;
 
 include_once 'Sample_Header.php';
 
 // Template processor instance creation
 echo date('H:i:s'), ' Creating new TemplateProcessor instance...', EOL;
-$templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor('resources/Sample_41_TemplateSetChart.docx');
+$templateProcessor = new \Alireza1250ssss\PhpWord\TemplateProcessor('resources/Sample_41_TemplateSetChart.docx');
 
 $chartTypes = array('pie', 'doughnut', 'bar', 'column', 'line', 'area', 'scatter', 'radar', 'stacked_bar', 'percent_stacked_bar', 'stacked_column', 'percent_stacked_column');
 $twoSeries = array('bar', 'column', 'line', 'area', 'scatter', 'radar', 'stacked_bar', 'percent_stacked_bar', 'stacked_column', 'percent_stacked_column');

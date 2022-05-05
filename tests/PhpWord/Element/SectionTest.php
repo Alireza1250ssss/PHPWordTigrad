@@ -15,15 +15,15 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Style;
-use PhpOffice\PhpWord\Style\Section as SectionStyle;
+use Alireza1250ssss\PhpWord\PhpWord;
+use Alireza1250ssss\PhpWord\Style;
+use Alireza1250ssss\PhpWord\Style\Section as SectionStyle;
 
 /**
- * @covers \PhpOffice\PhpWord\Element\Section
- * @coversDefaultClass \PhpOffice\PhpWord\Element\Section
+ * @covers \Alireza1250ssss\PhpWord\Element\Section
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Element\Section
  * @runTestsInSeparateProcesses
  */
 class SectionTest extends \PHPUnit\Framework\TestCase
@@ -31,14 +31,14 @@ class SectionTest extends \PHPUnit\Framework\TestCase
     public function testConstructorWithDefaultStyle()
     {
         $section = new Section(0);
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Section', $section->getStyle());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Section', $section->getStyle());
     }
 
     public function testConstructorWithArrayStyle()
     {
         $section = new Section(0, array('orientation' => 'landscape'));
         $style = $section->getStyle();
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Section', $style);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Section', $style);
         $this->assertEquals('landscape', $style->getOrientation());
     }
 
@@ -102,14 +102,14 @@ class SectionTest extends \PHPUnit\Framework\TestCase
         );
         $elmCount = 0;
         foreach ($elementTypes as $elementType) {
-            $this->assertInstanceOf("PhpOffice\\PhpWord\\Element\\{$elementType}", $elementCollection[$elmCount]);
+            $this->assertInstanceOf("Alireza1250ssss\\PhpWord\\Element\\{$elementType}", $elementCollection[$elmCount]);
             $elmCount++;
         }
     }
 
     /**
      * @coversNothing
-     * @expectedException \PhpOffice\PhpWord\Exception\InvalidObjectException
+     * @expectedException \Alireza1250ssss\PhpWord\Exception\InvalidObjectException
      */
     public function testAddObjectException()
     {
@@ -131,7 +131,7 @@ class SectionTest extends \PHPUnit\Framework\TestCase
         $section->addTitle('Test', 1);
         $elementCollection = $section->getElements();
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Title', $elementCollection[0]);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Title', $elementCollection[0]);
     }
 
     /**
@@ -146,7 +146,7 @@ class SectionTest extends \PHPUnit\Framework\TestCase
 
         foreach ($elements as $element) {
             $method = "add{$element}";
-            $this->assertInstanceOf("PhpOffice\\PhpWord\\Element\\{$element}", $object->$method());
+            $this->assertInstanceOf("Alireza1250ssss\\PhpWord\\Element\\{$element}", $object->$method());
         }
         $this->assertFalse($object->hasDifferentFirstPage());
     }
@@ -186,7 +186,7 @@ class SectionTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers \PhpOffice\PhpWord\Element\AbstractContainer::removeElement
+     * @covers \Alireza1250ssss\PhpWord\Element\AbstractContainer::removeElement
      */
     public function testRemoveElementByIndex()
     {
@@ -201,7 +201,7 @@ class SectionTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers \PhpOffice\PhpWord\Element\AbstractContainer::removeElement
+     * @covers \Alireza1250ssss\PhpWord\Element\AbstractContainer::removeElement
      */
     public function testRemoveElementByElement()
     {

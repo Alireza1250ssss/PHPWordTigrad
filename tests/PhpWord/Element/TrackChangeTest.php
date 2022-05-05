@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\TrackChange
+ * Test class for Alireza1250ssss\PhpWord\Element\TrackChange
  *
  * @runTestsInSeparateProcesses
  */
@@ -36,7 +36,7 @@ class TrackChangeTest extends \PHPUnit\Framework\TestCase
         $oText = new Text('dummy text');
         $oText->setTrackChange($oTrackChange);
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\TrackChange', $oTrackChange);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\TrackChange', $oTrackChange);
         $this->assertEquals($author, $oTrackChange->getAuthor());
         $this->assertEquals($date, $oTrackChange->getDate());
         $this->assertEquals(TrackChange::INSERTED, $oTrackChange->getChangeType());
@@ -54,7 +54,7 @@ class TrackChangeTest extends \PHPUnit\Framework\TestCase
         $oText = new Text('dummy text');
         $oText->setTrackChange($oTrackChange);
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\TrackChange', $oTrackChange);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\TrackChange', $oTrackChange);
         $this->assertEquals($author, $oTrackChange->getAuthor());
         $this->assertEquals($date, null);
         $this->assertEquals(TrackChange::INSERTED, $oTrackChange->getChangeType());

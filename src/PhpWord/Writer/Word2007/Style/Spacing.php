@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Style;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007\Style;
 
 /**
  * Spacing between lines and above/below paragraph style writer
@@ -30,7 +30,7 @@ class Spacing extends AbstractStyle
     public function write()
     {
         $style = $this->getStyle();
-        if (!$style instanceof \PhpOffice\PhpWord\Style\Spacing) {
+        if (!$style instanceof \Alireza1250ssss\PhpWord\Style\Spacing) {
             return;
         }
         $xmlWriter = $this->getXmlWriter();
@@ -46,7 +46,7 @@ class Spacing extends AbstractStyle
         $line = $style->getLine();
         //if linerule is auto, the spacing is supposed to include the height of the line itself, which is 240 twips
         if (null !== $line && 'auto' === $style->getLineRule()) {
-            $line += \PhpOffice\PhpWord\Style\Paragraph::LINE_HEIGHT;
+            $line += \Alireza1250ssss\PhpWord\Style\Paragraph::LINE_HEIGHT;
         }
         $xmlWriter->writeAttributeIf(!is_null($line), 'w:line', $line);
 

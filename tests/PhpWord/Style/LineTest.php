@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Alireza1250ssss\PhpWord\Style;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Image
+ * Test class for Alireza1250ssss\PhpWord\Style\Image
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\Image
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Style\Image
  * @runTestsInSeparateProcesses
  */
 class LineTest extends \PHPUnit\Framework\TestCase
@@ -33,10 +33,10 @@ class LineTest extends \PHPUnit\Framework\TestCase
         $object = new Line();
 
         $properties = array(
-            'connectorType' => \PhpOffice\PhpWord\Style\Line::CONNECTOR_TYPE_STRAIGHT,
-            'beginArrow'    => \PhpOffice\PhpWord\Style\Line::ARROW_STYLE_BLOCK,
-            'endArrow'      => \PhpOffice\PhpWord\Style\Line::ARROW_STYLE_OVAL,
-            'dash'          => \PhpOffice\PhpWord\Style\Line::DASH_STYLE_LONG_DASH_DOT_DOT,
+            'connectorType' => \Alireza1250ssss\PhpWord\Style\Line::CONNECTOR_TYPE_STRAIGHT,
+            'beginArrow'    => \Alireza1250ssss\PhpWord\Style\Line::ARROW_STYLE_BLOCK,
+            'endArrow'      => \Alireza1250ssss\PhpWord\Style\Line::ARROW_STYLE_OVAL,
+            'dash'          => \Alireza1250ssss\PhpWord\Style\Line::DASH_STYLE_LONG_DASH_DOT_DOT,
             'weight'        => 10,
             'color'         => 'red',
         );
@@ -56,10 +56,10 @@ class LineTest extends \PHPUnit\Framework\TestCase
         $object = new Line();
 
         $properties = array(
-            'connectorType' => \PhpOffice\PhpWord\Style\Line::CONNECTOR_TYPE_STRAIGHT,
-            'beginArrow'    => \PhpOffice\PhpWord\Style\Line::ARROW_STYLE_BLOCK,
-            'endArrow'      => \PhpOffice\PhpWord\Style\Line::ARROW_STYLE_OVAL,
-            'dash'          => \PhpOffice\PhpWord\Style\Line::DASH_STYLE_LONG_DASH_DOT_DOT,
+            'connectorType' => \Alireza1250ssss\PhpWord\Style\Line::CONNECTOR_TYPE_STRAIGHT,
+            'beginArrow'    => \Alireza1250ssss\PhpWord\Style\Line::ARROW_STYLE_BLOCK,
+            'endArrow'      => \Alireza1250ssss\PhpWord\Style\Line::ARROW_STYLE_OVAL,
+            'dash'          => \Alireza1250ssss\PhpWord\Style\Line::DASH_STYLE_LONG_DASH_DOT_DOT,
             'weight'        => 10,
             'color'         => 'red',
         );
@@ -86,7 +86,7 @@ class LineTest extends \PHPUnit\Framework\TestCase
      */
     public function testSetGetConnectorType()
     {
-        $expected = \PhpOffice\PhpWord\Style\Line::CONNECTOR_TYPE_STRAIGHT;
+        $expected = \Alireza1250ssss\PhpWord\Style\Line::CONNECTOR_TYPE_STRAIGHT;
         $object = new Line();
         $object->setConnectorType($expected);
         $this->assertEquals($expected, $object->getConnectorType());
@@ -119,7 +119,7 @@ class LineTest extends \PHPUnit\Framework\TestCase
      */
     public function testSetGetDash()
     {
-        $expected = \PhpOffice\PhpWord\Style\Line::DASH_STYLE_LONG_DASH_DOT_DOT;
+        $expected = \Alireza1250ssss\PhpWord\Style\Line::DASH_STYLE_LONG_DASH_DOT_DOT;
         $object = new Line();
         $object->setDash($expected);
         $this->assertEquals($expected, $object->getDash());
@@ -130,7 +130,7 @@ class LineTest extends \PHPUnit\Framework\TestCase
      */
     public function testSetGetBeginArrow()
     {
-        $expected = \PhpOffice\PhpWord\Style\Line::ARROW_STYLE_BLOCK;
+        $expected = \Alireza1250ssss\PhpWord\Style\Line::ARROW_STYLE_BLOCK;
         $object = new Line();
         $object->setBeginArrow($expected);
         $this->assertEquals($expected, $object->getBeginArrow());
@@ -141,7 +141,7 @@ class LineTest extends \PHPUnit\Framework\TestCase
      */
     public function testSetGetEndArrow()
     {
-        $expected = \PhpOffice\PhpWord\Style\Line::ARROW_STYLE_CLASSIC;
+        $expected = \Alireza1250ssss\PhpWord\Style\Line::ARROW_STYLE_CLASSIC;
         $object = new Line();
         $object->setEndArrow($expected);
         $this->assertEquals($expected, $object->getEndArrow());

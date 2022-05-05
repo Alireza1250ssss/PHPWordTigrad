@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Element;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007\Element;
 
 /**
  * TextBreak element writer
@@ -31,7 +31,7 @@ class TextBreak extends Text
     {
         $xmlWriter = $this->getXmlWriter();
         $element = $this->getElement();
-        if (!$element instanceof \PhpOffice\PhpWord\Element\TextBreak) {
+        if (!$element instanceof \Alireza1250ssss\PhpWord\Element\TextBreak) {
             return;
         }
 

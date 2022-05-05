@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\ComplexType;
+namespace Alireza1250ssss\PhpWord\ComplexType;
 
 /**
  * Spelling and Grammatical Checking State

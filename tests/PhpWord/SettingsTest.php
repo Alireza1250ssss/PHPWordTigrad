@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord;
+namespace Alireza1250ssss\PhpWord;
 
 /**
- * Test class for PhpOffice\PhpWord\Settings
+ * Test class for Alireza1250ssss\PhpWord\Settings
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Settings
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Settings
  * @runTestsInSeparateProcesses
  */
 class SettingsTest extends \PHPUnit\Framework\TestCase

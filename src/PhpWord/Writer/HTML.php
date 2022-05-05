@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer;
+namespace Alireza1250ssss\PhpWord\Writer;
 
-use PhpOffice\PhpWord\PhpWord;
+use Alireza1250ssss\PhpWord\PhpWord;
 
 /**
  * HTML writer
@@ -50,9 +50,9 @@ class HTML extends AbstractWriter implements WriterInterface
 
         $this->parts = array('Head', 'Body');
         foreach ($this->parts as $partName) {
-            $partClass = 'PhpOffice\\PhpWord\\Writer\\HTML\\Part\\' . $partName;
+            $partClass = 'Alireza1250ssss\\PhpWord\\Writer\\HTML\\Part\\' . $partName;
             if (class_exists($partClass)) {
-                /** @var \PhpOffice\PhpWord\Writer\HTML\Part\AbstractPart $part Type hint */
+                /** @var \Alireza1250ssss\PhpWord\Writer\HTML\Part\AbstractPart $part Type hint */
                 $part = new $partClass();
                 $part->setParentWriter($this);
                 $this->writerParts[strtolower($partName)] = $part;
@@ -65,7 +65,7 @@ class HTML extends AbstractWriter implements WriterInterface
      *
      * @param string $filename
      *
-     * @throws \PhpOffice\PhpWord\Exception\Exception
+     * @throws \Alireza1250ssss\PhpWord\Exception\Exception
      */
     public function save($filename = null)
     {

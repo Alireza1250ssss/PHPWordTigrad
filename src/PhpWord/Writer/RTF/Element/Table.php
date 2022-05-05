@@ -15,11 +15,11 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\RTF\Element;
+namespace Alireza1250ssss\PhpWord\Writer\RTF\Element;
 
-use PhpOffice\PhpWord\Element\Cell as CellElement;
-use PhpOffice\PhpWord\Element\Row as RowElement;
-use PhpOffice\PhpWord\Element\Table as TableElement;
+use Alireza1250ssss\PhpWord\Element\Cell as CellElement;
+use Alireza1250ssss\PhpWord\Element\Row as RowElement;
+use Alireza1250ssss\PhpWord\Element\Table as TableElement;
 
 /**
  * Table element RTF writer
@@ -67,7 +67,7 @@ class Table extends AbstractElement
     /**
      * Write column
      *
-     * @param \PhpOffice\PhpWord\Element\Row $row
+     * @param \Alireza1250ssss\PhpWord\Element\Row $row
      * @return string
      */
     private function writeRowDef(RowElement $row)
@@ -91,7 +91,7 @@ class Table extends AbstractElement
     /**
      * Write row
      *
-     * @param \PhpOffice\PhpWord\Element\Row $row
+     * @param \Alireza1250ssss\PhpWord\Element\Row $row
      * @return string
      */
     private function writeRow(RowElement $row)
@@ -109,7 +109,7 @@ class Table extends AbstractElement
     /**
      * Write cell
      *
-     * @param \PhpOffice\PhpWord\Element\Cell $cell
+     * @param \Alireza1250ssss\PhpWord\Element\Cell $cell
      * @return string
      */
     private function writeCell(CellElement $cell)

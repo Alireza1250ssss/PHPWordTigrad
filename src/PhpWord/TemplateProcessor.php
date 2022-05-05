@@ -16,16 +16,16 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord;
+namespace Alireza1250ssss\PhpWord;
 
-use PhpOffice\PhpWord\Escaper\RegExp;
-use PhpOffice\PhpWord\Escaper\Xml;
-use PhpOffice\PhpWord\Exception\CopyFileException;
-use PhpOffice\PhpWord\Exception\CreateTemporaryFileException;
-use PhpOffice\PhpWord\Exception\Exception;
-use PhpOffice\PhpWord\Shared\Text;
-use PhpOffice\PhpWord\Shared\XMLWriter;
-use PhpOffice\PhpWord\Shared\ZipArchive;
+use Alireza1250ssss\PhpWord\Escaper\RegExp;
+use Alireza1250ssss\PhpWord\Escaper\Xml;
+use Alireza1250ssss\PhpWord\Exception\CopyFileException;
+use Alireza1250ssss\PhpWord\Exception\CreateTemporaryFileException;
+use Alireza1250ssss\PhpWord\Exception\Exception;
+use Alireza1250ssss\PhpWord\Shared\Text;
+use Alireza1250ssss\PhpWord\Shared\XMLWriter;
+use Alireza1250ssss\PhpWord\Shared\ZipArchive;
 
 class TemplateProcessor
 {
@@ -97,8 +97,8 @@ class TemplateProcessor
      *
      * @param string $documentTemplate The fully qualified template filename
      *
-     * @throws \PhpOffice\PhpWord\Exception\CreateTemporaryFileException
-     * @throws \PhpOffice\PhpWord\Exception\CopyFileException
+     * @throws \Alireza1250ssss\PhpWord\Exception\CreateTemporaryFileException
+     * @throws \Alireza1250ssss\PhpWord\Exception\CopyFileException
      */
     public function __construct($documentTemplate)
     {
@@ -138,7 +138,7 @@ class TemplateProcessor
      * To replace an image: $templateProcessor->zip()->AddFromString("word/media/image1.jpg", file_get_contents($file));<br>
      * To read a file: $templateProcessor->zip()->getFromName("word/media/image1.jpg");
      *
-     * @return \PhpOffice\PhpWord\Shared\ZipArchive
+     * @return \Alireza1250ssss\PhpWord\Shared\ZipArchive
      */
     public function zip()
     {
@@ -165,7 +165,7 @@ class TemplateProcessor
      * @param string $xml
      * @param \XSLTProcessor $xsltProcessor
      *
-     * @throws \PhpOffice\PhpWord\Exception\Exception
+     * @throws \Alireza1250ssss\PhpWord\Exception\Exception
      *
      * @return string
      */
@@ -220,7 +220,7 @@ class TemplateProcessor
      * @param array $xslOptions
      * @param string $xslOptionsUri
      *
-     * @throws \PhpOffice\PhpWord\Exception\Exception
+     * @throws \Alireza1250ssss\PhpWord\Exception\Exception
      */
     public function applyXslStyleSheet($xslDomDocument, $xslOptions = array(), $xslOptionsUri = '')
     {
@@ -266,15 +266,15 @@ class TemplateProcessor
 
     /**
      * @param string $search
-     * @param \PhpOffice\PhpWord\Element\AbstractElement $complexType
+     * @param \Alireza1250ssss\PhpWord\Element\AbstractElement $complexType
      */
-    public function setComplexValue($search, \PhpOffice\PhpWord\Element\AbstractElement $complexType)
+    public function setComplexValue($search, \Alireza1250ssss\PhpWord\Element\AbstractElement $complexType)
     {
         $elementName = substr(get_class($complexType), strrpos(get_class($complexType), '\\') + 1);
-        $objectClass = 'PhpOffice\\PhpWord\\Writer\\Word2007\\Element\\' . $elementName;
+        $objectClass = 'Alireza1250ssss\\PhpWord\\Writer\\Word2007\\Element\\' . $elementName;
 
         $xmlWriter = new XMLWriter();
-        /** @var \PhpOffice\PhpWord\Writer\Word2007\Element\AbstractElement $elementWriter */
+        /** @var \Alireza1250ssss\PhpWord\Writer\Word2007\Element\AbstractElement $elementWriter */
         $elementWriter = new $objectClass($xmlWriter, $complexType, true);
         $elementWriter->write();
 
@@ -294,15 +294,15 @@ class TemplateProcessor
 
     /**
      * @param string $search
-     * @param \PhpOffice\PhpWord\Element\AbstractElement $complexType
+     * @param \Alireza1250ssss\PhpWord\Element\AbstractElement $complexType
      */
-    public function setComplexBlock($search, \PhpOffice\PhpWord\Element\AbstractElement $complexType)
+    public function setComplexBlock($search, \Alireza1250ssss\PhpWord\Element\AbstractElement $complexType)
     {
         $elementName = substr(get_class($complexType), strrpos(get_class($complexType), '\\') + 1);
-        $objectClass = 'PhpOffice\\PhpWord\\Writer\\Word2007\\Element\\' . $elementName;
+        $objectClass = 'Alireza1250ssss\\PhpWord\\Writer\\Word2007\\Element\\' . $elementName;
 
         $xmlWriter = new XMLWriter();
-        /** @var \PhpOffice\PhpWord\Writer\Word2007\Element\AbstractElement $elementWriter */
+        /** @var \Alireza1250ssss\PhpWord\Writer\Word2007\Element\AbstractElement $elementWriter */
         $elementWriter = new $objectClass($xmlWriter, $complexType, false);
         $elementWriter->write();
 
@@ -358,12 +358,12 @@ class TemplateProcessor
 
     /**
      * @param string $search
-     * @param \PhpOffice\PhpWord\Element\AbstractElement $complexType
+     * @param \Alireza1250ssss\PhpWord\Element\AbstractElement $complexType
      */
-    public function setChart($search, \PhpOffice\PhpWord\Element\AbstractElement $chart)
+    public function setChart($search, \Alireza1250ssss\PhpWord\Element\AbstractElement $chart)
     {
         $elementName = substr(get_class($chart), strrpos(get_class($chart), '\\') + 1);
-        $objectClass = 'PhpOffice\\PhpWord\\Writer\\Word2007\\Element\\' . $elementName;
+        $objectClass = 'Alireza1250ssss\\PhpWord\\Writer\\Word2007\\Element\\' . $elementName;
 
         // Get the next relation id
         $rId = $this->getNextRelationsIndex($this->getMainPartName());
@@ -373,7 +373,7 @@ class TemplateProcessor
         $filename = "charts/chart{$rId}.xml";
 
         // Get the part writer
-        $writerPart = new \PhpOffice\PhpWord\Writer\Word2007\Part\Chart();
+        $writerPart = new \Alireza1250ssss\PhpWord\Writer\Word2007\Part\Chart();
         $writerPart->setElement($chart);
 
         // ContentTypes.xml
@@ -718,7 +718,7 @@ class TemplateProcessor
      * @param string $search
      * @param int $numberOfClones
      *
-     * @throws \PhpOffice\PhpWord\Exception\Exception
+     * @throws \Alireza1250ssss\PhpWord\Exception\Exception
      */
     public function cloneRow($search, $numberOfClones)
     {
@@ -787,17 +787,17 @@ class TemplateProcessor
 
     public static function getcontent($input)
     {
-        if (empty($input)) return new \PhpOffice\PhpWord\Element\TextRun();
+        if (empty($input)) return new \Alireza1250ssss\PhpWord\Element\TextRun();
         $replace = ['<strong>' => 'BOLD', '<i>' => "ITALIC", '<u>' => "UNDERLINE"];
         preg_match("/<p>(.*?)<\/p>/s", $input, $matches);
         if (empty($matches[1]) or is_null($matches[1])){
             if(is_string($input)) {
-                $txtRun = new \PhpOffice\PhpWord\Element\TextRun();
+                $txtRun = new \Alireza1250ssss\PhpWord\Element\TextRun();
                 $txtRun->addText($input, ['name' => "B Nazanin",'rtl'=>true]);
                 return $txtRun;
             }
             else
-                return new \PhpOffice\PhpWord\Element\TextRun();
+                return new \Alireza1250ssss\PhpWord\Element\TextRun();
         }
         $content = $matches[1];
         $content = html_entity_decode($content);
@@ -825,7 +825,7 @@ class TemplateProcessor
                 $result[] = $item;
             }
         }
-        $textRun = new \PhpOffice\PhpWord\Element\TextRun();
+        $textRun = new \Alireza1250ssss\PhpWord\Element\TextRun();
         $style = [
             'name'=>"B Nazanin",
             'rtl'=>true
@@ -1023,7 +1023,7 @@ class TemplateProcessor
     /**
      * Saves the result document.
      *
-     * @throws \PhpOffice\PhpWord\Exception\Exception
+     * @throws \Alireza1250ssss\PhpWord\Exception\Exception
      *
      * @return string
      */
@@ -1233,7 +1233,7 @@ class TemplateProcessor
      *
      * @param int $offset
      *
-     * @throws \PhpOffice\PhpWord\Exception\Exception
+     * @throws \Alireza1250ssss\PhpWord\Exception\Exception
      *
      * @return int
      */
@@ -1327,7 +1327,7 @@ class TemplateProcessor
      * @param string $macro Name of macro
      * @param string $block New block content
      * @param string $blockType XML tag type of block
-     * @return \PhpOffice\PhpWord\TemplateProcessor Fluent interface
+     * @return \Alireza1250ssss\PhpWord\TemplateProcessor Fluent interface
      */
     public function replaceXmlBlock($macro, $block, $blockType = 'w:p')
     {

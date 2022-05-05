@@ -15,11 +15,11 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Shared\Microsoft;
+namespace Alireza1250ssss\PhpWord\Shared\Microsoft;
 
 /**
- * Test class for \PhpOffice\PhpWord\Shared\Microsoft
- * @coversDefaultClass \PhpOffice\PhpWord\Shared\Microsoft
+ * Test class for \Alireza1250ssss\PhpWord\Shared\Microsoft
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Shared\Microsoft
  */
 class PasswordEncoderTest extends \PHPUnit\Framework\TestCase
 {

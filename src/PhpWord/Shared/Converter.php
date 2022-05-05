@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Shared;
+namespace Alireza1250ssss\PhpWord\Shared;
 
 /**
  * Common converter functions
@@ -281,35 +281,35 @@ class Converter
     public static function stringToRgb($value)
     {
         switch ($value) {
-            case \PhpOffice\PhpWord\Style\Font::FGCOLOR_YELLOW:
+            case \Alireza1250ssss\PhpWord\Style\Font::FGCOLOR_YELLOW:
                 return 'FFFF00';
-            case \PhpOffice\PhpWord\Style\Font::FGCOLOR_LIGHTGREEN:
+            case \Alireza1250ssss\PhpWord\Style\Font::FGCOLOR_LIGHTGREEN:
                 return '90EE90';
-            case \PhpOffice\PhpWord\Style\Font::FGCOLOR_CYAN:
+            case \Alireza1250ssss\PhpWord\Style\Font::FGCOLOR_CYAN:
                 return '00FFFF';
-            case \PhpOffice\PhpWord\Style\Font::FGCOLOR_MAGENTA:
+            case \Alireza1250ssss\PhpWord\Style\Font::FGCOLOR_MAGENTA:
                 return 'FF00FF';
-            case \PhpOffice\PhpWord\Style\Font::FGCOLOR_BLUE:
+            case \Alireza1250ssss\PhpWord\Style\Font::FGCOLOR_BLUE:
                 return '0000FF';
-            case \PhpOffice\PhpWord\Style\Font::FGCOLOR_RED:
+            case \Alireza1250ssss\PhpWord\Style\Font::FGCOLOR_RED:
                 return 'FF0000';
-            case \PhpOffice\PhpWord\Style\Font::FGCOLOR_DARKBLUE:
+            case \Alireza1250ssss\PhpWord\Style\Font::FGCOLOR_DARKBLUE:
                 return '00008B';
-            case \PhpOffice\PhpWord\Style\Font::FGCOLOR_DARKCYAN:
+            case \Alireza1250ssss\PhpWord\Style\Font::FGCOLOR_DARKCYAN:
                 return '008B8B';
-            case \PhpOffice\PhpWord\Style\Font::FGCOLOR_DARKGREEN:
+            case \Alireza1250ssss\PhpWord\Style\Font::FGCOLOR_DARKGREEN:
                 return '006400';
-            case \PhpOffice\PhpWord\Style\Font::FGCOLOR_DARKMAGENTA:
+            case \Alireza1250ssss\PhpWord\Style\Font::FGCOLOR_DARKMAGENTA:
                 return '8B008B';
-            case \PhpOffice\PhpWord\Style\Font::FGCOLOR_DARKRED:
+            case \Alireza1250ssss\PhpWord\Style\Font::FGCOLOR_DARKRED:
                 return '8B0000';
-            case \PhpOffice\PhpWord\Style\Font::FGCOLOR_DARKYELLOW:
+            case \Alireza1250ssss\PhpWord\Style\Font::FGCOLOR_DARKYELLOW:
                 return '8B8B00';
-            case \PhpOffice\PhpWord\Style\Font::FGCOLOR_DARKGRAY:
+            case \Alireza1250ssss\PhpWord\Style\Font::FGCOLOR_DARKGRAY:
                 return 'A9A9A9';
-            case \PhpOffice\PhpWord\Style\Font::FGCOLOR_LIGHTGRAY:
+            case \Alireza1250ssss\PhpWord\Style\Font::FGCOLOR_LIGHTGRAY:
                 return 'D3D3D3';
-            case \PhpOffice\PhpWord\Style\Font::FGCOLOR_BLACK:
+            case \Alireza1250ssss\PhpWord\Style\Font::FGCOLOR_BLACK:
                 return '000000';
         }
 

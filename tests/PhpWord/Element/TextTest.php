@@ -15,13 +15,13 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
-use PhpOffice\PhpWord\SimpleType\Jc;
-use PhpOffice\PhpWord\Style\Font;
+use Alireza1250ssss\PhpWord\SimpleType\Jc;
+use Alireza1250ssss\PhpWord\Style\Font;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\Text
+ * Test class for Alireza1250ssss\PhpWord\Element\Text
  *
  * @runTestsInSeparateProcesses
  */
@@ -34,10 +34,10 @@ class TextTest extends \PHPUnit\Framework\TestCase
     {
         $oText = new Text();
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Text', $oText);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Text', $oText);
         $this->assertNull($oText->getText());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Font', $oText->getFontStyle());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Paragraph', $oText->getParagraphStyle());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Font', $oText->getFontStyle());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Paragraph', $oText->getParagraphStyle());
     }
 
     /**
@@ -59,7 +59,7 @@ class TextTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals('fontStyle', $oText->getFontStyle());
 
         $oText->setFontStyle(array('bold' => true, 'italic' => true, 'size' => 16));
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Font', $oText->getFontStyle());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Font', $oText->getFontStyle());
     }
 
     /**
@@ -81,6 +81,6 @@ class TextTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals('paragraphStyle', $oText->getParagraphStyle());
 
         $oText->setParagraphStyle(array('alignment' => Jc::CENTER, 'spaceAfter' => 100));
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Paragraph', $oText->getParagraphStyle());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Paragraph', $oText->getParagraphStyle());
     }
 }

@@ -1,21 +1,21 @@
 <?php
-use PhpOffice\PhpWord\Style\Font;
+use Alireza1250ssss\PhpWord\Style\Font;
 
 include_once 'Sample_Header.php';
 
 // New Word Document
 echo date('H:i:s') , ' Create new PhpWord object' , EOL;
 
-$languageEnGb = new \PhpOffice\PhpWord\Style\Language(\PhpOffice\PhpWord\Style\Language::EN_GB);
+$languageEnGb = new \Alireza1250ssss\PhpWord\Style\Language(\Alireza1250ssss\PhpWord\Style\Language::EN_GB);
 
-$phpWord = new \PhpOffice\PhpWord\PhpWord();
+$phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
 $phpWord->getSettings()->setThemeFontLang($languageEnGb);
 
 $fontStyleName = 'rStyle';
 $phpWord->addFontStyle($fontStyleName, array('bold' => true, 'italic' => true, 'size' => 16, 'allCaps' => true, 'doubleStrikethrough' => true));
 
 $paragraphStyleName = 'pStyle';
-$phpWord->addParagraphStyle($paragraphStyleName, array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER, 'spaceAfter' => 100));
+$phpWord->addParagraphStyle($paragraphStyleName, array('alignment' => \Alireza1250ssss\PhpWord\SimpleType\Jc::CENTER, 'spaceAfter' => 100));
 
 $phpWord->addTitleStyle(1, array('bold' => true), array('spaceAfter' => 240));
 
@@ -28,7 +28,7 @@ $section->addText('Hello World!');
 
 // $pStyle = new Font();
 // $pStyle->setLang()
-$section->addText('Ce texte-ci est en français.', array('lang' => \PhpOffice\PhpWord\Style\Language::FR_BE));
+$section->addText('Ce texte-ci est en français.', array('lang' => \Alireza1250ssss\PhpWord\Style\Language::FR_BE));
 
 // Two text break
 $section->addTextBreak(2);

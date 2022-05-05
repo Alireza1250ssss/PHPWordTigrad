@@ -15,13 +15,13 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer;
+namespace Alireza1250ssss\PhpWord\Writer;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Settings;
+use Alireza1250ssss\PhpWord\PhpWord;
+use Alireza1250ssss\PhpWord\Settings;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\PDF
+ * Test class for Alireza1250ssss\PhpWord\Writer\PDF
  *
  * @runTestsInSeparateProcesses
  */
@@ -49,7 +49,7 @@ class PDFTest extends \PHPUnit\Framework\TestCase
     /**
      * Test construct exception
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\Exception
+     * @expectedException \Alireza1250ssss\PhpWord\Exception\Exception
      * @expectedExceptionMessage PDF rendering library or library path has not been defined.
      */
     public function testConstructException()

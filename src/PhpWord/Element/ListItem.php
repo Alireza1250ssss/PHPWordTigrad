@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
-use PhpOffice\PhpWord\Shared\Text as SharedText;
-use PhpOffice\PhpWord\Style\ListItem as ListItemStyle;
+use Alireza1250ssss\PhpWord\Shared\Text as SharedText;
+use Alireza1250ssss\PhpWord\Style\ListItem as ListItemStyle;
 
 /**
  * List item element
@@ -28,14 +28,14 @@ class ListItem extends AbstractElement
     /**
      * Element style
      *
-     * @var \PhpOffice\PhpWord\Style\ListItem
+     * @var \Alireza1250ssss\PhpWord\Style\ListItem
      */
     private $style;
 
     /**
      * Text object
      *
-     * @var \PhpOffice\PhpWord\Element\Text
+     * @var \Alireza1250ssss\PhpWord\Element\Text
      */
     private $textObject;
 
@@ -71,7 +71,7 @@ class ListItem extends AbstractElement
     /**
      * Get style
      *
-     * @return \PhpOffice\PhpWord\Style\ListItem
+     * @return \Alireza1250ssss\PhpWord\Style\ListItem
      */
     public function getStyle()
     {
@@ -81,7 +81,7 @@ class ListItem extends AbstractElement
     /**
      * Get Text object
      *
-     * @return \PhpOffice\PhpWord\Element\Text
+     * @return \Alireza1250ssss\PhpWord\Element\Text
      */
     public function getTextObject()
     {

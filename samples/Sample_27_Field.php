@@ -1,12 +1,12 @@
 <?php
-use PhpOffice\PhpWord\Element\TextRun;
+use Alireza1250ssss\PhpWord\Element\TextRun;
 
 include_once 'Sample_Header.php';
 
 // New Word document
 echo date('H:i:s'), ' Create new PhpWord object', EOL;
-$phpWord = new \PhpOffice\PhpWord\PhpWord();
-PhpOffice\PhpWord\Style::addTitleStyle(1, array('size' => 14));
+$phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
+Alireza1250ssss\PhpWord\Style::addTitleStyle(1, array('size' => 14));
 
 // New section
 $section = $phpWord->addSection();
@@ -45,7 +45,7 @@ $textrun->addText('here:');
 $section->addText('The actual index:');
 $section->addField('INDEX', array(), array('\\e "	"'), 'right click to update the index');
 
-$textrun = $section->addTextRun(array('alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER));
+$textrun = $section->addTextRun(array('alignment' => \Alireza1250ssss\PhpWord\SimpleType\Jc::CENTER));
 $textrun->addText('This is the date of lunar calendar ');
 $textrun->addField('DATE', array('dateformat' => 'd-M-yyyy H:mm:ss'), array('PreserveFormat', 'LunarCalendar'));
 $textrun->addText(' written in a textrun.');

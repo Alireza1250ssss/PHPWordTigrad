@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\PDF;
+namespace Alireza1250ssss\PhpWord\Writer\PDF;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Settings;
-use PhpOffice\PhpWord\Writer\PDF;
+use Alireza1250ssss\PhpWord\PhpWord;
+use Alireza1250ssss\PhpWord\Settings;
+use Alireza1250ssss\PhpWord\Writer\PDF;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\PDF\MPDF
+ * Test class for Alireza1250ssss\PhpWord\Writer\PDF\MPDF
  *
  * @runTestsInSeparateProcesses
  */

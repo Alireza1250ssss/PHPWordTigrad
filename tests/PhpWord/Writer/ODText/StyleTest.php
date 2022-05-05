@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText;
+namespace Alireza1250ssss\PhpWord\Writer\ODText;
 
-use PhpOffice\PhpWord\Shared\XMLWriter;
+use Alireza1250ssss\PhpWord\Shared\XMLWriter;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\ODText\Style subnamespace
+ * Test class for Alireza1250ssss\PhpWord\Writer\ODText\Style subnamespace
  */
 class StyleTest extends \PHPUnit\Framework\TestCase
 {
@@ -31,7 +31,7 @@ class StyleTest extends \PHPUnit\Framework\TestCase
     {
         $styles = array('Font', 'Paragraph', 'Image', 'Section', 'Table');
         foreach ($styles as $style) {
-            $objectClass = 'PhpOffice\\PhpWord\\Writer\\ODText\\Style\\' . $style;
+            $objectClass = 'Alireza1250ssss\\PhpWord\\Writer\\ODText\\Style\\' . $style;
             $xmlWriter = new XMLWriter();
             $object = new $objectClass($xmlWriter);
             $object->write();

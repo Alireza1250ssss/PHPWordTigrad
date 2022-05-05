@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Part;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007\Part;
 
-use PhpOffice\PhpWord\Writer\Word2007;
+use Alireza1250ssss\PhpWord\Writer\Word2007;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Part\Footer
+ * Test class for Alireza1250ssss\PhpWord\Writer\Word2007\Part\Footer
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Writer\Word2007\Part\Footer
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Writer\Word2007\Part\Footer
  * @runTestsInSeparateProcesses
  */
 class FooterTest extends \PHPUnit\Framework\TestCase
@@ -33,7 +33,7 @@ class FooterTest extends \PHPUnit\Framework\TestCase
     public function testWriteFooter()
     {
         $imageSrc = __DIR__ . '/../../../_files/images/PhpWord.png';
-        $container = new \PhpOffice\PhpWord\Element\Footer(1);
+        $container = new \Alireza1250ssss\PhpWord\Element\Footer(1);
         $container->addText('');
         $container->addPreserveText('');
         $container->addTextBreak();

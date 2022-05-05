@@ -20,7 +20,7 @@
 //     - supports style only if specified by name
 //     - spaces before and after field may be dropped
 
-namespace PhpOffice\PhpWord\Writer\ODText\Element;
+namespace Alireza1250ssss\PhpWord\Writer\ODText\Element;
 
 /**
  * Field element writer
@@ -35,7 +35,7 @@ class Field extends Text
     public function write()
     {
         $element = $this->getElement();
-        if (!$element instanceof \PhpOffice\PhpWord\Element\Field) {
+        if (!$element instanceof \Alireza1250ssss\PhpWord\Element\Field) {
             return;
         }
 
@@ -49,7 +49,7 @@ class Field extends Text
         }
     }
 
-    private function writeDefault(\PhpOffice\PhpWord\Element\Field $element, $type)
+    private function writeDefault(\Alireza1250ssss\PhpWord\Element\Field $element, $type)
     {
         $xmlWriter = $this->getXmlWriter();
 

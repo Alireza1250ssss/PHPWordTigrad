@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
 /**
  * Comment element
@@ -77,7 +77,7 @@ class Comment extends TrackChange
     /**
      * Sets the element where this comment starts
      *
-     * @param \PhpOffice\PhpWord\Element\AbstractElement $value
+     * @param \Alireza1250ssss\PhpWord\Element\AbstractElement $value
      */
     public function setStartElement(AbstractElement $value)
     {
@@ -90,7 +90,7 @@ class Comment extends TrackChange
     /**
      * Get the element where this comment starts
      *
-     * @return \PhpOffice\PhpWord\Element\AbstractElement
+     * @return \Alireza1250ssss\PhpWord\Element\AbstractElement
      */
     public function getStartElement()
     {
@@ -100,7 +100,7 @@ class Comment extends TrackChange
     /**
      * Sets the element where this comment ends
      *
-     * @param \PhpOffice\PhpWord\Element\AbstractElement $value
+     * @param \Alireza1250ssss\PhpWord\Element\AbstractElement $value
      */
     public function setEndElement(AbstractElement $value)
     {
@@ -113,7 +113,7 @@ class Comment extends TrackChange
     /**
      * Get the element where this comment ends
      *
-     * @return \PhpOffice\PhpWord\Element\AbstractElement
+     * @return \Alireza1250ssss\PhpWord\Element\AbstractElement
      */
     public function getEndElement()
     {

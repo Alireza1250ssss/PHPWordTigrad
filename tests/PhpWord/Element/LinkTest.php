@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
-use PhpOffice\PhpWord\Style\Font;
+use Alireza1250ssss\PhpWord\Style\Font;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\Link
+ * Test class for Alireza1250ssss\PhpWord\Element\Link
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Element\Link
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Element\Link
  * @runTestsInSeparateProcesses
  */
 class LinkTest extends \PHPUnit\Framework\TestCase
@@ -34,7 +34,7 @@ class LinkTest extends \PHPUnit\Framework\TestCase
     {
         $oLink = new Link('https://github.com/PHPOffice/PHPWord');
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Link', $oLink);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Link', $oLink);
         $this->assertEquals('https://github.com/PHPOffice/PHPWord', $oLink->getSource());
         $this->assertEquals($oLink->getSource(), $oLink->getText());
         $this->assertNull($oLink->getFontStyle());
@@ -53,11 +53,11 @@ class LinkTest extends \PHPUnit\Framework\TestCase
             array('marginLeft' => 600, 'marginRight' => 600, 'marginTop' => 600, 'marginBottom' => 600)
         );
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Link', $oLink);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Link', $oLink);
         $this->assertEquals('https://github.com/PHPOffice/PHPWord', $oLink->getSource());
         $this->assertEquals('PHPWord on GitHub', $oLink->getText());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Font', $oLink->getFontStyle());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Paragraph', $oLink->getParagraphStyle());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Font', $oLink->getFontStyle());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Paragraph', $oLink->getParagraphStyle());
     }
 
     /**

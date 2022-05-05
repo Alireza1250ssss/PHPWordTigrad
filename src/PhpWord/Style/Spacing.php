@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Alireza1250ssss\PhpWord\Style;
 
-use PhpOffice\PhpWord\SimpleType\LineSpacingRule;
+use Alireza1250ssss\PhpWord\SimpleType\LineSpacingRule;
 
 /**
  * Spacing between lines and above/below paragraph style

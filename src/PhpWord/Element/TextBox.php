@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
-use PhpOffice\PhpWord\Style\TextBox as TextBoxStyle;
+use Alireza1250ssss\PhpWord\Style\TextBox as TextBoxStyle;
 
 /**
  * TextBox element
@@ -34,7 +34,7 @@ class TextBox extends AbstractContainer
     /**
      * TextBox style
      *
-     * @var \PhpOffice\PhpWord\Style\TextBox
+     * @var \Alireza1250ssss\PhpWord\Style\TextBox
      */
     private $style;
 
@@ -51,7 +51,7 @@ class TextBox extends AbstractContainer
     /**
      * Get textbox style
      *
-     * @return \PhpOffice\PhpWord\Style\TextBox
+     * @return \Alireza1250ssss\PhpWord\Style\TextBox
      */
     public function getStyle()
     {

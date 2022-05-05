@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\RTF\Element;
+namespace Alireza1250ssss\PhpWord\Writer\RTF\Element;
 
 /**
  * PageBreak element RTF writer

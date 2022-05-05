@@ -15,17 +15,17 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007;
 
-use PhpOffice\PhpWord\Element\Comment;
-use PhpOffice\PhpWord\Element\TextRun;
-use PhpOffice\PhpWord\Element\TrackChange;
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Shared\XMLWriter;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Alireza1250ssss\PhpWord\Element\Comment;
+use Alireza1250ssss\PhpWord\Element\TextRun;
+use Alireza1250ssss\PhpWord\Element\TrackChange;
+use Alireza1250ssss\PhpWord\PhpWord;
+use Alireza1250ssss\PhpWord\Shared\XMLWriter;
+use Alireza1250ssss\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Element subnamespace
+ * Test class for Alireza1250ssss\PhpWord\Writer\Word2007\Element subnamespace
  */
 class ElementTest extends \PHPUnit\Framework\TestCase
 {
@@ -48,9 +48,9 @@ class ElementTest extends \PHPUnit\Framework\TestCase
             'Field', 'Line', 'Shape', 'Chart', 'FormField', 'SDT', 'Bookmark',
         );
         foreach ($elements as $element) {
-            $objectClass = 'PhpOffice\\PhpWord\\Writer\\Word2007\\Element\\' . $element;
+            $objectClass = 'Alireza1250ssss\\PhpWord\\Writer\\Word2007\\Element\\' . $element;
             $xmlWriter = new XMLWriter();
-            $newElement = new \PhpOffice\PhpWord\Element\PageBreak();
+            $newElement = new \Alireza1250ssss\PhpWord\Element\PageBreak();
             $object = new $objectClass($xmlWriter, $newElement);
             $object->write();
 
@@ -120,7 +120,7 @@ class ElementTest extends \PHPUnit\Framework\TestCase
         $phpWord = new PhpWord();
         $section = $phpWord->addSection();
 
-        $table = $section->addTable(array('alignment' => \PhpOffice\PhpWord\SimpleType\JcTable::CENTER));
+        $table = $section->addTable(array('alignment' => \Alireza1250ssss\PhpWord\SimpleType\JcTable::CENTER));
         $table->addRow(900);
         $table->addCell(2000)->addText('Row 1');
         $table->addCell(2000)->addText('Row 2');
@@ -490,7 +490,7 @@ class ElementTest extends \PHPUnit\Framework\TestCase
      */
     public function testTextWithAmpersant()
     {
-        \PhpOffice\PhpWord\Settings::setOutputEscapingEnabled(true);
+        \Alireza1250ssss\PhpWord\Settings::setOutputEscapingEnabled(true);
         $phpWord = new PhpWord();
         $section = $phpWord->addSection();
         $section->addText('this text contains an & (ampersant)');

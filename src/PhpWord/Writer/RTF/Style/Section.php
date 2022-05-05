@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\RTF\Style;
+namespace Alireza1250ssss\PhpWord\Writer\RTF\Style;
 
-use PhpOffice\PhpWord\Style\Section as SectionStyle;
+use Alireza1250ssss\PhpWord\Style\Section as SectionStyle;
 
 /**
  * RTF section style writer

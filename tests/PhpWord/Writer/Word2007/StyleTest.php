@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007;
+namespace Alireza1250ssss\PhpWord\Writer\Word2007;
 
-use PhpOffice\PhpWord\Shared\XMLWriter;
+use Alireza1250ssss\PhpWord\Shared\XMLWriter;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Style subnamespace
+ * Test class for Alireza1250ssss\PhpWord\Writer\Word2007\Style subnamespace
  */
 class StyleTest extends \PHPUnit\Framework\TestCase
 {
@@ -35,7 +35,7 @@ class StyleTest extends \PHPUnit\Framework\TestCase
             'TextBox', 'Line', 'Shape', 'Frame', 'Outline', 'Fill', 'Shadow', 'Extrusion',
         );
         foreach ($styles as $style) {
-            $objectClass = 'PhpOffice\\PhpWord\\Writer\\Word2007\\Style\\' . $style;
+            $objectClass = 'Alireza1250ssss\\PhpWord\\Writer\\Word2007\\Style\\' . $style;
             $xmlWriter = new XMLWriter();
             $object = new $objectClass($xmlWriter);
             $object->write();
@@ -55,7 +55,7 @@ class StyleTest extends \PHPUnit\Framework\TestCase
             'TextBox'   => 'writeBorder',
         );
         foreach ($styles as $style => $method) {
-            $objectClass = 'PhpOffice\\PhpWord\\Writer\\Word2007\\Style\\' . $style;
+            $objectClass = 'Alireza1250ssss\\PhpWord\\Writer\\Word2007\\Style\\' . $style;
             $xmlWriter = new XMLWriter();
             $object = new $objectClass($xmlWriter);
             $object->$method();

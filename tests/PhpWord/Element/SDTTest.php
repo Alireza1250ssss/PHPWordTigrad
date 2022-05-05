@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\SDT
+ * Test class for Alireza1250ssss\PhpWord\Element\SDT
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Element\SDT
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Element\SDT
  */
 class SDTTest extends \PHPUnit\Framework\TestCase
 {
@@ -40,7 +40,7 @@ class SDTTest extends \PHPUnit\Framework\TestCase
         $object->setAlias($alias);
         $object->setTag($tag);
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\SDT', $object);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\SDT', $object);
         $this->assertEquals($type, $object->getType());
         $this->assertEquals($types, $object->getListItems());
         $this->assertEquals($value, $object->getValue());

@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Alireza1250ssss\PhpWord\Style;
 
 use PHPUnit\Framework\Assert;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Language
+ * Test class for Alireza1250ssss\PhpWord\Style\Language
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\Language
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Style\Language
  */
 class LanguageTest extends \PHPUnit\Framework\TestCase
 {

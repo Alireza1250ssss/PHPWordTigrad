@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Exception;
+namespace Alireza1250ssss\PhpWord\Exception;
 
 /**
- * Test class for PhpOffice\PhpWord\Exception\InvalidImageException
+ * Test class for Alireza1250ssss\PhpWord\Exception\InvalidImageException
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Exception\InvalidImageException
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Exception\InvalidImageException
  * @runTestsInSeparateProcesses
  */
 class InvalidImageExceptionTest extends \PHPUnit\Framework\TestCase
@@ -28,8 +28,8 @@ class InvalidImageExceptionTest extends \PHPUnit\Framework\TestCase
     /**
      * Throw new exception
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\InvalidImageException
-     * @covers            \PhpOffice\PhpWord\Exception\InvalidImageException
+     * @expectedException \Alireza1250ssss\PhpWord\Exception\InvalidImageException
+     * @covers            \Alireza1250ssss\PhpWord\Exception\InvalidImageException
      */
     public function testThrowException()
     {

@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
-use PhpOffice\PhpWord\SimpleType\Jc;
+use Alireza1250ssss\PhpWord\SimpleType\Jc;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\PreserveText
+ * Test class for Alireza1250ssss\PhpWord\Element\PreserveText
  *
  * @runTestsInSeparateProcesses
  */
@@ -33,7 +33,7 @@ class PreserveTextTest extends \PHPUnit\Framework\TestCase
     {
         $oPreserveText = new PreserveText();
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\PreserveText', $oPreserveText);
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\PreserveText', $oPreserveText);
         $this->assertNull($oPreserveText->getText());
         $this->assertNull($oPreserveText->getFontStyle());
         $this->assertNull($oPreserveText->getParagraphStyle());
@@ -56,7 +56,7 @@ class PreserveTextTest extends \PHPUnit\Framework\TestCase
     public function testConstructWithArray()
     {
         $oPreserveText = new PreserveText('text', array('size' => 16, 'color' => '1B2232'), array('alignment' => Jc::CENTER));
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Font', $oPreserveText->getFontStyle());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Paragraph', $oPreserveText->getParagraphStyle());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Font', $oPreserveText->getFontStyle());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\Paragraph', $oPreserveText->getParagraphStyle());
     }
 }

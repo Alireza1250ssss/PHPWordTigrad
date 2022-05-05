@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
-use PhpOffice\PhpWord\Exception\CreateTemporaryFileException;
-use PhpOffice\PhpWord\Exception\InvalidImageException;
-use PhpOffice\PhpWord\Exception\UnsupportedImageTypeException;
-use PhpOffice\PhpWord\Settings;
-use PhpOffice\PhpWord\Shared\ZipArchive;
-use PhpOffice\PhpWord\Style\Image as ImageStyle;
+use Alireza1250ssss\PhpWord\Exception\CreateTemporaryFileException;
+use Alireza1250ssss\PhpWord\Exception\InvalidImageException;
+use Alireza1250ssss\PhpWord\Exception\UnsupportedImageTypeException;
+use Alireza1250ssss\PhpWord\Settings;
+use Alireza1250ssss\PhpWord\Shared\ZipArchive;
+use Alireza1250ssss\PhpWord\Style\Image as ImageStyle;
 
 /**
  * Image element
@@ -136,8 +136,8 @@ class Image extends AbstractElement
      * @param bool $watermark
      * @param string $name
      *
-     * @throws \PhpOffice\PhpWord\Exception\InvalidImageException
-     * @throws \PhpOffice\PhpWord\Exception\UnsupportedImageTypeException
+     * @throws \Alireza1250ssss\PhpWord\Exception\InvalidImageException
+     * @throws \Alireza1250ssss\PhpWord\Exception\UnsupportedImageTypeException
      */
     public function __construct($source, $style = null, $watermark = false, $name = null)
     {
@@ -399,8 +399,8 @@ class Image extends AbstractElement
     /**
      * Check memory image, supported type, image functions, and proportional width/height.
      *
-     * @throws \PhpOffice\PhpWord\Exception\InvalidImageException
-     * @throws \PhpOffice\PhpWord\Exception\UnsupportedImageTypeException
+     * @throws \Alireza1250ssss\PhpWord\Exception\InvalidImageException
+     * @throws \Alireza1250ssss\PhpWord\Exception\UnsupportedImageTypeException
      */
     private function checkImage()
     {
@@ -470,7 +470,7 @@ class Image extends AbstractElement
      *
      * @param string $source
      *
-     * @throws \PhpOffice\PhpWord\Exception\CreateTemporaryFileException
+     * @throws \Alireza1250ssss\PhpWord\Exception\CreateTemporaryFileException
      *
      * @return array|null
      */

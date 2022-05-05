@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\ComplexType;
+namespace Alireza1250ssss\PhpWord\ComplexType;
 
-use PhpOffice\PhpWord\SimpleType\NumberFormat;
+use Alireza1250ssss\PhpWord\SimpleType\NumberFormat;
 
 /**
- * Test class for PhpOffice\PhpWord\ComplexType\FootnoteProperties
+ * Test class for Alireza1250ssss\PhpWord\ComplexType\FootnoteProperties
  *
- * @coversDefaultClass \PhpOffice\PhpWord\ComplexType\FootnoteProperties
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\ComplexType\FootnoteProperties
  * @runTestsInSeparateProcesses
  */
 class FootnotePropertiesTest extends \PHPUnit\Framework\TestCase

@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Alireza1250ssss\PhpWord\Style;
 
 /**
  * Font style
@@ -219,14 +219,14 @@ class Font extends AbstractStyle
     /**
      * Paragraph style
      *
-     * @var \PhpOffice\PhpWord\Style\Paragraph
+     * @var \Alireza1250ssss\PhpWord\Style\Paragraph
      */
     private $paragraph;
 
     /**
      * Shading
      *
-     * @var \PhpOffice\PhpWord\Style\Shading
+     * @var \Alireza1250ssss\PhpWord\Style\Shading
      */
     private $shading;
 
@@ -248,7 +248,7 @@ class Font extends AbstractStyle
     /**
      * Languages
      *
-     * @var \PhpOffice\PhpWord\Style\Language
+     * @var \Alireza1250ssss\PhpWord\Style\Language
      */
     private $lang;
 
@@ -272,7 +272,7 @@ class Font extends AbstractStyle
      * Create new font style
      *
      * @param string $type Type of font
-     * @param array|string|\PhpOffice\PhpWord\Style\AbstractStyle $paragraph Paragraph styles definition
+     * @param array|string|\Alireza1250ssss\PhpWord\Style\AbstractStyle $paragraph Paragraph styles definition
      */
     public function __construct($type = 'text', $paragraph = null)
     {
@@ -658,7 +658,7 @@ class Font extends AbstractStyle
      * Set background
      *
      * @param string $value
-     * @return \PhpOffice\PhpWord\Style\Table
+     * @return \Alireza1250ssss\PhpWord\Style\Table
      */
     public function setBgColor($value = null)
     {
@@ -783,7 +783,7 @@ class Font extends AbstractStyle
     /**
      * Get paragraph style
      *
-     * @return \PhpOffice\PhpWord\Style\Paragraph
+     * @return \Alireza1250ssss\PhpWord\Style\Paragraph
      */
     public function getParagraph()
     {
@@ -829,7 +829,7 @@ class Font extends AbstractStyle
     /**
      * Get shading
      *
-     * @return \PhpOffice\PhpWord\Style\Shading
+     * @return \Alireza1250ssss\PhpWord\Style\Shading
      */
     public function getShading()
     {
@@ -852,7 +852,7 @@ class Font extends AbstractStyle
     /**
      * Get language
      *
-     * @return \PhpOffice\PhpWord\Style\Language
+     * @return \Alireza1250ssss\PhpWord\Style\Language
      */
     public function getLang()
     {

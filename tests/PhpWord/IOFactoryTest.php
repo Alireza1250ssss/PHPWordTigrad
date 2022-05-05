@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord;
+namespace Alireza1250ssss\PhpWord;
 
 /**
- * Test class for PhpOffice\PhpWord\IOFactory
+ * Test class for Alireza1250ssss\PhpWord\IOFactory
  *
  * @runTestsInSeparateProcesses
  */
@@ -30,7 +30,7 @@ class IOFactoryTest extends \PHPUnit\Framework\TestCase
     public function testExistingWriterCanBeCreated()
     {
         $this->assertInstanceOf(
-            'PhpOffice\\PhpWord\\Writer\\Word2007',
+            'Alireza1250ssss\\PhpWord\\Writer\\Word2007',
             IOFactory::createWriter(new PhpWord(), 'Word2007')
         );
     }
@@ -38,7 +38,7 @@ class IOFactoryTest extends \PHPUnit\Framework\TestCase
     /**
      * Create non-existing writer
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\Exception
+     * @expectedException \Alireza1250ssss\PhpWord\Exception\Exception
      */
     public function testNonexistentWriterCanNotBeCreated()
     {
@@ -51,7 +51,7 @@ class IOFactoryTest extends \PHPUnit\Framework\TestCase
     public function testExistingReaderCanBeCreated()
     {
         $this->assertInstanceOf(
-            'PhpOffice\\PhpWord\\Reader\\Word2007',
+            'Alireza1250ssss\\PhpWord\\Reader\\Word2007',
             IOFactory::createReader('Word2007')
         );
     }
@@ -59,7 +59,7 @@ class IOFactoryTest extends \PHPUnit\Framework\TestCase
     /**
      * Create non-existing reader
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\Exception
+     * @expectedException \Alireza1250ssss\PhpWord\Exception\Exception
      */
     public function testNonexistentReaderCanNotBeCreated()
     {
@@ -73,7 +73,7 @@ class IOFactoryTest extends \PHPUnit\Framework\TestCase
     {
         $file = __DIR__ . '/_files/templates/blank.docx';
         $this->assertInstanceOf(
-            'PhpOffice\\PhpWord\\PhpWord',
+            'Alireza1250ssss\\PhpWord\\PhpWord',
             IOFactory::load($file)
         );
     }

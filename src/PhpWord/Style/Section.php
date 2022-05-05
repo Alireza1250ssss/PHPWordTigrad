@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Alireza1250ssss\PhpWord\Style;
 
-use PhpOffice\PhpWord\Settings;
-use PhpOffice\PhpWord\SimpleType\VerticalJc;
+use Alireza1250ssss\PhpWord\Settings;
+use Alireza1250ssss\PhpWord\SimpleType\VerticalJc;
 
 /**
  * Section settings
@@ -58,7 +58,7 @@ class Section extends Border
     /**
      * Paper size
      *
-     * @var \PhpOffice\PhpWord\Style\Paper
+     * @var \Alireza1250ssss\PhpWord\Style\Paper
      */
     private $paper;
 
@@ -164,14 +164,14 @@ class Section extends Border
     /**
      * Line numbering
      *
-     * @var \PhpOffice\PhpWord\Style\LineNumbering
+     * @var \Alireza1250ssss\PhpWord\Style\LineNumbering
      * @see  http://www.schemacentral.com/sc/ooxml/e-w_lnNumType-1.html
      */
     private $lineNumbering;
 
     /**
      * Vertical Text Alignment on Page
-     * One of \PhpOffice\PhpWord\SimpleType\VerticalJc
+     * One of \Alireza1250ssss\PhpWord\SimpleType\VerticalJc
      *
      * @var string
      */
@@ -301,7 +301,7 @@ class Section extends Border
     /**
      * @param int|float|null $value
      *
-     * @return \PhpOffice\PhpWord\Style\Section
+     * @return \Alireza1250ssss\PhpWord\Style\Section
      *
      * @since 0.12.0
      */
@@ -327,7 +327,7 @@ class Section extends Border
     /**
      * @param int|float|null $value
      *
-     * @return \PhpOffice\PhpWord\Style\Section
+     * @return \Alireza1250ssss\PhpWord\Style\Section
      *
      * @since 0.12.0
      */
@@ -594,7 +594,7 @@ class Section extends Border
     /**
      * Get line numbering
      *
-     * @return \PhpOffice\PhpWord\Style\LineNumbering
+     * @return \Alireza1250ssss\PhpWord\Style\LineNumbering
      */
     public function getLineNumbering()
     {

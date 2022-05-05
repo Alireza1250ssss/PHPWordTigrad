@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Alireza1250ssss\PhpWord\Style;
 
-use PhpOffice\PhpWord\SimpleType\TblWidth;
-use PhpOffice\PhpWord\SimpleType\VerticalJc;
+use Alireza1250ssss\PhpWord\SimpleType\TblWidth;
+use Alireza1250ssss\PhpWord\SimpleType\VerticalJc;
 
 /**
  * Table cell style
@@ -29,19 +29,19 @@ class Cell extends Border
      * Vertical alignment constants
      *
      * @const string
-     * @deprecated Use \PhpOffice\PhpWord\SimpleType\VerticalJc::TOP instead
+     * @deprecated Use \Alireza1250ssss\PhpWord\SimpleType\VerticalJc::TOP instead
      */
     const VALIGN_TOP = 'top';
     /**
-     * @deprecated Use \PhpOffice\PhpWord\SimpleType\VerticalJc::CENTER instead
+     * @deprecated Use \Alireza1250ssss\PhpWord\SimpleType\VerticalJc::CENTER instead
      */
     const VALIGN_CENTER = 'center';
     /**
-     * @deprecated Use \PhpOffice\PhpWord\SimpleType\VerticalJc::BOTTOM instead
+     * @deprecated Use \Alireza1250ssss\PhpWord\SimpleType\VerticalJc::BOTTOM instead
      */
     const VALIGN_BOTTOM = 'bottom';
     /**
-     * @deprecated Use \PhpOffice\PhpWord\SimpleType\VerticalJc::BOTH instead
+     * @deprecated Use \Alireza1250ssss\PhpWord\SimpleType\VerticalJc::BOTH instead
      */
     const VALIGN_BOTH = 'both';
 
@@ -120,7 +120,7 @@ class Cell extends Border
     /**
      * Shading
      *
-     * @var \PhpOffice\PhpWord\Style\Shading
+     * @var \Alireza1250ssss\PhpWord\Style\Shading
      */
     private $shading;
 
@@ -261,7 +261,7 @@ class Cell extends Border
     /**
      * Get shading
      *
-     * @return \PhpOffice\PhpWord\Style\Shading
+     * @return \Alireza1250ssss\PhpWord\Style\Shading
      */
     public function getShading()
     {

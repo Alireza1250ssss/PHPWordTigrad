@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\HTML\Style;
+namespace Alireza1250ssss\PhpWord\Writer\HTML\Style;
 
-use PhpOffice\PhpWord\Style\AbstractStyle as Style;
+use Alireza1250ssss\PhpWord\Style\AbstractStyle as Style;
 
 /**
  * Style writer
@@ -29,14 +29,14 @@ abstract class AbstractStyle
     /**
      * Parent writer
      *
-     * @var \PhpOffice\PhpWord\Writer\AbstractWriter
+     * @var \Alireza1250ssss\PhpWord\Writer\AbstractWriter
      */
     private $parentWriter;
 
     /**
      * Style
      *
-     * @var array|\PhpOffice\PhpWord\Style\AbstractStyle
+     * @var array|\Alireza1250ssss\PhpWord\Style\AbstractStyle
      */
     private $style;
 
@@ -48,7 +48,7 @@ abstract class AbstractStyle
     /**
      * Create new instance
      *
-     * @param array|\PhpOffice\PhpWord\Style\AbstractStyle $style
+     * @param array|\Alireza1250ssss\PhpWord\Style\AbstractStyle $style
      */
     public function __construct($style = null)
     {
@@ -58,7 +58,7 @@ abstract class AbstractStyle
     /**
      * Set parent writer.
      *
-     * @param \PhpOffice\PhpWord\Writer\AbstractWriter $writer
+     * @param \Alireza1250ssss\PhpWord\Writer\AbstractWriter $writer
      */
     public function setParentWriter($writer)
     {
@@ -68,7 +68,7 @@ abstract class AbstractStyle
     /**
      * Get parent writer
      *
-     * @return \PhpOffice\PhpWord\Writer\AbstractWriter
+     * @return \Alireza1250ssss\PhpWord\Writer\AbstractWriter
      */
     public function getParentWriter()
     {
@@ -78,7 +78,7 @@ abstract class AbstractStyle
     /**
      * Get style
      *
-     * @return array|\PhpOffice\PhpWord\Style\AbstractStyle $style
+     * @return array|\Alireza1250ssss\PhpWord\Style\AbstractStyle $style
      */
     public function getStyle()
     {

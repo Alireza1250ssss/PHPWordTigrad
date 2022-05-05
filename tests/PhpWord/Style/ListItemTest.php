@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Alireza1250ssss\PhpWord\Style;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\ListItem
+ * Test class for Alireza1250ssss\PhpWord\Style\ListItem
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\ListItem
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Style\ListItem
  * @runTestsInSeparateProcesses
  */
 class ListItemTest extends \PHPUnit\Framework\TestCase

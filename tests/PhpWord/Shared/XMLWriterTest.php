@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Shared;
+namespace Alireza1250ssss\PhpWord\Shared;
 
 /**
  * Test class for XMLWriter
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Shared\XMLWriter
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Shared\XMLWriter
  */
 class XMLWriterTest extends \PHPUnit\Framework\TestCase
 {

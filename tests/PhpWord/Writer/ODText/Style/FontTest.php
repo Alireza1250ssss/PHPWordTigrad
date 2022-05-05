@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Style;
+namespace Alireza1250ssss\PhpWord\Writer\ODText\Style;
 
-use PhpOffice\PhpWord\Style\Font;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Alireza1250ssss\PhpWord\Style\Font;
+use Alireza1250ssss\PhpWord\TestHelperDOCX;
 
 /**
  * Test class for Headers, Footers, Tabs in ODT
@@ -38,11 +38,11 @@ class FontTest extends \PHPUnit\Framework\TestCase
      */
     public function testColors()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
         $section = $phpWord->addSection();
         $section->addText('This is red (800) in rtf/html, default in docx/odt', array('color' => '800'));
         $section->addText('This should be cyanish (008787)', array('color' => '008787'));
-        $section->addText('This should be dark green (FGCOLOR_DARKGREEN)', array('color' => \PhpOffice\PhpWord\Style\Font::FGCOLOR_DARKGREEN));
+        $section->addText('This should be dark green (FGCOLOR_DARKGREEN)', array('color' => \Alireza1250ssss\PhpWord\Style\Font::FGCOLOR_DARKGREEN));
         $section->addText('This color is default (unknow)', array('color' => 'unknow'));
 
         $doc = TestHelperDOCX::getDocument($phpWord, 'ODText');
@@ -105,7 +105,7 @@ class FontTest extends \PHPUnit\Framework\TestCase
      */
     public function testAllNamedColors($namedColor, $rgbColor)
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
         $section = $phpWord->addSection();
         $section->addText('This is red (800) in rtf/html, default in docx/odt', array('color' => '800'));
         $section->addText('This should be cyanish (008787)', array('color' => '008787'));
@@ -134,7 +134,7 @@ class FontTest extends \PHPUnit\Framework\TestCase
      */
     public function testNoProof()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
         $section = $phpWord->addSection();
         $section->addText('Noproof not specified', array('color' => 'black'));
         $section->addText('Noproof is true', array('color' => 'black', 'noproof' => true));
@@ -190,7 +190,7 @@ class FontTest extends \PHPUnit\Framework\TestCase
      */
     public function testNamedStyleAsObject()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
         $named = $phpWord->addFontStyle('namedobject', array('color' => '008787'));
         $section = $phpWord->addSection();
         $section->addText('Let us see what color we wind up with', $named);
@@ -208,7 +208,7 @@ class FontTest extends \PHPUnit\Framework\TestCase
      */
     public function testFieldStyles()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
         $namedstyle = $phpWord->addFontStyle('namedstyle', array('color' => '800000'));
         $section = $phpWord->addSection();
         $textrun = $section->addTextRun();
@@ -219,7 +219,7 @@ class FontTest extends \PHPUnit\Framework\TestCase
         $fld->setFontStyle(array('color' => '008000'));
         $textrun = $section->addTextRun();
         $fld = $textrun->addField('DATE');
-        $font = new \PhpOffice\PhpWord\Style\Font();
+        $font = new \Alireza1250ssss\PhpWord\Style\Font();
         $font->setColor('000080');
         $fld->setFontStyle($font);
         $textrun = $section->addTextRun();

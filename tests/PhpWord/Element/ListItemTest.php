@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\ListItem
+ * Test class for Alireza1250ssss\PhpWord\Element\ListItem
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Element\ListItem
+ * @coversDefaultClass \Alireza1250ssss\PhpWord\Element\ListItem
  * @runTestsInSeparateProcesses
  */
 class ListItemTest extends \PHPUnit\Framework\TestCase
@@ -32,7 +32,7 @@ class ListItemTest extends \PHPUnit\Framework\TestCase
     {
         $oListItem = new ListItem('text');
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Text', $oListItem->getTextObject());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Element\\Text', $oListItem->getTextObject());
     }
 
     /**
@@ -40,10 +40,10 @@ class ListItemTest extends \PHPUnit\Framework\TestCase
      */
     public function testStyle()
     {
-        $oListItem = new ListItem('text', 1, null, array('listType' => \PhpOffice\PhpWord\Style\ListItem::TYPE_NUMBER));
+        $oListItem = new ListItem('text', 1, null, array('listType' => \Alireza1250ssss\PhpWord\Style\ListItem::TYPE_NUMBER));
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\ListItem', $oListItem->getStyle());
-        $this->assertEquals(\PhpOffice\PhpWord\Style\ListItem::TYPE_NUMBER, $oListItem->getStyle()->getListType());
+        $this->assertInstanceOf('Alireza1250ssss\\PhpWord\\Style\\ListItem', $oListItem->getStyle());
+        $this->assertEquals(\Alireza1250ssss\PhpWord\Style\ListItem::TYPE_NUMBER, $oListItem->getStyle()->getListType());
     }
 
     /**

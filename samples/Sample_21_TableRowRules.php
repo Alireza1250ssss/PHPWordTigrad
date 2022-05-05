@@ -3,7 +3,7 @@ include_once 'Sample_Header.php';
 
 // New Word document
 echo date('H:i:s'), ' Create new PhpWord object', EOL;
-$phpWord = new \PhpOffice\PhpWord\PhpWord();
+$phpWord = new \Alireza1250ssss\PhpWord\PhpWord();
 
 // New section
 $section = $phpWord->addSection();
@@ -18,7 +18,7 @@ $section->addText(
 $table1 = $section->addTable(array('cellMargin' => 0, 'cellMarginRight' => 0, 'cellMarginBottom' => 0, 'cellMarginLeft' => 0));
 $table1->addRow(3750);
 $cell1 = $table1->addCell(null, array('valign' => 'top', 'borderSize' => 30, 'borderColor' => 'ff0000'));
-$cell1->addImage('./resources/_earth.jpg', array('width' => 250, 'height' => 250, 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER));
+$cell1->addImage('./resources/_earth.jpg', array('width' => 250, 'height' => 250, 'alignment' => \Alireza1250ssss\PhpWord\SimpleType\Jc::CENTER));
 
 $section->addTextBreak();
 $section->addText("But if we set the rowStyle 'exactHeight' to true, the real row height is used, removing the textbreak:");
@@ -33,7 +33,7 @@ $table2 = $section->addTable(
 );
 $table2->addRow(3750, array('exactHeight' => true));
 $cell2 = $table2->addCell(null, array('valign' => 'top', 'borderSize' => 30, 'borderColor' => '00ff00'));
-$cell2->addImage('./resources/_earth.jpg', array('width' => 250, 'height' => 250, 'alignment' => \PhpOffice\PhpWord\SimpleType\Jc::CENTER));
+$cell2->addImage('./resources/_earth.jpg', array('width' => 250, 'height' => 250, 'alignment' => \Alireza1250ssss\PhpWord\SimpleType\Jc::CENTER));
 
 $section->addTextBreak();
 $section->addText('In this example, image is 250px height. Rows are calculated in twips, and 1px = 15twips.');

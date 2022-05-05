@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Alireza1250ssss\PhpWord\Element;
 
-use PhpOffice\PhpWord\Style\Shape as ShapeStyle;
+use Alireza1250ssss\PhpWord\Style\Shape as ShapeStyle;
 
 /**
  * Shape element
@@ -36,7 +36,7 @@ class Shape extends AbstractElement
     /**
      * Shape style
      *
-     * @var \PhpOffice\PhpWord\Style\Shape
+     * @var \Alireza1250ssss\PhpWord\Style\Shape
      */
     private $style;
 
@@ -79,7 +79,7 @@ class Shape extends AbstractElement
     /**
      * Get shape style
      *
-     * @return \PhpOffice\PhpWord\Style\Shape
+     * @return \Alireza1250ssss\PhpWord\Style\Shape
      */
     public function getStyle()
     {
