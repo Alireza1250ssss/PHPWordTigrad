@@ -438,7 +438,7 @@ class TemplateProcessor
         if (is_null($value) && isset($inlineValue)) {
             $value = $inlineValue;
         }
-        if (!preg_match('/^([0-9]*(cm|mm|in|pt|pc|px|%|em|ex|)|auto)$/i', isset($value) ? $value : '')) {
+        if (!preg_match('/^([0-9]*(cm|mm|in|pt|pc|px|%|em|ex|)|auto)$/i', $value)) {
             $value = null;
         }
         if (is_null($value)) {
@@ -779,11 +779,71 @@ class TemplateProcessor
         foreach ($values as $rowKey => $rowData) {
             $rowNumber = $rowKey + 1;
             foreach ($rowData as $macro => $replace) {
-                $this->setValue($macro . '#' . $rowNumber, $replace);
+                $this->setComplexValue($macro . '#' . $rowNumber, self::getcontent($replace));
             }
         }
     }
 
+
+    public static function getcontent($input)
+    {
+        if (empty($input)) return new \PhpOffice\PhpWord\Element\TextRun();
+        $replace = ['<strong>' => 'BOLD', '<i>' => "ITALIC", '<u>' => "UNDERLINE"];
+        preg_match("/<p>(.*?)<\/p>/s", $input, $matches);
+        if (empty($matches[1]) or is_null($matches[1])){
+            if(is_string($input)) {
+                $txtRun = new \PhpOffice\PhpWord\Element\TextRun();
+                $txtRun->addText($input, ['name' => "B Nazanin",'rtl'=>true]);
+                return $txtRun;
+            }
+            else
+                return new \PhpOffice\PhpWord\Element\TextRun();
+        }
+        $content = $matches[1];
+        $content = html_entity_decode($content);
+        $array = preg_split('/(<\/?\w*>)/', $content, -1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
+        $result = [];
+        for ($i = 0; $i < count($array); $i++) {
+            $item = $array[$i];
+            if ($item === '<strong>' or $item === '<i>' or $item === '<u>') {
+                $close_tags[] = $replace[$item];
+                while (in_array($array[$i + 1], ['<strong>', '<i>', '<u>'])) {
+                    $close_tags[] = $replace[$array[$i + 1]];
+                    $i++;
+                }
+
+                foreach ($close_tags as $style) {
+                    $value[$style] = $array[$i + 1];
+                }
+
+                $result[] = $value;
+                unset($value);
+                $i += 1;
+                $i += count($close_tags);
+                unset($close_tags);
+            } else {
+                $result[] = $item;
+            }
+        }
+        $textRun = new \PhpOffice\PhpWord\Element\TextRun();
+        $style = [
+            'name'=>"B Nazanin",
+            'rtl'=>true
+        ];
+        foreach ($result as $item) {
+            if (!is_array($item))
+                $textRun->addText($item . ' ',$style);
+            else {
+                $style += [
+                    'bold' => isset($item['BOLD']),
+                    'italic' => isset($item['ITALIC']),
+                    'underline' => isset($item['UNDERLINE']) ? 'single' : 'none'
+                ];
+                $textRun->addText(reset($item) . ' ', $style);
+            }
+        }
+        return $textRun;
+    }
     /**
      * Clone a block.
      *
@@ -795,32 +855,122 @@ class TemplateProcessor
      *
      * @return string|null
      */
-    public function cloneBlock($blockname, $clones = 1, $replace = true, $indexVariables = false, $variableReplacements = null)
+    public function cloneBlock($blockname, $clones = 1, $replace = true)
     {
+        // Parse the XML
+        $xml = new \SimpleXMLElement($this->tempDocumentMainPart);
+
+        // Find the starting and ending tags
+        $startNode = false; $endNode = false;
+        foreach ($xml->xpath('//w:t') as $node)
+        {
+            if (strpos($node, '${'.$blockname.'}') !== false)
+            {
+                $startNode = $node;
+                continue;
+            }
+
+            if (strpos($node, '${/'.$blockname.'}') !== false)
+            {
+                $endNode = $node;
+                break;
+            }
+        }
+
+        // Make sure we found the tags
+        if ($startNode === false || $endNode === false)
+        {
+            return null;
+        }
+
+        // Find the parent <w:p> node for the start tag
+        $node = $startNode; $startNode = null;
+        while (is_null($startNode))
+        {
+            $node = $node->xpath('..')[0];
+
+            if ($node->getName() == 'p')
+            {
+                $startNode = $node;
+            }
+        }
+
+        // Find the parent <w:p> node for the end tag
+        $node = $endNode; $endNode = null;
+        while (is_null($endNode))
+        {
+            $node = $node->xpath('..')[0];
+
+            if ($node->getName() == 'p')
+            {
+                $endNode = $node;
+            }
+        }
+
+        /*
+         * NOTE: Because SimpleXML reduces empty tags to "self-closing" tags.
+         * We need to replace the original XML with the version of XML as
+         * SimpleXML sees it. The following example should show the issue
+         * we are facing.
+         *
+         * This is the XML that my document contained orginally.
+         *
+         * ```xml
+         *  <w:p>
+         *      <w:pPr>
+         *          <w:pStyle w:val="TextBody"/>
+         *          <w:rPr></w:rPr>
+         *      </w:pPr>
+         *      <w:r>
+         *          <w:rPr></w:rPr>
+         *          <w:t>${CLONEME}</w:t>
+         *      </w:r>
+         *  </w:p>
+         * ```
+         *
+         * This is the XML that SimpleXML returns from asXml().
+         *
+         * ```xml
+         *  <w:p>
+         *      <w:pPr>
+         *          <w:pStyle w:val="TextBody"/>
+         *          <w:rPr/>
+         *      </w:pPr>
+         *      <w:r>
+         *          <w:rPr/>
+         *          <w:t>${CLONEME}</w:t>
+         *      </w:r>
+         *  </w:p>
+         * ```
+         */
+
+        $this->tempDocumentMainPart = $xml->asXml();
+
+        // Find the xml in between the tags
         $xmlBlock = null;
-        $matches = array();
-        preg_match(
-            '/(.*((?s)<w:p\b(?:(?!<w:p\b).)*?\${' . $blockname . '}<\/w:.*?p>))(.*)((?s)<w:p\b(?:(?!<w:p\b).)[^$]*?\${\/' . $blockname . '}<\/w:.*?p>)/is',
+        preg_match
+        (
+            '/'.preg_quote($startNode->asXml(), '/').'(.*?)'.preg_quote($endNode->asXml(), '/').'/is',
             $this->tempDocumentMainPart,
             $matches
         );
 
-        if (isset($matches[3])) {
-            $xmlBlock = $matches[3];
-            if ($indexVariables) {
-                $cloned = $this->indexClonedVariables($clones, $xmlBlock);
-            } elseif ($variableReplacements !== null && is_array($variableReplacements)) {
-                $cloned = $this->replaceClonedVariables($variableReplacements, $xmlBlock);
-            } else {
-                $cloned = array();
-                for ($i = 1; $i <= $clones; $i++) {
-                    $cloned[] = $xmlBlock;
-                }
+        if (isset($matches[1]))
+        {
+            $xmlBlock = $matches[1];
+
+            $cloned = array();
+
+            for ($i = 1; $i <= $clones; $i++)
+            {
+                $cloned[] = preg_replace('/\${(.*?)}/','${$1_'.$i.'}', $xmlBlock);
             }
 
-            if ($replace) {
-                $this->tempDocumentMainPart = str_replace(
-                    $matches[2] . $matches[3] . $matches[4],
+            if ($replace)
+            {
+                $this->tempDocumentMainPart = str_replace
+                (
+                    $matches[0],
                     implode('', $cloned),
                     $this->tempDocumentMainPart
                 );
@@ -836,22 +986,12 @@ class TemplateProcessor
      * @param string $blockname
      * @param string $replacement
      */
-    public function replaceBlock($blockname, $replacement)
-    {
-        $matches = array();
-        preg_match(
-            '/(<\?xml.*)(<w:p.*>\${' . $blockname . '}<\/w:.*?p>)(.*)(<w:p.*\${\/' . $blockname . '}<\/w:.*?p>)/is',
-            $this->tempDocumentMainPart,
-            $matches
+    public function replaceBlock($blockname, $replacement) {
+        $this->tempDocumentMainPart = preg_replace(
+            '/(\${' . $blockname . '})(.*?)(\${\/' . $blockname . '})/is',
+            $replacement,
+            $this->tempDocumentMainPart
         );
-
-        if (isset($matches[3])) {
-            $this->tempDocumentMainPart = str_replace(
-                $matches[2] . $matches[3] . $matches[4],
-                $replacement,
-                $this->tempDocumentMainPart
-            );
-        }
     }
 
     /**

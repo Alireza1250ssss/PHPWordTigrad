@@ -84,7 +84,7 @@
     },
     "autoload": {
         "psr-4": {
-            "PhpOffice\\PhpWord\\": "src/PhpWord"
+            "Alireza1250ssss\\PhpWord\\": "src/PhpWord"
         }
     },
     "extra": {
